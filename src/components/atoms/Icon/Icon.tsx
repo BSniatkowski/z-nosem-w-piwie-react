@@ -1,16 +1,16 @@
-import close from '/close.svg'
-import copyright from '/copyright.svg'
-import facebook from '/facebook.svg'
-import instagram from '/instagram.svg'
-import menu from '/menu.svg'
-import merch from '/merch.svg'
-import send from '/send.svg'
-import share from '/share.svg'
-import tiktok from '/tiktok.svg'
-import x from '/x.svg'
-import youtube from '/youtube.svg'
+import close from '/icons/close.svg'
+import copyright from '/icons/copyright.svg'
+import facebook from '/icons/facebook.svg'
+import instagram from '/icons/instagram.svg'
+import menu from '/icons/menu.svg'
+import merch from '/icons/merch.svg'
+import send from '/icons/send.svg'
+import share from '/icons/share.svg'
+import tiktok from '/icons/tiktok.svg'
+import x from '/icons/x.svg'
+import youtube from '/icons/youtube.svg'
 
-import { SIcon } from './Icon.style'
+import * as S from './Icon.style'
 import { IIconProps } from './Icon.types'
 
 const Icon = ({ size = 'normal', variant = 'close' }: IIconProps) => {
@@ -28,7 +28,7 @@ const Icon = ({ size = 'normal', variant = 'close' }: IIconProps) => {
         youtube: youtube,
     }[variant]
 
-    return <SIcon src={IconPath} $size={size} />
+    return <S.IconImg src={IconPath} $size={size} />
 }
 
 export default Icon

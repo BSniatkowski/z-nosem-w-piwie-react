@@ -127,3 +127,75 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* FONTS */
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"),
+    url("/fonts/Roboto/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Righteous";
+  src: local("Righteous"),
+    url("/fonts/Righteous/Righteous-Regular.ttf");
+  font-weight: 400;
+}
+
+html, body {
+  font-family: 'Roboto';
+
+  --minimumSize: 8;
+  --minimumSizePx: var(--minimumSize) * 1px;
+  --maximumSize: 10;
+  --minimumViewWidth: 356;
+  --minimumViewWidthPx: var(--minimumViewWidth) * 1px;
+  --maximumViewWidth: 1920;
+  font-size: calc(var(--minimumSizePx) + (var(--maximumSize) - var(--minimumSize)) * ((100vw - var(--minimumViewWidthPx)) / (var(--maximumViewWidth) - var(--minimumViewWidth))));
+}
+
+h1 {
+  font-size: 8.8rem;
+  line-height: 9.6rem;
+}
+
+h2 {
+  font-size: 6.4rem;
+  line-height: 7.2rem;
+}
+
+h3 {
+  font-size: 4.8rem;
+  line-height: 5rem;
+}
+
+h4 {
+  font-size: 3.4rem;
+  line-height: 4rem;
+}
+
+h1.decorative, h2.decorative, h3.decorative, h4.decorative {
+  font-family: 'Righteous';
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+p.small {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+label {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+label.small {
+  font-size: 1rem;
+  line-height: 2rem;
+}
