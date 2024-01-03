@@ -1,4 +1,4 @@
-# *"Z Nosem W Piwie"*
+# _"Z Nosem W Piwie"_
 
 Based on **Vite CLI React-TS template**.
 
@@ -7,21 +7,25 @@ Based on **Vite CLI React-TS template**.
 ## Usefull commands
 
 **To install project dependecies**
+
 ```sh
 yarn install
 ```
 
 **To start project development**
+
 ```sh
 yarn dev
 ```
 
 **To start project storybook**
+
 ```sh
 yarn storybook
 ```
 
 **To build project**
+
 ```sh
 yarn build
 ```

@@ -1490,6 +1490,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/is-prop-valid@npm:1.2.1":
+  version: 1.2.1
+  resolution: "@emotion/is-prop-valid@npm:1.2.1"
+  dependencies:
+    "@emotion/memoize": "npm:^0.8.1"
+  checksum: 7c2aabdf0ca9986ca25abc9dae711348308cf18d418d64ffa4c8ffd2114806c47f2e06ba8ee769f38ec67d65bd59ec73f34d94023e81baa1c43510ac86ccd5e6
+  languageName: node
+  linkType: hard
+
+"@emotion/memoize@npm:^0.8.1":
+  version: 0.8.1
+  resolution: "@emotion/memoize@npm:0.8.1"
+  checksum: dffed372fc3b9fa2ba411e76af22b6bb686fb0cb07694fdfaa6dd2baeb0d5e4968c1a7caa472bfcf06a5997d5e7c7d16b90e993f9a6ffae79a2c3dbdc76dfe78
+  languageName: node
+  linkType: hard
+
+"@emotion/unitless@npm:0.8.0":
+  version: 0.8.0
+  resolution: "@emotion/unitless@npm:0.8.0"
+  checksum: 1f2cfb7c0ccb83c20b1c6d8d92a74a93da4b2a440f9a0d49ded08647faf299065a2ffde17e1335920fa10397b85f8635bbfe14f3cd29222a59ea81d978478072
+  languageName: node
+  linkType: hard
+
 "@emotion/use-insertion-effect-with-fallbacks@npm:^1.0.0":
   version: 1.0.1
   resolution: "@emotion/use-insertion-effect-with-fallbacks@npm:1.0.1"
@@ -2001,6 +2024,13 @@ __metadata:
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
   checksum: 5bd7576bb1b38a47a7fc7b51ac9f38748e772beebc56200450c4a817d712232b8f1d3ef70532c80840243c657d491cf6a6be1e3a214cff907645819fdc34aadd
+  languageName: node
+  linkType: hard
+
+"@pkgr/core@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@pkgr/core@npm:0.1.0"
+  checksum: 8f4a0aa6cc1c445fec4f5f12157047e8a05e30b5c03441156f40203d6430f84d15135e8f1a6886e6c9800ff0e4a75d9d3419a43dbcd7490683f2882375a3b99a
   languageName: node
   linkType: hard
 
@@ -3829,6 +3859,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/stylis@npm:4.2.0":
+  version: 4.2.0
+  resolution: "@types/stylis@npm:4.2.0"
+  checksum: c76c13e76ca485f598a13984cfb5e07bb88a851da5bee213587424a5f101f182c74f4f92d633cebf9abcec40ccebb645d600d184b7e4b42793e3eeca8729b110
+  languageName: node
+  linkType: hard
+
 "@types/unist@npm:^2.0.0":
   version: 2.0.10
   resolution: "@types/unist@npm:2.0.10"
@@ -4721,6 +4758,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"camelize@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "camelize@npm:1.0.1"
+  checksum: 4c9ac55efd356d37ac483bad3093758236ab686192751d1c9daa43188cc5a07b09bd431eb7458a4efd9ca22424bba23253e7b353feb35d7c749ba040de2385fb
+  languageName: node
+  linkType: hard
+
 "caniuse-lite@npm:^1.0.30001565":
   version: 1.0.30001572
   resolution: "caniuse-lite@npm:1.0.30001572"
@@ -5062,10 +5106,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-color-keywords@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "css-color-keywords@npm:1.0.0"
+  checksum: af205a86c68e0051846ed91eb3e30b4517e1904aac040013ff1d742019b3f9369ba5658ba40901dbbc121186fc4bf0e75a814321cc3e3182fbb2feb81c6d9cb7
+  languageName: node
+  linkType: hard
+
+"css-to-react-native@npm:3.2.0":
+  version: 3.2.0
+  resolution: "css-to-react-native@npm:3.2.0"
+  dependencies:
+    camelize: "npm:^1.0.0"
+    css-color-keywords: "npm:^1.0.0"
+    postcss-value-parser: "npm:^4.0.2"
+  checksum: fde850a511d5d3d7c55a1e9b8ed26b69a8ad4868b3487e36ebfbfc0b96fc34bc977d9cd1d61a289d0c74d3f9a662d8cee297da53d4433bf2e27d6acdff8e1003
+  languageName: node
+  linkType: hard
+
 "css.escape@npm:^1.5.1":
   version: 1.5.1
   resolution: "css.escape@npm:1.5.1"
   checksum: 5e09035e5bf6c2c422b40c6df2eb1529657a17df37fda5d0433d722609527ab98090baf25b13970ca754079a0f3161dd3dfc0e743563ded8cfa0749d861c1525
+  languageName: node
+  linkType: hard
+
+"csstype@npm:3.1.2":
+  version: 3.1.2
+  resolution: "csstype@npm:3.1.2"
+  checksum: 32c038af259897c807ac738d9eab16b3d86747c72b09d5c740978e06f067f9b7b1737e1b75e407c7ab1fe1543dc95f20e202b4786aeb1b8d3bdf5d5ce655e6c6
   languageName: node
   linkType: hard
 
@@ -5600,6 +5669,37 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-config-prettier@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "eslint-config-prettier@npm:9.1.0"
+  peerDependencies:
+    eslint: ">=7.0.0"
+  bin:
+    eslint-config-prettier: bin/cli.js
+  checksum: 6d332694b36bc9ac6fdb18d3ca2f6ac42afa2ad61f0493e89226950a7091e38981b66bac2b47ba39d15b73fff2cd32c78b850a9cf9eed9ca9a96bfb2f3a2f10d
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-prettier@npm:^5.1.2":
+  version: 5.1.2
+  resolution: "eslint-plugin-prettier@npm:5.1.2"
+  dependencies:
+    prettier-linter-helpers: "npm:^1.0.0"
+    synckit: "npm:^0.8.6"
+  peerDependencies:
+    "@types/eslint": ">=8.0.0"
+    eslint: ">=8.0.0"
+    eslint-config-prettier: "*"
+    prettier: ">=3.0.0"
+  peerDependenciesMeta:
+    "@types/eslint":
+      optional: true
+    eslint-config-prettier:
+      optional: true
+  checksum: e16c9fbb0e9f8da45bdbb1cf6e4a190266235c3686deede3815196d2604bbe2bac531d1fc9adc3c0b9a03d88b55bd3bfaa4f9d85e34e73dc040d545a1931fab9
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-react-hooks@npm:^4.6.0":
   version: 4.6.0
   resolution: "eslint-plugin-react-hooks@npm:4.6.0"
@@ -5615,6 +5715,15 @@ __metadata:
   peerDependencies:
     eslint: ">=7"
   checksum: ea696811c6264d2efee10efe07f80aaae75ded66c941d8d5ce65e15e6c4bb8ad50ac225310ed04f35ed68d2d57937ba4c6f06d9306e78931d583648abf496a41
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-simple-import-sort@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "eslint-plugin-simple-import-sort@npm:10.0.0"
+  peerDependencies:
+    eslint: ">=5.0.0"
+  checksum: 1ae0814d23816d51d010cfbc5ee0a0dde8d825a3093876b2e8219a0562d53f4d4794508551e503ebe2ea98904cb35204dbe54dfbf9d7fc8b8e3ea25c52aa68ac
   languageName: node
   linkType: hard
 
@@ -5886,6 +5995,13 @@ __metadata:
   version: 3.1.3
   resolution: "fast-deep-equal@npm:3.1.3"
   checksum: 40dedc862eb8992c54579c66d914635afbec43350afbbe991235fdcb4e3a8d5af1b23ae7e79bef7d4882d0ecee06c3197488026998fb19f72dc95acff1d1b1d0
+  languageName: node
+  linkType: hard
+
+"fast-diff@npm:^1.1.2":
+  version: 1.3.0
+  resolution: "fast-diff@npm:1.3.0"
+  checksum: 5c19af237edb5d5effda008c891a18a585f74bf12953be57923f17a3a4d0979565fc64dbc73b9e20926b9d895f5b690c618cbb969af0cf022e3222471220ad29
   languageName: node
   linkType: hard
 
@@ -7845,7 +7961,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.3.7":
+"nanoid@npm:^3.3.6, nanoid@npm:^3.3.7":
   version: 3.3.7
   resolution: "nanoid@npm:3.3.7"
   bin:
@@ -8394,6 +8510,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-value-parser@npm:^4.0.2":
+  version: 4.2.0
+  resolution: "postcss-value-parser@npm:4.2.0"
+  checksum: f4142a4f56565f77c1831168e04e3effd9ffcc5aebaf0f538eee4b2d465adfd4b85a44257bb48418202a63806a7da7fe9f56c330aebb3cac898e46b4cbf49161
+  languageName: node
+  linkType: hard
+
+"postcss@npm:8.4.31":
+  version: 8.4.31
+  resolution: "postcss@npm:8.4.31"
+  dependencies:
+    nanoid: "npm:^3.3.6"
+    picocolors: "npm:^1.0.0"
+    source-map-js: "npm:^1.0.2"
+  checksum: 748b82e6e5fc34034dcf2ae88ea3d11fd09f69b6c50ecdd3b4a875cfc7cdca435c958b211e2cb52355422ab6fccb7d8f2f2923161d7a1b281029e4a913d59acf
+  languageName: node
+  linkType: hard
+
 "postcss@npm:^8.4.27":
   version: 8.4.32
   resolution: "postcss@npm:8.4.32"
@@ -8409,6 +8543,24 @@ __metadata:
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
   checksum: b00d617431e7886c520a6f498a2e14c75ec58f6d93ba48c3b639cf241b54232d90daa05d83a9e9b9fef6baa63cb7e1e4602c2372fea5bc169668401eb127d0cd
+  languageName: node
+  linkType: hard
+
+"prettier-linter-helpers@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "prettier-linter-helpers@npm:1.0.0"
+  dependencies:
+    fast-diff: "npm:^1.1.2"
+  checksum: 81e0027d731b7b3697ccd2129470ed9913ecb111e4ec175a12f0fcfab0096516373bf0af2fef132af50cafb0a905b74ff57996d615f59512bb9ac7378fcc64ab
+  languageName: node
+  linkType: hard
+
+"prettier@npm:3.1.1":
+  version: 3.1.1
+  resolution: "prettier@npm:3.1.1"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: facc944ba20e194ff4db765e830ffbcb642803381f0d2033ed397e79904fa4ccc877dc25ad68f42d36985c01d051c990ca1b905fb83d2d7d65fe69e4386fa1a3
   languageName: node
   linkType: hard
 
@@ -9223,6 +9375,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"shallowequal@npm:1.1.0":
+  version: 1.1.0
+  resolution: "shallowequal@npm:1.1.0"
+  checksum: b926efb51cd0f47aa9bc061add788a4a650550bbe50647962113a4579b60af2abe7b62f9b02314acc6f97151d4cf87033a2b15fc20852fae306d1a095215396c
+  languageName: node
+  linkType: hard
+
 "shebang-command@npm:^2.0.0":
   version: 2.0.0
   resolution: "shebang-command@npm:2.0.0"
@@ -9535,6 +9694,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"styled-components@npm:^6.1.6":
+  version: 6.1.6
+  resolution: "styled-components@npm:6.1.6"
+  dependencies:
+    "@emotion/is-prop-valid": "npm:1.2.1"
+    "@emotion/unitless": "npm:0.8.0"
+    "@types/stylis": "npm:4.2.0"
+    css-to-react-native: "npm:3.2.0"
+    csstype: "npm:3.1.2"
+    postcss: "npm:8.4.31"
+    shallowequal: "npm:1.1.0"
+    stylis: "npm:4.3.1"
+    tslib: "npm:2.5.0"
+  peerDependencies:
+    react: ">= 16.8.0"
+    react-dom: ">= 16.8.0"
+  checksum: 935f621c99b0b04df918f644219a99575b97a32cc4215e16af5bc6596b0c0270162405eef1aa03f68ac84eea9bba4b0445ae10ed39541f975c74d17264f7c22b
+  languageName: node
+  linkType: hard
+
+"stylis@npm:4.3.1":
+  version: 4.3.1
+  resolution: "stylis@npm:4.3.1"
+  checksum: 33e8ebd2bfa5f0bd0215f718dc2d3be896e1d00c5bcaeb9a4ae03cf239db6867af9eee230f57229bf1c29499357073ba3e6b547484ba1db2f5de1e8be7d4eee9
+  languageName: node
+  linkType: hard
+
 "supports-color@npm:^5.3.0":
   version: 5.5.0
   resolution: "supports-color@npm:5.5.0"
@@ -9573,6 +9759,16 @@ __metadata:
   version: 2.0.17
   resolution: "synchronous-promise@npm:2.0.17"
   checksum: 1babe643d8417789ef6e5a2f3d4b8abcda2de236acd09bbe2c98f6be82c0a2c92ed21a6e4f934845fa8de18b1435a9cba1e8c3d945032e8a532f076224c024b1
+  languageName: node
+  linkType: hard
+
+"synckit@npm:^0.8.6":
+  version: 0.8.8
+  resolution: "synckit@npm:0.8.8"
+  dependencies:
+    "@pkgr/core": "npm:^0.1.0"
+    tslib: "npm:^2.6.2"
+  checksum: c3d3aa8e284f3f84f2f868b960c9f49239b364e35f6d20825a448449a3e9c8f49fe36cdd5196b30615682f007830d46f2ea354003954c7336723cb821e4b6519
   languageName: node
   linkType: hard
 
@@ -9755,6 +9951,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:2.5.0":
+  version: 2.5.0
+  resolution: "tslib@npm:2.5.0"
+  checksum: e32fc99cc730dd514e53c44e668d76016e738f0bcc726aad5dbd2d335cf19b87a95a9b1e4f0a9993e370f1d702b5e471cdd4acabcac428a3099d496b9af2021e
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^1.13.0, tslib@npm:^1.8.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
@@ -9762,7 +9965,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.1.0, tslib@npm:^2.4.0":
+"tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.6.2":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb
@@ -10425,12 +10628,17 @@ __metadata:
     "@typescript-eslint/parser": "npm:^6.14.0"
     "@vitejs/plugin-react": "npm:^4.2.1"
     eslint: "npm:^8.55.0"
+    eslint-config-prettier: "npm:^9.1.0"
+    eslint-plugin-prettier: "npm:^5.1.2"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-refresh: "npm:^0.4.5"
+    eslint-plugin-simple-import-sort: "npm:^10.0.0"
     eslint-plugin-storybook: "npm:^0.6.15"
+    prettier: "npm:3.1.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     storybook: "npm:7.6.6"
+    styled-components: "npm:^6.1.6"
     typescript: "npm:^5.2.2"
     vite: "npm:4.5.1"
   languageName: unknown
