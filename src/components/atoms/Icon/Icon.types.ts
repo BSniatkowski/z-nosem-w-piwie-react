@@ -14,4 +14,5 @@ export interface IIconProps {
         | 'tiktok'
         | 'x'
         | 'youtube'
+        | 'expand'
 }

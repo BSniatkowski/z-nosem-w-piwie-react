@@ -21,7 +21,7 @@ declare module 'styled-components' {
                     87: string
                 }
                 primary: {
-                    50: string
+                    48: string
                     87: string
                 }
                 secondary: {

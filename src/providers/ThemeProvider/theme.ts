@@ -20,7 +20,7 @@ export const theme = {
                 87: '#000000DE',
             },
             primary: {
-                50: '#FFE0B280',
+                48: '#FFE0B280',
                 87: '#FFE0B2DE',
             },
             secondary: {
