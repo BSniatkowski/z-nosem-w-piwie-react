@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 
+import { SLink } from '../../atoms/Link/Link.style'
 import { INavItem, INavList } from './Navigation.types'
 
 export const NavigationList = styled.ul<INavList>`
@@ -14,10 +15,14 @@ export const NavigationList = styled.ul<INavList>`
                 color: ${theme.palette.primary};
             `,
             headerMobile: css`
+                position: absolute;
+                top: 100%;
+                width: calc(100vw - 4rem);
+                padding: 0 2rem 1rem 2rem;
                 flex-direction: column;
-                padding-top: 1rem;
                 font-size: 3.4rem;
                 color: ${theme.palette.secondary};
+                background-color: ${theme.palette.shades.primary[87]};
             `,
             footer: css`
                 flex-direction: column;
@@ -29,6 +34,8 @@ export const NavigationList = styled.ul<INavList>`
 `
 
 export const NavigationItem = styled.li<INavItem>`
+    cursor: pointer;
+
     ${({ theme, $variant }) =>
         ({
             header: css`
@@ -39,15 +46,18 @@ export const NavigationItem = styled.li<INavItem>`
                 }
             `,
             headerMobile: css`
-                padding: 1rem;
-                text-align: center;
-                transition:
-                    color 0.1s ease-out,
-                    background-color 0.1s ease-out;
+                & > ${SLink} {
+                    display: block;
+                    padding: 1rem;
+                    text-align: center;
+                    transition:
+                        color 0.1s ease-out,
+                        background-color 0.1s ease-out;
 
-                &:hover {
-                    color: ${theme.palette.shades.primary[48]};
-                    background-color: ${theme.palette.shades.secondary[38]};
+                    &:hover {
+                        color: ${theme.palette.shades.primary[87]};
+                        background-color: ${theme.palette.shades.secondary[38]};
+                    }
                 }
             `,
             footer: css`

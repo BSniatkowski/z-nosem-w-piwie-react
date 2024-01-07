@@ -1,12 +1,14 @@
 import styled, { css } from 'styled-components'
 
-export const LanguagePickerContainer = styled.div<{ $isActive: boolean; $isMobile: boolean }>`
+import { IconWrapper } from '../../atoms/Icon/Icon.style'
+
+export const LanguagePickerContainer = styled.div<{ $isActive: boolean; $isMenuActive: boolean }>`
     position: relative;
     display: flex;
     flex-direction: column;
     padding: 0.5rem 1rem;
-    color: ${({ theme, $isActive, $isMobile }) =>
-        $isActive || $isMobile ? theme.palette.secondary : theme.palette.primary};
+    color: ${({ theme, $isActive, $isMenuActive }) =>
+        $isActive || $isMenuActive ? theme.palette.secondary : theme.palette.primary};
     font-size: 3.4rem;
     text-transform: uppercase;
 
@@ -17,16 +19,16 @@ export const LanguagePickerContainer = styled.div<{ $isActive: boolean; $isMobil
         `};
 `
 
-export const ActualLanguageWithArrow = styled.div<{ $isActive: boolean; $isMobile: boolean }>`
+export const ActualLanguageWithArrow = styled.div<{ $isActive: boolean; $isMenuActive: boolean }>`
     display: flex;
     align-items: center;
     column-gap: 1rem;
     cursor: pointer;
 
-    & svg {
-        fill: ${({ theme, $isActive }) =>
-            $isActive ? theme.palette.secondary : theme.palette.primary};
-        transform: rotate(${({ $isActive }) => ($isActive ? '180deg' : '')});
+    & > ${IconWrapper} {
+        fill: ${({ theme, $isActive, $isMenuActive }) =>
+            $isActive || $isMenuActive ? theme.palette.secondary : theme.palette.primary};
+        transform: rotate(${({ $isActive }) => ($isActive ? '180deg' : '0deg')});
     }
 `
 

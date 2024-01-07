@@ -1,3 +1,3 @@
 export interface ILanguagePickerProps {
-    isMobile: boolean
+    isMenuActive: boolean
 }

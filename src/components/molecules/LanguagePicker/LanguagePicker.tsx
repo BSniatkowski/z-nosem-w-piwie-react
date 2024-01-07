@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 
 import { useOutsideClick } from '../../../hooks/useOutsideClick/useOutsideClick'
 import Icon from '../../atoms/Icon/Icon'
@@ -7,7 +7,7 @@ import { ILanguagePickerProps } from './LanguagePicker.types'
 
 const langauges = ['pl', 'en']
 
-const LanguagePicker: React.FC<ILanguagePickerProps> = ({ isMobile }) => {
+const LanguagePicker: React.FC<ILanguagePickerProps> = ({ isMenuActive }) => {
     const [isActive, setIsActive] = useState(false)
     const [actualLanguage, setActualLanguage] = useState('pl')
 
@@ -16,13 +16,22 @@ const LanguagePicker: React.FC<ILanguagePickerProps> = ({ isMobile }) => {
         [actualLanguage],
     )
 
+    const onLangItemClick = useCallback((lang: string) => {
+        setActualLanguage(lang)
+        setIsActive(false)
+    }, [])
+
     const elementRef = useOutsideClick<HTMLDivElement>(() => setIsActive(false))
 
     return (
-        <S.LanguagePickerContainer $isActive={isActive} $isMobile={isMobile} ref={elementRef}>
+        <S.LanguagePickerContainer
+            $isActive={isActive}
+            $isMenuActive={isMenuActive}
+            ref={elementRef}
+        >
             <S.ActualLanguageWithArrow
                 $isActive={isActive}
-                $isMobile={isMobile}
+                $isMenuActive={isMenuActive}
                 onClick={() => setIsActive(!isActive)}
             >
                 {actualLanguage}
@@ -32,7 +41,7 @@ const LanguagePicker: React.FC<ILanguagePickerProps> = ({ isMobile }) => {
                 <S.LanguagesOptions>
                     {langaugesOptions.length > 0 &&
                         langaugesOptions.map((lang) => (
-                            <S.LanguageOption key={lang} onClick={() => setActualLanguage(lang)}>
+                            <S.LanguageOption key={lang} onClick={() => onLangItemClick(lang)}>
                                 {lang}
                             </S.LanguageOption>
                         ))}

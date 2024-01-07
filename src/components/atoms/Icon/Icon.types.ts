@@ -15,4 +15,5 @@ export interface IIconProps {
         | 'x'
         | 'youtube'
         | 'expand'
+    onClick?: () => void
 }

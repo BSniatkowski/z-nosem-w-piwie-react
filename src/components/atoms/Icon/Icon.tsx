@@ -14,7 +14,7 @@ import youtube from '/icons/youtube.svg?raw'
 import * as S from './Icon.style'
 import { IIconProps } from './Icon.types'
 
-const Icon = ({ size = 'normal', variant = 'close' }: IIconProps) => {
+const Icon = ({ size = 'normal', variant = 'close', onClick }: IIconProps) => {
     const svg = {
         close: close,
         copyright: copyright,
@@ -30,7 +30,9 @@ const Icon = ({ size = 'normal', variant = 'close' }: IIconProps) => {
         expand: expand,
     }[variant]
 
-    return <S.IconWrapper $size={size} dangerouslySetInnerHTML={{ __html: svg }} />
+    return (
+        <S.IconWrapper onClick={onClick} $size={size} dangerouslySetInnerHTML={{ __html: svg }} />
+    )
 }
 
 export default Icon

@@ -31,5 +31,7 @@ declare module 'styled-components' {
                 }
             }
         }
+        border: string
+        boxShadow: string
     }
 }

@@ -30,4 +30,6 @@ export const theme = {
             },
         },
     },
+    border: '2px solid #5D40377A',
+    boxShadow: '-10px -10px 0 0 #FFE0B280',
 } satisfies DefaultTheme

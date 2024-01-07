@@ -3,7 +3,7 @@ import { ILinkProps } from '../../atoms/Link/Link.types'
 import * as S from './Navigation.style'
 import { INavigationProps } from './Navigation.types'
 
-const Navigation: React.FC<INavigationProps> = ({ variant }) => {
+const Navigation: React.FC<INavigationProps> = ({ variant, onItemClickCallback }) => {
     const links = [
         { label: 'Home', href: '#home' },
         { label: 'Menu', href: '#menu' },
@@ -15,7 +15,7 @@ const Navigation: React.FC<INavigationProps> = ({ variant }) => {
         <S.NavigationList $variant={variant}>
             {links.length > 0 &&
                 links.map(({ label, href }, index) => (
-                    <S.NavigationItem $variant={variant} key={index}>
+                    <S.NavigationItem $variant={variant} onClick={onItemClickCallback} key={index}>
                         <Link label={label} href={href} />
                     </S.NavigationItem>
                 ))}
