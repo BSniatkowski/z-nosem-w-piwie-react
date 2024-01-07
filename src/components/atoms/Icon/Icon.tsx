@@ -1,20 +1,21 @@
-import close from '/icons/close.svg'
-import copyright from '/icons/copyright.svg'
-import facebook from '/icons/facebook.svg'
-import instagram from '/icons/instagram.svg'
-import menu from '/icons/menu.svg'
-import merch from '/icons/merch.svg'
-import send from '/icons/send.svg'
-import share from '/icons/share.svg'
-import tiktok from '/icons/tiktok.svg'
-import x from '/icons/x.svg'
-import youtube from '/icons/youtube.svg'
+import close from '/icons/close.svg?raw'
+import copyright from '/icons/copyright.svg?raw'
+import expand from '/icons/expand.svg?raw'
+import facebook from '/icons/facebook.svg?raw'
+import instagram from '/icons/instagram.svg?raw'
+import menu from '/icons/menu.svg?raw'
+import merch from '/icons/merch.svg?raw'
+import send from '/icons/send.svg?raw'
+import share from '/icons/share.svg?raw'
+import tiktok from '/icons/tiktok.svg?raw'
+import x from '/icons/x.svg?raw'
+import youtube from '/icons/youtube.svg?raw'
 
 import * as S from './Icon.style'
 import { IIconProps } from './Icon.types'
 
-const Icon = ({ size = 'normal', variant = 'close' }: IIconProps) => {
-    const IconPath = {
+const Icon = ({ size = 'normal', variant = 'close', onClick }: IIconProps) => {
+    const svg = {
         close: close,
         copyright: copyright,
         facebook: facebook,
@@ -26,9 +27,12 @@ const Icon = ({ size = 'normal', variant = 'close' }: IIconProps) => {
         tiktok: tiktok,
         x: x,
         youtube: youtube,
+        expand: expand,
     }[variant]
 
-    return <S.IconImg src={IconPath} $size={size} />
+    return (
+        <S.IconWrapper onClick={onClick} $size={size} dangerouslySetInnerHTML={{ __html: svg }} />
+    )
 }
 
 export default Icon

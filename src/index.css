@@ -145,6 +145,7 @@ table {
 }
 
 html, body {
+  scroll-behavior: smooth;
   font-family: 'Roboto';
 
   --minimumSize: 8;

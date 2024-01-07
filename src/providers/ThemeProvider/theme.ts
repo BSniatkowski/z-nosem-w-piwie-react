@@ -20,7 +20,7 @@ export const theme = {
                 87: '#000000DE',
             },
             primary: {
-                50: '#FFE0B280',
+                48: '#FFE0B280',
                 87: '#FFE0B2DE',
             },
             secondary: {
@@ -30,4 +30,6 @@ export const theme = {
             },
         },
     },
+    border: '2px solid #5D40377A',
+    boxShadow: '-10px -10px 0 0 #FFE0B280',
 } satisfies DefaultTheme

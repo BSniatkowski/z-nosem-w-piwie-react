@@ -14,4 +14,6 @@ export interface IIconProps {
         | 'tiktok'
         | 'x'
         | 'youtube'
+        | 'expand'
+    onClick?: () => void
 }

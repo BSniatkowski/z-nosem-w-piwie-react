@@ -15,6 +15,13 @@ const preview: Preview = {
                 date: /Date$/i,
             },
         },
+        backgrounds: {
+            default: 'light',
+            values: [
+                {name: 'light', value: '#fff'},
+                {name: 'dark', value: '#9E9E9E'}
+            ]
+        }
     },
     decorators: [
         withThemeFromJSXProvider<ReactRenderer>({
