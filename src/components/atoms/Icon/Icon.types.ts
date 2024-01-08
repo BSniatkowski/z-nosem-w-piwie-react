@@ -1,19 +1,19 @@
 export type TSizes = 'normal' | 'big'
-
+export type TIconVariants =
+    | 'close'
+    | 'copyright'
+    | 'facebook'
+    | 'instagram'
+    | 'menu'
+    | 'merch'
+    | 'send'
+    | 'share'
+    | 'tiktok'
+    | 'x'
+    | 'youtube'
+    | 'expand'
 export interface IIconProps {
     size?: TSizes
-    variant?:
-        | 'close'
-        | 'copyright'
-        | 'facebook'
-        | 'instagram'
-        | 'menu'
-        | 'merch'
-        | 'send'
-        | 'share'
-        | 'tiktok'
-        | 'x'
-        | 'youtube'
-        | 'expand'
+    variant?: TIconVariants
     onClick?: () => void
 }

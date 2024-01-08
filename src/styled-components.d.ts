@@ -17,6 +17,7 @@ declare module 'styled-components' {
             greyLighten2: string
             shades: {
                 black: {
+                    18: string
                     38: string
                     87: string
                 }
