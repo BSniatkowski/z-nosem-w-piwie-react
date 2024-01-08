@@ -5,8 +5,8 @@ export const LogoWrapper = styled.div<{ $isDark?: boolean; $withFrame?: boolean 
     width: fit-content;
 
     & > svg {
-        height: inherit;
-        width: inherit;
+        height: 100%;
+        width: 100%;
     }
 
     ${({ theme, $isDark }) =>
@@ -27,7 +27,7 @@ export const LogoWrapper = styled.div<{ $isDark?: boolean; $withFrame?: boolean 
     ${({ theme, $withFrame }) =>
         $withFrame &&
         css`
-            height: 5rem;
+            height: 7rem;
             padding: 1rem;
             border-radius: 2rem;
             background-color: ${theme.palette.shades.secondary[48]};

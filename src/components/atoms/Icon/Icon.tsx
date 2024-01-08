@@ -29,9 +29,13 @@ const Icon = ({ size = 'normal', variant = 'close', onClick }: IIconProps) => {
         youtube: youtube,
         expand: expand,
     }[variant]
-
     return (
-        <S.IconWrapper onClick={onClick} $size={size} dangerouslySetInnerHTML={{ __html: svg }} />
+        <S.IconWrapper
+            onClick={onClick}
+            $size={size}
+            $isClickable={!!onClick}
+            dangerouslySetInnerHTML={{ __html: svg }}
+        />
     )
 }
 

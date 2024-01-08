@@ -16,6 +16,7 @@ export const theme = {
         greyLighten2: '#E0E0E0',
         shades: {
             black: {
+                18: '#0000002E',
                 38: '#00000061',
                 87: '#000000DE',
             },

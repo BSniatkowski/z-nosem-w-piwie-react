@@ -7,6 +7,9 @@ const meta = {
     component: LanguagePicker,
     parameters: {
         layout: 'centered',
+        backgrounds: {
+            default: 'dark',
+        },
     },
     tags: ['autodocs'],
 } satisfies Meta<typeof LanguagePicker>
@@ -14,4 +17,6 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Default: Story = {}
+export const Default: Story = { args: { isMenuActive: false } }
+
+export const MenuActive: Story = { args: { isMenuActive: true } }
