@@ -8,7 +8,7 @@ import Navigation from '../../molecules/Navigation/Navigation'
 import * as S from './Header.style'
 import { IHeaderProps } from './Header.types'
 
-const Header: React.FC<IHeaderProps> = ({ isMobile }) => {
+const Header: React.FC<IHeaderProps> = ({ isMobile, links }) => {
     const [isMenuActive, setIsMenuActive] = useState(false)
     const headerRef = useOutsideClick(() => setIsMenuActive(false))
 
@@ -23,7 +23,7 @@ const Header: React.FC<IHeaderProps> = ({ isMobile }) => {
                     </S.MobileMenuContainer>
                 ) : (
                     <>
-                        <Navigation variant={'header'} />
+                        <Navigation variant={'header'} links={links} />
                         <LanguagePicker isMenuActive={isMobile} />
                     </>
                 )}
@@ -31,6 +31,7 @@ const Header: React.FC<IHeaderProps> = ({ isMobile }) => {
             {isMobile && isMenuActive && (
                 <Navigation
                     variant={'headerMobile'}
+                    links={links}
                     onItemClickCallback={() => setIsMenuActive(false)}
                 />
             )}
