@@ -17,8 +17,18 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const HeaderNav: Story = { args: { variant: 'header' } }
+export const HeaderNav: Story = {
+    args: {
+        variant: 'header',
+        links: [
+            { label: 'Home', href: '#home' },
+            { label: 'Menu', href: '#menu' },
+            { label: 'About', href: '#about' },
+            { label: 'Contact', href: '#contact' },
+        ],
+    },
+}
 
-export const HeaderMobileNav: Story = { args: { variant: 'headerMobile' } }
+export const HeaderMobileNav: Story = { args: { ...HeaderNav.args, variant: 'headerMobile' } }
 
-export const FooterNav: Story = { args: { variant: 'footer' } }
+export const FooterNav: Story = { args: { ...HeaderNav.args, variant: 'footer' } }

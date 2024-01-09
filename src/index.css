@@ -185,7 +185,7 @@ h4 {
   font-family: 'Righteous';
 }
 
-p {
+p, span {
   font-size: 1.6rem;
   line-height: 2rem;
 }

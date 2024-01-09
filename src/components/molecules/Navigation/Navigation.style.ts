@@ -36,7 +36,7 @@ export const NavigationList = styled.ul<INavList>`
 export const NavigationItem = styled.li<INavItem>`
     cursor: pointer;
 
-    ${({ theme, $variant }) =>
+    ${({ theme, $variant, $isCurrent }) =>
         ({
             header: css`
                 transition: opacity 0.1s ease-out;
@@ -44,6 +44,12 @@ export const NavigationItem = styled.li<INavItem>`
                 &:hover {
                     opacity: 0.5;
                 }
+
+                ${$isCurrent &&
+                css`
+                    opacity: 0.5;
+                    pointer-events: none;
+                `}
             `,
             headerMobile: css`
                 & > ${SLink} {
@@ -58,14 +64,29 @@ export const NavigationItem = styled.li<INavItem>`
                         color: ${theme.palette.shades.primary[87]};
                         background-color: ${theme.palette.shades.secondary[38]};
                     }
+
+                    ${$isCurrent &&
+                    css`
+                        color: ${theme.palette.shades.primary[87]};
+                        background-color: ${theme.palette.shades.secondary[38]};
+                        pointer-events: none;
+                    `}
                 }
             `,
             footer: css`
+                font-size: 1.4rem;
+                color: ${theme.palette.shades.secondary[48]};
                 transition: color 0.1s ease-out;
 
                 &:hover {
-                    color: ${theme.palette.primary};
+                    color: ${theme.palette.secondary};
                 }
+
+                ${$isCurrent &&
+                css`
+                    color: ${theme.palette.secondary};
+                    pointer-events: none;
+                `}
             `,
         })[$variant]}
 `
