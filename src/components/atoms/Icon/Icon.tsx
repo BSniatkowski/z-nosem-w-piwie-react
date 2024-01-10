@@ -1,5 +1,7 @@
 import close from '/icons/close.svg?raw'
 import copyright from '/icons/copyright.svg?raw'
+import dot from '/icons/dot.svg?raw'
+import dotActive from '/icons/dotActive.svg?raw'
 import expand from '/icons/expand.svg?raw'
 import facebook from '/icons/facebook.svg?raw'
 import instagram from '/icons/instagram.svg?raw'
@@ -28,6 +30,8 @@ const Icon = ({ size = 'normal', variant = 'close', onClick }: IIconProps) => {
         x: x,
         youtube: youtube,
         expand: expand,
+        dot: dot,
+        dotActive: dotActive,
     }[variant]
     return (
         <S.IconWrapper
