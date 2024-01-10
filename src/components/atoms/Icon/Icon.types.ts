@@ -12,6 +12,8 @@ export type TIconVariants =
     | 'x'
     | 'youtube'
     | 'expand'
+    | 'dot'
+    | 'dotActive'
 export interface IIconProps {
     size?: TSizes
     variant?: TIconVariants
