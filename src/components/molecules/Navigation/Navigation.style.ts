@@ -17,12 +17,13 @@ export const NavigationList = styled.ul<INavList>`
             headerMobile: css`
                 position: absolute;
                 top: 100%;
-                width: calc(100vw - 4rem);
+                width: 100vw;
                 padding: 0 2rem 1rem 2rem;
                 flex-direction: column;
                 font-size: 3.4rem;
                 color: ${theme.palette.secondary};
                 background-color: ${theme.palette.shades.primary[87]};
+                border-top: ${theme.border.secondary};
             `,
             footer: css`
                 flex-direction: column;

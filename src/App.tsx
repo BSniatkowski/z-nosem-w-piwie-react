@@ -1,10 +1,11 @@
-import Icon from './components/atoms/Icon/Icon'
+import Layout from './components/templates/Layout/Layout'
+import ThemeProvider from './providers/ThemeProvider/ThemeProviding'
 
 function App() {
     return (
-        <>
-            <Icon size='big' />
-        </>
+        <ThemeProvider>
+            <Layout />
+        </ThemeProvider>
     )
 }
 

@@ -32,7 +32,7 @@ declare module 'styled-components' {
                 }
             }
         }
-        border: string
+        border: { primary: string; secondary: string }
         boxShadow: string
     }
 }

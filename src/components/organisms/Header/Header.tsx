@@ -13,8 +13,8 @@ const Header: React.FC<IHeaderProps> = ({ isMobile, links }) => {
     const headerRef = useOutsideClick(() => setIsMenuActive(false))
 
     return (
-        <S.SHeader ref={headerRef} $isMenuActive={isMenuActive}>
-            <S.InnerHeader $isMenuActive={isMenuActive}>
+        <S.SHeader ref={headerRef} $isMenuActive={isMobile && isMenuActive}>
+            <S.InnerHeader>
                 <Logo isDark={isMobile && isMenuActive} />
                 {isMobile ? (
                     <S.MobileMenuContainer $isMenuActive={isMenuActive}>

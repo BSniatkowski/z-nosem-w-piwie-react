@@ -8,7 +8,7 @@ export const TextInputContainer = styled.div<{ $isFocused: boolean }>`
     width: 100%;
     background-color: ${({ theme }) => theme.palette.shades.secondary[18]};
     color: ${({ theme }) => theme.palette.secondary};
-    border-bottom: ${({ theme }) => theme.border};
+    border-bottom: ${({ theme }) => theme.border.secondary};
     border-color: ${({ theme }) => theme.palette.shades.secondary[48]};
     transition: background-color 0.1s ease-out;
 

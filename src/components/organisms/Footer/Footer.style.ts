@@ -4,7 +4,7 @@ import { IconWrapper } from '../../atoms/Icon/Icon.style'
 
 export const SFooter = styled.footer`
     padding: 2rem 0;
-    max-width: 60rem;
+    max-width: 600px;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
