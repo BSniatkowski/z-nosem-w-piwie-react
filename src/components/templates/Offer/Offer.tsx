@@ -128,6 +128,7 @@ const Offer = () => {
                         {beersOffer.length > 0 &&
                             beersOffer.map((item, index) => (
                                 <MenuItem
+                                    key={index}
                                     {...item}
                                     name={`${index + 1}. ${item.name}`}
                                     direction={
@@ -148,6 +149,7 @@ const Offer = () => {
                         {coffeeOffer.length > 0 &&
                             coffeeOffer.map((item, index) => (
                                 <MenuItem
+                                    key={index}
                                     {...item}
                                     name={`${index + 1}. ${item.name}`}
                                     direction={

@@ -23,8 +23,10 @@ export const MenuItemContainer = styled.div<{ $direction: directions }>`
 
 export const ItemImg = styled.img`
     --size: 30rem;
-    height: var(--size);
-    width: var(--size);
+    height: 100%;
+    max-height: var(--size);
+    width: 100%;
+    max-width: var(--size);
     border-radius: 100%;
     object-fit: contain;
     aspect-ratio: 1;

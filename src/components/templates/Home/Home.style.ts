@@ -43,7 +43,7 @@ export const MainTextFrame = styled.div`
 `
 
 export const FollowUs = styled.div`
-    height: 6rem;
+    height: fit-content;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -56,13 +56,14 @@ export const FollowUsTextContainer = styled.div`
     padding-right: 2rem;
     border-right: ${({ theme }) => theme.border.primary};
     color: ${({ theme }) => theme.palette.primary};
-    font-size: 3.4rem;
+    font-size: 2.8rem;
 `
 
 export const FollowUsIconsContainer = styled.div`
     display: flex;
     align-items: center;
-    column-gap: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
 
     & > ${IconWrapper} {
         fill: ${({ theme }) => theme.palette.primary};

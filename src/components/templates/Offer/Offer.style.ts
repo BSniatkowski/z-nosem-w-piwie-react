@@ -36,7 +36,7 @@ export const ItemsCategoryNameContainer = styled.div`
     text-align: center;
 `
 
-export const ItemsCategoryName = styled.h1.attrs({
+export const ItemsCategoryName = styled.h2.attrs({
     className: 'decorative',
 })`
     position: sticky;

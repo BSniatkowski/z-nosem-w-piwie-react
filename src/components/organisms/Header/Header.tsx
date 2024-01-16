@@ -14,7 +14,7 @@ const Header: React.FC<IHeaderProps> = ({ isMobile, links }) => {
 
     return (
         <S.SHeader ref={headerRef} $isMenuActive={isMobile && isMenuActive}>
-            <S.InnerHeader>
+            <S.InnerHeader $isMenuActive={isMobile && isMenuActive}>
                 <Logo isDark={isMobile && isMenuActive} />
                 {isMobile ? (
                     <S.MobileMenuContainer $isMenuActive={isMenuActive}>

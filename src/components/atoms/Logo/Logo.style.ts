@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const LogoWrapper = styled.div<{ $isDark?: boolean; $withFrame?: boolean }>`
-    height: 10rem;
+    height: 8rem;
     width: fit-content;
 
     & > svg {

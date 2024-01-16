@@ -50,6 +50,18 @@ const Carousel: React.FC<ICarouselProps> = ({ autoChange, items = [] }) => {
     )
 
     useEffect(() => {
+        const onResizeCorrectPosition = () => {
+            if (actualItemId) showElement(actualItemId)
+        }
+
+        window.addEventListener('resize', onResizeCorrectPosition)
+
+        return () => {
+            window.removeEventListener('resize', onResizeCorrectPosition)
+        }
+    }, [actualItemId, showElement])
+
+    useEffect(() => {
         if (!actualItemId || !autoChange) return
 
         const changeInterval = setInterval(() => {
@@ -60,10 +72,12 @@ const Carousel: React.FC<ICarouselProps> = ({ autoChange, items = [] }) => {
             } else {
                 changeElement(items[0].id)
             }
-        }, 3000)
+        }, 5000)
 
-        return () => clearInterval(changeInterval)
-    }, [actualItemId, autoChange, changeElement, items])
+        return () => {
+            clearInterval(changeInterval)
+        }
+    }, [actualItemId, autoChange, changeElement, items, showElement])
 
     return (
         <S.CarouselContainer>
