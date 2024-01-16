@@ -22,7 +22,7 @@ export const HeaderNav: Story = {
         variant: 'header',
         links: [
             { label: 'Home', href: '#home' },
-            { label: 'Menu', href: '#menu' },
+            { label: 'Offer', href: '#offer' },
             { label: 'About', href: '#about' },
             { label: 'Contact', href: '#contact' },
         ],

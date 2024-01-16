@@ -7,7 +7,7 @@ export const useBreakpoint = (breakpoint: TBreakpointKey) => {
     const breakpointWidth = breakpoints[breakpoint]
 
     const [actualWidth, setActualWidth] = useState<number>(window.innerWidth)
-    const isActive = useMemo(() => breakpointWidth <= actualWidth, [actualWidth, breakpointWidth])
+    const isActive = useMemo(() => actualWidth <= breakpointWidth, [actualWidth, breakpointWidth])
 
     const resize = () => {
         setActualWidth(window.innerWidth)

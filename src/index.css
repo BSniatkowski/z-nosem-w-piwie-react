@@ -162,23 +162,23 @@ html, body {
 }
 
 h1 {
-  font-size: 8.8rem;
-  line-height: 9.6rem;
-}
-
-h2 {
-  font-size: 6.4rem;
+  font-size: 7.2rem;
   line-height: 7.2rem;
 }
 
+h2 {
+  font-size: 5.4rem;
+  line-height: 5.4rem;
+}
+
 h3 {
-  font-size: 4.8rem;
-  line-height: 5rem;
+  font-size: 4.2rem;
+  line-height: 4.2rem;
 }
 
 h4 {
-  font-size: 3.4rem;
-  line-height: 4rem;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
 }
 
 *.decorative {
@@ -188,6 +188,7 @@ h4 {
 p, span {
   font-size: 1.6rem;
   line-height: 2rem;
+  text-align: justify;
 }
 
 p.small {

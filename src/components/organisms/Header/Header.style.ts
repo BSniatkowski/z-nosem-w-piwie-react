@@ -4,8 +4,8 @@ import { IconWrapper } from '../../atoms/Icon/Icon.style'
 
 export const SHeader = styled.header<{ $isMenuActive: boolean }>`
     position: relative;
-    width: calc(100vw - 4rem);
-    padding: 1rem 2rem;
+    width: 100%;
+    padding: 2rem 1rem 0 1rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -14,22 +14,34 @@ export const SHeader = styled.header<{ $isMenuActive: boolean }>`
     ${({ theme, $isMenuActive }) =>
         $isMenuActive &&
         css`
-            background-color: ${theme.palette.shades.primary[87]};
+            &::before {
+                position: absolute;
+                top: 0;
+                left: -2rem;
+                content: '';
+                display: block;
+                width: calc(100% + 4rem);
+                height: 100%;
+                background-color: ${theme.palette.shades.primary[87]};
+            }
         `}
 `
 
 export const InnerHeader = styled.div<{ $isMenuActive: boolean }>`
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 120rem;
+    max-width: 1200px;
     width: 100%;
     padding-bottom: 1rem;
-    ${({ theme, $isMenuActive }) =>
-        $isMenuActive &&
+    border-bottom: ${({ theme }) => theme.border.secondary};
+
+    ${({ $isMenuActive }) =>
+        !$isMenuActive &&
         css`
-            border-bottom: ${theme.border};
-        `};
+            border-color: transparent;
+        `}
 `
 
 export const MobileMenuContainer = styled.div<{ $isMenuActive: boolean }>`

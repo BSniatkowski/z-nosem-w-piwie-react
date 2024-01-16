@@ -6,16 +6,19 @@ export const LanguagePickerContainer = styled.div<{ $isActive: boolean; $isMenuA
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     color: ${({ theme, $isActive, $isMenuActive }) =>
         $isActive || $isMenuActive ? theme.palette.secondary : theme.palette.primary};
-    font-size: 3.4rem;
+    font-size: 2.8rem;
     text-transform: uppercase;
+    border-bottom: ${({ theme }) => theme.border.secondary};
+    border-color: transparent;
 
     ${({ theme, $isActive }) =>
         $isActive &&
         css`
-            background-color: ${theme.palette.primary};
+            background-color: ${theme.palette.shades.primary[87]};
+            border-color: ${theme.palette.shades.secondary[18]};
         `};
 `
 
@@ -34,24 +37,21 @@ export const ActualLanguageWithArrow = styled.div<{ $isActive: boolean; $isMenuA
 
 export const LanguagesOptions = styled.ul`
     position: absolute;
-    top: 100%;
+    top: calc(100% + 2px);
     left: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: ${({ theme }) => theme.palette.primary};
+    background-color: ${({ theme }) => theme.palette.shades.primary[87]};
 `
 
 export const LanguageOption = styled.li`
-    padding: 0.5rem 0;
+    padding: 1rem;
     text-align: center;
-    transition:
-        color 0.1s ease-out,
-        background-color 0.1s ease-out;
+    transition: background-color 0.1s ease-out;
     cursor: pointer;
 
     &:hover {
-        color: ${({ theme }) => theme.palette.primary};
         background-color: ${({ theme }) => theme.palette.shades.secondary[38]};
     }
 `
