@@ -2,9 +2,9 @@ import styled, { css } from 'styled-components'
 
 import { IconWrapper } from '../Icon/Icon.style'
 
-export const TextInputContainer = styled.div<{ $isFocused: boolean }>`
+export const TextareaContainer = styled.div<{ $isFocused: boolean }>`
     position: relative;
-    height: 7.4rem;
+    height: fit-content;
     width: 100%;
     background-color: ${({ theme }) => theme.palette.shades.secondary[18]};
     color: ${({ theme }) => theme.palette.secondary};
@@ -54,15 +54,28 @@ export const SLabel = styled.label<{ $isSmall: boolean }>`
               `}
 `
 
-export const STextInput = styled.input`
-    position: absolute;
+export const STextarea = styled.textarea.attrs({ rows: 4 })`
+    position: relative;
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 3.8rem 2rem 1.3rem 2rem;
+    margin-top: 3.8rem;
+    padding: 0 2rem 1.3rem 2rem;
     outline: none;
     background: none;
     border: none;
     font-size: 2.4rem;
     color: ${({ theme }) => theme.palette.secondary};
+    resize: none;
+
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: ${({ theme }) => theme.palette.shades.secondary[18]};
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: ${({ theme }) => theme.palette.secondary};
+    }
 `
