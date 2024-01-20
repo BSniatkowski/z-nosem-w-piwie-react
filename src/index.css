@@ -195,3 +195,7 @@ p.small {
   font-size: 1.4rem;
   line-height: 1.8rem;
 }
+
+textarea {
+  font-family: 'Roboto';
+}

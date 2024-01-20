@@ -1,4 +1,6 @@
 import { useCallback, useMemo } from 'react'
+import { SubmitHandler } from 'react-hook-form'
+import * as yup from 'yup'
 
 import event_1 from '/imgs/event_1.png'
 import event_2 from '/imgs/event_2.png'
@@ -10,12 +12,29 @@ import { useBreakpoint } from '../../../hooks/useBreakpoint/useBreakpoint'
 import Button from '../../atoms/Button/Button'
 import Card from '../../atoms/Card/Card'
 import Icon from '../../atoms/Icon/Icon'
-import TextInput from '../../atoms/TextInput/TextInput'
 import Carousel from '../../organisms/Carousel/Carousel'
 import { TCarouselItems } from '../../organisms/Carousel/Carousel.types'
+import Form from '../../organisms/Form/Form'
 import * as S from './About.style'
+import { IContactFieldsValues, TContactFields } from './About.types'
 
 const About = () => {
+    const fields = [
+        { name: 'fullname', label: 'Fullname', type: 'text', defaultValue: '' },
+        { name: 'email', label: 'Contact email', type: 'text', defaultValue: '' },
+        { name: 'message', label: 'Message', type: 'textarea', defaultValue: '' },
+    ] satisfies TContactFields
+
+    const validationSchema = yup
+        .object({
+            fullname: yup.string().max(128).required(),
+            email: yup.string().email().required(),
+            message: yup.string().max(512).required(),
+        })
+        .required()
+
+    const onSubmit: SubmitHandler<IContactFieldsValues> = useCallback(() => {}, [])
+
     const isTablet = useBreakpoint('tablet')
     const isMobile = useBreakpoint('mobile')
 
@@ -166,7 +185,7 @@ const About = () => {
                             <span>+48 000 000 000</span>
                         </S.ContentRow>
                     </Card>
-                    <Card size='fit'>
+                    <Card size={34}>
                         <h4 className='decorative'>Join our newsletter</h4>
                         <Button size='full' label='Ok!' onClick={() => 'Click'} />
                     </Card>
@@ -182,23 +201,11 @@ const About = () => {
                         <h4 className='decorative' style={{ textAlign: 'center' }}>
                             Contact Us
                         </h4>
-                        <div
-                            style={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                gap: '4rem',
-                                alignItems: 'flex-end',
-                            }}
-                        >
-                            <TextInput label='Fullname' />
-                            <TextInput label='Contact email' />
-                            <TextInput label='Message' />
-                            <Button
-                                label='Send'
-                                iconVariant='send'
-                                onClick={() => console.log('click')}
-                            />
-                        </div>
+                        <Form<IContactFieldsValues>
+                            fields={fields}
+                            validationSchema={validationSchema}
+                            onSubmit={onSubmit}
+                        />
                     </Card>
                     <Card size={40}>
                         <S.MerchTitle>
