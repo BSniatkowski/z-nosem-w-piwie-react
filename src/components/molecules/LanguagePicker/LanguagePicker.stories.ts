@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import LanguagePicker from './LanguagePicker'
+import { EN } from './LanguagePicker.consts'
 
 const meta = {
     title: 'Molecules/LanguagePicker',
@@ -17,6 +18,6 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Default: Story = { args: { isMenuActive: false } }
+export const Default: Story = { args: { actualLocale: EN, isMenuActive: false } }
 
-export const MenuActive: Story = { args: { isMenuActive: true } }
+export const MenuActive: Story = { args: { actualLocale: EN, isMenuActive: true } }

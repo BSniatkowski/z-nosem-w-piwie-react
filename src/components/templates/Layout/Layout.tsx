@@ -1,15 +1,18 @@
-import Footer from '../../organisms/Footer/Footer'
-import About from '../About/About'
-import Home from '../Home/Home'
-import Offer from '../Offer/Offer'
-import { SLayout } from './Layout.style'
+import { useIntl } from 'react-intl'
 
-const Layout = () => {
+import Footer from '../../organisms/Footer/Footer'
+import messages from './Layout.messages'
+import { SLayout } from './Layout.style'
+import { ILayout } from './Layout.types'
+
+const Layout: React.FC<ILayout> = ({ children }) => {
+    const intl = useIntl()
+
     const siteLinks = [
-        { label: 'Home', href: '#home' },
-        { label: 'Offer', href: '#offer' },
-        { label: 'About', href: '#about' },
-        { label: 'Contact', href: '#contact' },
+        { label: intl.formatMessage(messages.home), href: '#home' },
+        { label: intl.formatMessage(messages.offer), href: '#offer' },
+        { label: intl.formatMessage(messages.about), href: '#about' },
+        { label: intl.formatMessage(messages.contact), href: '#contact' },
     ]
     const altLinks = [
         { label: 'React (current)', href: '#', isCurrent: true },
@@ -23,9 +26,7 @@ const Layout = () => {
 
     return (
         <SLayout>
-            <Home />
-            <Offer />
-            <About />
+            {children}
             <Footer siteLinks={siteLinks} altLinks={altLinks} myLinks={myLinks} />
         </SLayout>
     )

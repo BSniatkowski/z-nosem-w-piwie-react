@@ -1,14 +1,20 @@
+import { FormattedMessage, useIntl } from 'react-intl'
+
 import { useBreakpoint } from '../../../hooks/useBreakpoint/useBreakpoint'
 import Icon from '../../atoms/Icon/Icon'
 import Header from '../../organisms/Header/Header'
+import messages from './Home.messages'
 import * as S from './Home.style'
+import { IHomeProps } from './Home.types'
 
-const Home = () => {
+const Home: React.FC<IHomeProps> = ({ actualLocale, setActualIntlLocale }) => {
+    const intl = useIntl()
+
     const links = [
-        { label: 'Home', href: '#home' },
-        { label: 'Offer', href: '#offer' },
-        { label: 'About', href: '#about' },
-        { label: 'Contact', href: '#contact' },
+        { label: intl.formatMessage(messages.home), href: '#home' },
+        { label: intl.formatMessage(messages.offer), href: '#offer' },
+        { label: intl.formatMessage(messages.about), href: '#about' },
+        { label: intl.formatMessage(messages.contact), href: '#contact' },
     ]
 
     const isMobile = useBreakpoint('mobile')
@@ -16,19 +22,24 @@ const Home = () => {
     return (
         <S.HeaderSection id='home'>
             <S.SHome>
-                <Header links={links} isMobile={isMobile} />
+                <Header
+                    actualLocale={actualLocale}
+                    setActualIntlLocale={setActualIntlLocale}
+                    links={links}
+                    isMobile={isMobile}
+                />
                 <S.MainTextFrame>
-                    <h1 className='decorative'>Z Nosem W Piwie</h1>
+                    <h1 className='decorative'>
+                        <FormattedMessage {...messages.pubName} />
+                    </h1>
                     <p>
-                        Welcome to place where the past and imagination converge for a unique
-                        pub/cafe experience! Immerse yourself in the charm of rustic decor, sip on
-                        imaginative brews, and let every moment transport you to a place where
-                        laughter knows no bounds. Cheers to the magic of "Z Nosem W Piwie" – your
-                        escape into an extraordinary world of make-believe!
+                        <FormattedMessage {...messages.welcome} />
                     </p>
                 </S.MainTextFrame>
                 <S.FollowUs>
-                    <S.FollowUsTextContainer>Follow Us</S.FollowUsTextContainer>
+                    <S.FollowUsTextContainer>
+                        <FormattedMessage {...messages.follow} />
+                    </S.FollowUsTextContainer>
                     <S.FollowUsIconsContainer>
                         <Icon variant='facebook' />
                         <Icon variant='instagram' />

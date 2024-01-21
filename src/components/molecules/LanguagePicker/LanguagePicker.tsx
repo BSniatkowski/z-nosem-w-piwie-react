@@ -2,24 +2,31 @@ import { useCallback, useMemo, useState } from 'react'
 
 import { useOutsideClick } from '../../../hooks/useOutsideClick/useOutsideClick'
 import Icon from '../../atoms/Icon/Icon'
+import { EN, locales, PL } from './LanguagePicker.consts'
 import * as S from './LanguagePicker.style'
-import { ILanguagePickerProps } from './LanguagePicker.types'
+import { ILanguagePickerProps, TLocales } from './LanguagePicker.types'
 
-const langauges = ['pl', 'en']
-
-const LanguagePicker: React.FC<ILanguagePickerProps> = ({ isMenuActive }) => {
+const LanguagePicker: React.FC<ILanguagePickerProps> = ({
+    actualLocale,
+    setActualLocale: setActualIntlLocale,
+    isMenuActive,
+}) => {
     const [isActive, setIsActive] = useState(false)
-    const [actualLanguage, setActualLanguage] = useState('pl')
 
     const langaugesOptions = useMemo(
-        () => langauges.filter((lang) => lang !== actualLanguage),
-        [actualLanguage],
+        () => locales.filter((lang) => lang !== actualLocale),
+        [actualLocale],
     )
 
-    const onLangItemClick = useCallback((lang: string) => {
-        setActualLanguage(lang)
-        setIsActive(false)
-    }, [])
+    const languageLabels = { [EN]: 'en', [PL]: 'pl' } satisfies Record<TLocales, string>
+
+    const onLangItemClick = useCallback(
+        (lang: TLocales) => {
+            setActualIntlLocale(lang)
+            setIsActive(false)
+        },
+        [setActualIntlLocale],
+    )
 
     const elementRef = useOutsideClick<HTMLDivElement>(() => setIsActive(false))
 
@@ -34,7 +41,7 @@ const LanguagePicker: React.FC<ILanguagePickerProps> = ({ isMenuActive }) => {
                 $isMenuActive={isMenuActive}
                 onClick={() => setIsActive(!isActive)}
             >
-                {actualLanguage}
+                {languageLabels[actualLocale]}
                 <Icon variant='expand' />
             </S.ActualLanguageWithArrow>
             {isActive && (
@@ -42,7 +49,7 @@ const LanguagePicker: React.FC<ILanguagePickerProps> = ({ isMenuActive }) => {
                     {langaugesOptions.length > 0 &&
                         langaugesOptions.map((lang) => (
                             <S.LanguageOption key={lang} onClick={() => onLangItemClick(lang)}>
-                                {lang}
+                                {languageLabels[lang]}
                             </S.LanguageOption>
                         ))}
                 </S.LanguagesOptions>

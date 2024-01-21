@@ -8,7 +8,7 @@ import Navigation from '../../molecules/Navigation/Navigation'
 import * as S from './Header.style'
 import { IHeaderProps } from './Header.types'
 
-const Header: React.FC<IHeaderProps> = ({ isMobile, links }) => {
+const Header: React.FC<IHeaderProps> = ({ actualLocale, setActualIntlLocale, isMobile, links }) => {
     const [isMenuActive, setIsMenuActive] = useState(false)
     const headerRef = useOutsideClick(() => setIsMenuActive(false))
 
@@ -18,13 +18,21 @@ const Header: React.FC<IHeaderProps> = ({ isMobile, links }) => {
                 <Logo isDark={isMobile && isMenuActive} />
                 {isMobile ? (
                     <S.MobileMenuContainer $isMenuActive={isMenuActive}>
-                        <LanguagePicker isMenuActive={isMenuActive} />
+                        <LanguagePicker
+                            actualLocale={actualLocale}
+                            setActualLocale={setActualIntlLocale}
+                            isMenuActive={isMenuActive}
+                        />
                         <Icon variant='menu' onClick={() => setIsMenuActive(!isMenuActive)} />
                     </S.MobileMenuContainer>
                 ) : (
                     <>
                         <Navigation variant={'header'} links={links} />
-                        <LanguagePicker isMenuActive={isMobile} />
+                        <LanguagePicker
+                            actualLocale={actualLocale}
+                            setActualLocale={setActualIntlLocale}
+                            isMenuActive={isMobile}
+                        />
                     </>
                 )}
             </S.InnerHeader>

@@ -26,6 +26,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@formatjs/cli", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:6.2.6"],\
           ["@hookform/resolvers", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:3.3.4"],\
           ["@storybook/addon-essentials", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:7.6.6"],\
           ["@storybook/addon-interactions", "npm:7.6.6"],\
@@ -53,6 +54,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:18.2.0"],\
           ["react-hook-form", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:7.49.3"],\
+          ["react-intl", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:6.6.1"],\
           ["storybook", "npm:7.6.6"],\
           ["styled-components", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:6.1.6"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
@@ -3079,6 +3081,135 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/@floating-ui-utils-npm-0.1.6-ae508f7272-10c0.zip/node_modules/@floating-ui/utils/",\
         "packageDependencies": [\
           ["@floating-ui/utils", "npm:0.1.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@formatjs/cli", [\
+      ["npm:6.2.6", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/@formatjs-cli-npm-6.2.6-6787366049-10c0.zip/node_modules/@formatjs/cli/",\
+        "packageDependencies": [\
+          ["@formatjs/cli", "npm:6.2.6"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:6.2.6", {\
+        "packageLocation": "./.yarn/__virtual__/@formatjs-cli-virtual-05ad940e9b/4/AppData/Local/Yarn/Berry/cache/@formatjs-cli-npm-6.2.6-6787366049-10c0.zip/node_modules/@formatjs/cli/",\
+        "packageDependencies": [\
+          ["@formatjs/cli", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:6.2.6"],\
+          ["@types/vue", null],\
+          ["vue", null]\
+        ],\
+        "packagePeers": [\
+          "@types/vue",\
+          "vue"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@formatjs/ecma402-abstract", [\
+      ["npm:1.18.2", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/@formatjs-ecma402-abstract-npm-1.18.2-281c9afdd0-10c0.zip/node_modules/@formatjs/ecma402-abstract/",\
+        "packageDependencies": [\
+          ["@formatjs/ecma402-abstract", "npm:1.18.2"],\
+          ["@formatjs/intl-localematcher", "npm:0.5.4"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@formatjs/fast-memoize", [\
+      ["npm:2.2.0", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/@formatjs-fast-memoize-npm-2.2.0-4a46a61b8b-10c0.zip/node_modules/@formatjs/fast-memoize/",\
+        "packageDependencies": [\
+          ["@formatjs/fast-memoize", "npm:2.2.0"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@formatjs/icu-messageformat-parser", [\
+      ["npm:2.7.5", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/@formatjs-icu-messageformat-parser-npm-2.7.5-5d73127e7f-10c0.zip/node_modules/@formatjs/icu-messageformat-parser/",\
+        "packageDependencies": [\
+          ["@formatjs/icu-messageformat-parser", "npm:2.7.5"],\
+          ["@formatjs/ecma402-abstract", "npm:1.18.2"],\
+          ["@formatjs/icu-skeleton-parser", "npm:1.7.2"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@formatjs/icu-skeleton-parser", [\
+      ["npm:1.7.2", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/@formatjs-icu-skeleton-parser-npm-1.7.2-8de7dc7fce-10c0.zip/node_modules/@formatjs/icu-skeleton-parser/",\
+        "packageDependencies": [\
+          ["@formatjs/icu-skeleton-parser", "npm:1.7.2"],\
+          ["@formatjs/ecma402-abstract", "npm:1.18.2"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@formatjs/intl", [\
+      ["npm:2.9.11", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/@formatjs-intl-npm-2.9.11-1b56176399-10c0.zip/node_modules/@formatjs/intl/",\
+        "packageDependencies": [\
+          ["@formatjs/intl", "npm:2.9.11"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:34caba629898aa632344f9d3f1cffb33a72a79a365a91a0f6a838da1393378fe1f105203797687d0acf03eb526e6ad52b40d454600861ac8812ba90ae8a00a9d#npm:2.9.11", {\
+        "packageLocation": "./.yarn/__virtual__/@formatjs-intl-virtual-ea04c75032/4/AppData/Local/Yarn/Berry/cache/@formatjs-intl-npm-2.9.11-1b56176399-10c0.zip/node_modules/@formatjs/intl/",\
+        "packageDependencies": [\
+          ["@formatjs/intl", "virtual:34caba629898aa632344f9d3f1cffb33a72a79a365a91a0f6a838da1393378fe1f105203797687d0acf03eb526e6ad52b40d454600861ac8812ba90ae8a00a9d#npm:2.9.11"],\
+          ["@formatjs/ecma402-abstract", "npm:1.18.2"],\
+          ["@formatjs/fast-memoize", "npm:2.2.0"],\
+          ["@formatjs/icu-messageformat-parser", "npm:2.7.5"],\
+          ["@formatjs/intl-displaynames", "npm:6.6.6"],\
+          ["@formatjs/intl-listformat", "npm:7.5.5"],\
+          ["@types/typescript", null],\
+          ["intl-messageformat", "npm:10.5.10"],\
+          ["tslib", "npm:2.6.2"],\
+          ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\
+        ],\
+        "packagePeers": [\
+          "@types/typescript",\
+          "typescript"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@formatjs/intl-displaynames", [\
+      ["npm:6.6.6", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/@formatjs-intl-displaynames-npm-6.6.6-e035dc475b-10c0.zip/node_modules/@formatjs/intl-displaynames/",\
+        "packageDependencies": [\
+          ["@formatjs/intl-displaynames", "npm:6.6.6"],\
+          ["@formatjs/ecma402-abstract", "npm:1.18.2"],\
+          ["@formatjs/intl-localematcher", "npm:0.5.4"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@formatjs/intl-listformat", [\
+      ["npm:7.5.5", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/@formatjs-intl-listformat-npm-7.5.5-496f84d41c-10c0.zip/node_modules/@formatjs/intl-listformat/",\
+        "packageDependencies": [\
+          ["@formatjs/intl-listformat", "npm:7.5.5"],\
+          ["@formatjs/ecma402-abstract", "npm:1.18.2"],\
+          ["@formatjs/intl-localematcher", "npm:0.5.4"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@formatjs/intl-localematcher", [\
+      ["npm:0.5.4", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/@formatjs-intl-localematcher-npm-0.5.4-e30cfcd8fd-10c0.zip/node_modules/@formatjs/intl-localematcher/",\
+        "packageDependencies": [\
+          ["@formatjs/intl-localematcher", "npm:0.5.4"],\
+          ["tslib", "npm:2.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6177,6 +6308,17 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/graceful-fs", "npm:4.1.9"],\
           ["@types/node", "npm:20.10.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/hoist-non-react-statics", [\
+      ["npm:3.3.5", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/@types-hoist-non-react-statics-npm-3.3.5-98b8d8e47b-10c0.zip/node_modules/@types/hoist-non-react-statics/",\
+        "packageDependencies": [\
+          ["@types/hoist-non-react-statics", "npm:3.3.5"],\
+          ["@types/react", "npm:18.2.46"],\
+          ["hoist-non-react-statics", "npm:3.3.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9762,6 +9904,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["hoist-non-react-statics", [\
+      ["npm:3.3.2", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/hoist-non-react-statics-npm-3.3.2-e7b709e6c1-10c0.zip/node_modules/hoist-non-react-statics/",\
+        "packageDependencies": [\
+          ["hoist-non-react-statics", "npm:3.3.2"],\
+          ["react-is", "npm:16.13.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["hosted-git-info", [\
       ["npm:2.8.9", {\
         "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/hosted-git-info-npm-2.8.9-62c44fa93f-10c0.zip/node_modules/hosted-git-info/",\
@@ -9943,6 +10095,19 @@ const RAW_RUNTIME_STATE =
           ["get-intrinsic", "npm:1.2.2"],\
           ["hasown", "npm:2.0.0"],\
           ["side-channel", "npm:1.0.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["intl-messageformat", [\
+      ["npm:10.5.10", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/intl-messageformat-npm-10.5.10-1a55b202e5-10c0.zip/node_modules/intl-messageformat/",\
+        "packageDependencies": [\
+          ["intl-messageformat", "npm:10.5.10"],\
+          ["@formatjs/ecma402-abstract", "npm:1.18.2"],\
+          ["@formatjs/fast-memoize", "npm:2.2.0"],\
+          ["@formatjs/icu-messageformat-parser", "npm:2.7.5"],\
+          ["tslib", "npm:2.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12379,6 +12544,41 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-intl", [\
+      ["npm:6.6.1", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/react-intl-npm-6.6.1-4b759447e2-10c0.zip/node_modules/react-intl/",\
+        "packageDependencies": [\
+          ["react-intl", "npm:6.6.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:6.6.1", {\
+        "packageLocation": "./.yarn/__virtual__/react-intl-virtual-34caba6298/4/AppData/Local/Yarn/Berry/cache/react-intl-npm-6.6.1-4b759447e2-10c0.zip/node_modules/react-intl/",\
+        "packageDependencies": [\
+          ["react-intl", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:6.6.1"],\
+          ["@formatjs/ecma402-abstract", "npm:1.18.2"],\
+          ["@formatjs/icu-messageformat-parser", "npm:2.7.5"],\
+          ["@formatjs/intl", "virtual:34caba629898aa632344f9d3f1cffb33a72a79a365a91a0f6a838da1393378fe1f105203797687d0acf03eb526e6ad52b40d454600861ac8812ba90ae8a00a9d#npm:2.9.11"],\
+          ["@formatjs/intl-displaynames", "npm:6.6.6"],\
+          ["@formatjs/intl-listformat", "npm:7.5.5"],\
+          ["@types/hoist-non-react-statics", "npm:3.3.5"],\
+          ["@types/react", "npm:18.2.46"],\
+          ["@types/typescript", null],\
+          ["hoist-non-react-statics", "npm:3.3.2"],\
+          ["intl-messageformat", "npm:10.5.10"],\
+          ["react", "npm:18.2.0"],\
+          ["tslib", "npm:2.6.2"],\
+          ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "@types/typescript",\
+          "react",\
+          "typescript"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["react-is", [\
       ["npm:16.13.1", {\
         "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/react-is-npm-16.13.1-a9b9382b4f-10c0.zip/node_modules/react-is/",\
@@ -14704,6 +14904,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["z-nosem-w-piwie-react", "workspace:."],\
+          ["@formatjs/cli", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:6.2.6"],\
           ["@hookform/resolvers", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:3.3.4"],\
           ["@storybook/addon-essentials", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:7.6.6"],\
           ["@storybook/addon-interactions", "npm:7.6.6"],\
@@ -14731,6 +14932,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:18.2.0"],\
           ["react-hook-form", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:7.49.3"],\
+          ["react-intl", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:6.6.1"],\
           ["storybook", "npm:7.6.6"],\
           ["styled-components", "virtual:3e68a5daffa5353c78fe60da94da78e1bd5d42196e96ee056c92fae5efe5735cae93f2c90a733e9a40a2afec5a94c2637e09fff7585719a09aaee2c3c1308b26#npm:6.1.6"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
