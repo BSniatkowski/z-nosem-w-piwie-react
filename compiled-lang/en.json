@@ -17,6 +17,12 @@
       "value": "contact@znosemwpiwie.com"
     }
   ],
+  "app.about.emailLabel": [
+    {
+      "type": 0,
+      "value": "Contact email"
+    }
+  ],
   "app.about.emailTitle": [
     {
       "type": 0,
@@ -53,10 +59,22 @@
       "value": "The spirit of make-believe comes alive with an array of events at \"Z Nosem W Piwie.\" From live music performances that resonate through the walls to themed parties that transcend the ordinary, and quirky trivia nights that challenge the imagination – our event calendar is always buzzing with make-believe happenings. Check regularly for updates and immerse yourself in the magic of our make-believe world."
     }
   ],
+  "app.about.fullnameLabel": [
+    {
+      "type": 0,
+      "value": "Fullname"
+    }
+  ],
   "app.about.merchTitle": [
     {
       "type": 0,
       "value": "Checkout our merch!"
+    }
+  ],
+  "app.about.messageLabel": [
+    {
+      "type": 0,
+      "value": "Message"
     }
   ],
   "app.about.newsletter": [
@@ -123,6 +141,36 @@
     {
       "type": 0,
       "value": "Z Nosem W Piwie"
+    }
+  ],
+  "app.form.emailField": [
+    {
+      "type": 0,
+      "value": "Field must be valid email"
+    }
+  ],
+  "app.form.requiredField": [
+    {
+      "type": 1,
+      "value": "fieldName"
+    },
+    {
+      "type": 0,
+      "value": " is required"
+    }
+  ],
+  "app.form.tooLongField": [
+    {
+      "type": 1,
+      "value": "fieldName"
+    },
+    {
+      "type": 0,
+      "value": " cannot be longer than "
+    },
+    {
+      "type": 1,
+      "value": "max"
     }
   ],
   "app.home.about": [

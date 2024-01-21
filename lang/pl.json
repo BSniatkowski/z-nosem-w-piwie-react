@@ -11,6 +11,10 @@
     "defaultMessage": "contact@znosemwpiwie.com",
     "description": "Email address for contacting the establishment."
   },
+  "app.about.emailLabel": {
+    "defaultMessage": "Email kontaktowy",
+    "description": "Email field of contact form."
+  },
   "app.about.emailTitle": {
     "defaultMessage": "e-mail",
     "description": "Title for the email contact information."
@@ -35,9 +39,17 @@
     "defaultMessage": "Dusza wyobraźni ożywa dzięki różnorodności wydarzeń w \"Z Nosem W Piwie.\" Od koncertów na żywo, które rezonują w ścianach, po tematyczne imprezy wykraczające poza zwyczajność, i dziwaczne wieczory z quizami, które stawiają wyzwanie wyobraźni – nasz kalendarz wydarzeń zawsze pulsuje magicznymi wydarzeniami. Sprawdzaj regularnie aktualizacje i zanurzaj się w magii naszego świata wyobraźni.",
     "description": "Fourth part of the full description of the establishment."
   },
+  "app.about.fullnameLabel": {
+    "defaultMessage": "Imię i Nazwisko",
+    "description": "Fullname field of contact form."
+  },
   "app.about.merchTitle": {
     "defaultMessage": "Sprawdź nasze produkty!",
     "description": "Title for the merchandise section."
+  },
+  "app.about.messageLabel": {
+    "defaultMessage": "Treść wiadomości",
+    "description": "Message field of contact form."
   },
   "app.about.newsletter": {
     "defaultMessage": "Dołącz do naszego biuletynu",
@@ -82,6 +94,18 @@
   "app.about.pubName": {
     "defaultMessage": "Z Nosem W Piwie",
     "description": "Name of the pub/cafe establishment."
+  },
+  "app.form.emailField": {
+    "defaultMessage": "Pole musi zawierać prawidłowy email",
+    "description": "Form error message when field is required."
+  },
+  "app.form.requiredField": {
+    "defaultMessage": "Pole \"{fieldName}\" jest wymagane",
+    "description": "Form error message when field is required."
+  },
+  "app.form.tooLongField": {
+    "defaultMessage": "Tekst w polu \"{fieldName}\" nie może przekroczyć długości {max} znaków",
+    "description": "Form error message when field is required."
   },
   "app.home.about": {
     "defaultMessage": "O nas",

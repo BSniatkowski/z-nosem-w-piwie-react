@@ -105,6 +105,21 @@ export default defineMessages({
         description: 'Title for the contact section.',
         defaultMessage: 'Contact Us',
     },
+    fullnameLabel: {
+        id: 'app.about.fullnameLabel',
+        description: 'Fullname field of contact form.',
+        defaultMessage: 'Fullname',
+    },
+    emailLabel: {
+        id: 'app.about.emailLabel',
+        description: 'Email field of contact form.',
+        defaultMessage: 'Contact email',
+    },
+    messageLabel: {
+        id: 'app.about.messageLabel',
+        description: 'Message field of contact form.',
+        defaultMessage: 'Message',
+    },
     merchTitle: {
         id: 'app.about.merchTitle',
         description: 'Title for the merchandise section.',

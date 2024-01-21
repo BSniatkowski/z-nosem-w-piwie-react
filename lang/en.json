@@ -11,6 +11,10 @@
     "defaultMessage": "contact@znosemwpiwie.com",
     "description": "Email address for contacting the establishment."
   },
+  "app.about.emailLabel": {
+    "defaultMessage": "Contact email",
+    "description": "Email field of contact form."
+  },
   "app.about.emailTitle": {
     "defaultMessage": "email",
     "description": "Title for the email contact information."
@@ -35,9 +39,17 @@
     "defaultMessage": "The spirit of make-believe comes alive with an array of events at \"Z Nosem W Piwie.\" From live music performances that resonate through the walls to themed parties that transcend the ordinary, and quirky trivia nights that challenge the imagination – our event calendar is always buzzing with make-believe happenings. Check regularly for updates and immerse yourself in the magic of our make-believe world.",
     "description": "Fourth part of the full description of the establishment."
   },
+  "app.about.fullnameLabel": {
+    "defaultMessage": "Fullname",
+    "description": "Fullname field of contact form."
+  },
   "app.about.merchTitle": {
     "defaultMessage": "Checkout our merch!",
     "description": "Title for the merchandise section."
+  },
+  "app.about.messageLabel": {
+    "defaultMessage": "Message",
+    "description": "Message field of contact form."
   },
   "app.about.newsletter": {
     "defaultMessage": "Join our newsletter",
@@ -82,6 +94,18 @@
   "app.about.pubName": {
     "defaultMessage": "Z Nosem W Piwie",
     "description": "Name of the pub/cafe establishment."
+  },
+  "app.form.emailField": {
+    "defaultMessage": "Field must be valid email",
+    "description": "Form error message when field is required."
+  },
+  "app.form.requiredField": {
+    "defaultMessage": "{fieldName} is required",
+    "description": "Form error message when field is required."
+  },
+  "app.form.tooLongField": {
+    "defaultMessage": "{fieldName} cannot be longer than {max}",
+    "description": "Form error message when field is required."
   },
   "app.home.about": {
     "defaultMessage": "About",

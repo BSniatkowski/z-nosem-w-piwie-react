@@ -1,6 +1,6 @@
 import { useCallback, useMemo } from 'react'
 import { SubmitHandler } from 'react-hook-form'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, useIntl } from 'react-intl'
 import * as yup from 'yup'
 
 import event_1 from '/imgs/event_1.png'
@@ -16,24 +16,86 @@ import Icon from '../../atoms/Icon/Icon'
 import Carousel from '../../organisms/Carousel/Carousel'
 import { TCarouselItems } from '../../organisms/Carousel/Carousel.types'
 import Form from '../../organisms/Form/Form'
+import formMessages from '../../organisms/Form/Form.messages'
 import messages from './About.messages'
 import * as S from './About.style'
 import { IContactFieldsValues, TContactFields } from './About.types'
 
 const About = () => {
+    const intl = useIntl()
+
     const fields = [
-        { name: 'fullname', label: 'Fullname', type: 'text', defaultValue: '' },
-        { name: 'email', label: 'Contact email', type: 'text', defaultValue: '' },
-        { name: 'message', label: 'Message', type: 'textarea', defaultValue: '' },
+        {
+            name: 'fullname',
+            label: intl.formatMessage(messages.fullnameLabel),
+            type: 'text',
+            defaultValue: '',
+        },
+        {
+            name: 'email',
+            label: intl.formatMessage(messages.emailLabel),
+            type: 'text',
+            defaultValue: '',
+        },
+        {
+            name: 'message',
+            label: intl.formatMessage(messages.messageLabel),
+            type: 'textarea',
+            defaultValue: '',
+        },
     ] satisfies TContactFields
 
-    const validationSchema = yup
-        .object({
-            fullname: yup.string().max(128).required(),
-            email: yup.string().email().required(),
-            message: yup.string().max(512).required(),
-        })
-        .required()
+    const validationSchema = useMemo(
+        () =>
+            yup
+                .object({
+                    fullname: yup
+                        .string()
+                        .max(
+                            128,
+                            intl.formatMessage(formMessages.tooLongField, {
+                                fieldName: intl.formatMessage(messages.fullnameLabel),
+                                max: 128,
+                            }),
+                        )
+                        .required(
+                            intl.formatMessage(formMessages.requiredField, {
+                                fieldName: intl.formatMessage(messages.fullnameLabel),
+                            }),
+                        ),
+                    email: yup
+                        .string()
+                        .max(
+                            128,
+                            intl.formatMessage(formMessages.tooLongField, {
+                                fieldName: intl.formatMessage(messages.emailLabel),
+                                max: 128,
+                            }),
+                        )
+                        .email(intl.formatMessage(formMessages.emailField))
+                        .required(
+                            intl.formatMessage(formMessages.requiredField, {
+                                fieldName: intl.formatMessage(messages.emailLabel),
+                            }),
+                        ),
+                    message: yup
+                        .string()
+                        .max(
+                            512,
+                            intl.formatMessage(formMessages.tooLongField, {
+                                fieldName: intl.formatMessage(messages.messageLabel),
+                                max: 512,
+                            }),
+                        )
+                        .required(
+                            intl.formatMessage(formMessages.requiredField, {
+                                fieldName: intl.formatMessage(messages.messageLabel),
+                            }),
+                        ),
+                })
+                .required(),
+        [intl],
+    )
 
     const onSubmit: SubmitHandler<IContactFieldsValues> = useCallback(() => {}, [])
 

@@ -17,6 +17,12 @@
       "value": "contact@znosemwpiwie.com"
     }
   ],
+  "app.about.emailLabel": [
+    {
+      "type": 0,
+      "value": "Email kontaktowy"
+    }
+  ],
   "app.about.emailTitle": [
     {
       "type": 0,
@@ -53,10 +59,22 @@
       "value": "Dusza wyobraźni ożywa dzięki różnorodności wydarzeń w \"Z Nosem W Piwie.\" Od koncertów na żywo, które rezonują w ścianach, po tematyczne imprezy wykraczające poza zwyczajność, i dziwaczne wieczory z quizami, które stawiają wyzwanie wyobraźni – nasz kalendarz wydarzeń zawsze pulsuje magicznymi wydarzeniami. Sprawdzaj regularnie aktualizacje i zanurzaj się w magii naszego świata wyobraźni."
     }
   ],
+  "app.about.fullnameLabel": [
+    {
+      "type": 0,
+      "value": "Imię i Nazwisko"
+    }
+  ],
   "app.about.merchTitle": [
     {
       "type": 0,
       "value": "Sprawdź nasze produkty!"
+    }
+  ],
+  "app.about.messageLabel": [
+    {
+      "type": 0,
+      "value": "Treść wiadomości"
     }
   ],
   "app.about.newsletter": [
@@ -123,6 +141,48 @@
     {
       "type": 0,
       "value": "Z Nosem W Piwie"
+    }
+  ],
+  "app.form.emailField": [
+    {
+      "type": 0,
+      "value": "Pole musi zawierać prawidłowy email"
+    }
+  ],
+  "app.form.requiredField": [
+    {
+      "type": 0,
+      "value": "Pole \""
+    },
+    {
+      "type": 1,
+      "value": "fieldName"
+    },
+    {
+      "type": 0,
+      "value": "\" jest wymagane"
+    }
+  ],
+  "app.form.tooLongField": [
+    {
+      "type": 0,
+      "value": "Tekst w polu \""
+    },
+    {
+      "type": 1,
+      "value": "fieldName"
+    },
+    {
+      "type": 0,
+      "value": "\" nie może przekroczyć długości "
+    },
+    {
+      "type": 1,
+      "value": "max"
+    },
+    {
+      "type": 0,
+      "value": " znaków"
     }
   ],
   "app.home.about": [
