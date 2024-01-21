@@ -5,7 +5,7 @@ import * as S from './Carousel.style'
 import { ICarouselProps } from './Carousel.types'
 
 const Carousel: React.FC<ICarouselProps> = ({ autoChange, items = [] }) => {
-    const [actualItemId, setActualItemId] = useState(items.length > 0 && items[0].id)
+    const [actualItemId, setActualItemId] = useState<string | null>(null)
 
     const itemsContainerRef = useRef<HTMLDivElement | null>(null)
     const itemsRefsMap = useRef<Map<string, HTMLDivElement> | null>(null)
@@ -62,7 +62,9 @@ const Carousel: React.FC<ICarouselProps> = ({ autoChange, items = [] }) => {
     }, [actualItemId, showElement])
 
     useEffect(() => {
-        if (!actualItemId || !autoChange) return
+        if (!items.length || !autoChange) return
+
+        if (!actualItemId) setActualItemId(items[0].id)
 
         const changeInterval = setInterval(() => {
             const actualItemIndex = items.findIndex((item) => item.id === actualItemId)
