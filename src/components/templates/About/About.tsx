@@ -1,28 +1,77 @@
-import { useCallback, useMemo } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { SubmitHandler } from 'react-hook-form'
 import { FormattedMessage, useIntl } from 'react-intl'
 import * as yup from 'yup'
 
-import event_1 from '/imgs/event_1.png'
-import event_2 from '/imgs/event_2.png'
-import event_3 from '/imgs/event_3.png'
 import map from '/imgs/map.png'
-import merch_1 from '/imgs/tshirt.png'
 
+import { ContactFormData, fetchEvents, fetchMerch } from '../../../../api/api'
+import { IEventItemElement, IMerchItemElement } from '../../../../api/api.types'
 import { useBreakpoint } from '../../../hooks/useBreakpoint/useBreakpoint'
 import Button from '../../atoms/Button/Button'
 import Card from '../../atoms/Card/Card'
 import Icon from '../../atoms/Icon/Icon'
+import { TLocales } from '../../molecules/LanguagePicker/LanguagePicker.types'
 import Carousel from '../../organisms/Carousel/Carousel'
 import { TCarouselItems } from '../../organisms/Carousel/Carousel.types'
 import Form from '../../organisms/Form/Form'
 import formMessages from '../../organisms/Form/Form.messages'
 import messages from './About.messages'
 import * as S from './About.style'
-import { IContactFieldsValues, TContactFields } from './About.types'
+import { IContactFieldsValues, ITranslatedEventItem, TContactFields } from './About.types'
 
 const About = () => {
     const intl = useIntl()
+    const isTablet = useBreakpoint('tablet')
+    const isMobile = useBreakpoint('mobile')
+
+    const composeEventItemElement = useCallback(
+        ({ title, date, description, imgSrc }: ITranslatedEventItem) => (
+            <S.EventContainer $isMobile={isMobile}>
+                <S.EventDescription>
+                    <Button
+                        label={`${title} ${date}`}
+                        iconVariant='share'
+                        onClick={async () => {
+                            try {
+                                await navigator.clipboard.writeText(
+                                    'https://www.facebook.com/fake_event_link',
+                                )
+                                console.log('Content copied to clipboard')
+                            } catch (err) {
+                                console.error('Failed to copy: ', err)
+                            }
+                        }}
+                    />
+                    <p>{description}</p>
+                </S.EventDescription>
+                {imgSrc && <S.EventImg src={imgSrc} />}
+            </S.EventContainer>
+        ),
+        [isMobile],
+    )
+
+    const [eventsItems, setEventsItems] = useState<Array<IEventItemElement>>([])
+    const [merchItems, setMerchItems] = useState<Array<IMerchItemElement>>([])
+
+    const translatedEventsItems = useMemo<TCarouselItems>(
+        () =>
+            eventsItems.map((event) => {
+                const text = event.translations[intl.locale as TLocales]
+
+                return { id: event.id, itemElement: composeEventItemElement(text) }
+            }),
+        [composeEventItemElement, eventsItems, intl.locale],
+    )
+
+    const merchItemsElements = useMemo<TCarouselItems>(
+        () =>
+            merchItems.map((merchItem) => ({
+                id: merchItem.id,
+                itemElement: <S.MerchImg src={merchItem.imgSrc} />,
+            })),
+        [merchItems],
+    )
 
     const fields = [
         {
@@ -97,89 +146,28 @@ const About = () => {
         [intl],
     )
 
-    const onSubmit: SubmitHandler<IContactFieldsValues> = useCallback(() => {}, [])
+    const onSubmit: SubmitHandler<IContactFieldsValues> = useCallback(async (data) => {
+        const response = await ContactFormData(data)
 
-    const isTablet = useBreakpoint('tablet')
-    const isMobile = useBreakpoint('mobile')
+        console.log(response)
+    }, [])
 
-    const composeEventItemElement = useCallback(
-        ({
-            title,
-            date,
-            description,
-            imgSrc,
-        }: {
-            title: string
-            date: string
-            description: string
-            imgSrc: string
-        }) => (
-            <S.EventContainer $isMobile={isMobile}>
-                <S.EventDescription>
-                    <Button
-                        label={`${title} ${date}`}
-                        iconVariant='share'
-                        onClick={async () => {
-                            try {
-                                await navigator.clipboard.writeText(
-                                    'https://www.facebook.com/fake_event_link',
-                                )
-                                console.log('Content copied to clipboard')
-                            } catch (err) {
-                                console.error('Failed to copy: ', err)
-                            }
-                        }}
-                    />
-                    <p>{description}</p>
-                </S.EventDescription>
-                {imgSrc && <S.EventImg src={imgSrc} />}
-            </S.EventContainer>
-        ),
-        [isMobile],
-    )
+    const updateEvents = useCallback(async () => {
+        const events = await fetchEvents()
 
-    const eventsItems = useMemo(
-        () => [
-            {
-                id: 'coffeest',
-                itemElement: composeEventItemElement({
-                    title: 'Coffeest',
-                    date: '10.2024',
-                    description:
-                        'Coffeest - A Brew-tiful Blend of Art and Aroma Indulge your senses in the enchanting world of "Coffeest" at "Z Nosem W Piwie." Immerse yourself in a celebration of the finer things in life - the rich aroma of freshly brewed coffee and the artistic ambiance that elevates your coffee-drinking experience. "Coffeest" is more than an event; it\'s a sensory journey where every sip becomes a moment of pure bliss, and every conversation is enriched by the warmth of our carefully crafted brews.',
-                    imgSrc: event_1,
-                }),
-            },
-            {
-                id: 'brewers_banquet',
-                itemElement: composeEventItemElement({
-                    title: "Brewer's Banquet",
-                    date: '6-12.11.2024',
-                    description:
-                        "Brewer's Banquet: A Beer Tasting Feast Dive into the world of craft beers at \"Brewer's Banquet.\" Indulge your palate with a curated selection of artisanal brews, each with its unique flavor profile and story. Whether you're a seasoned beer enthusiast or a curious newcomer, this tasting event is a celebration of the art and science behind exceptional brewing.",
-                    imgSrc: event_2,
-                }),
-            },
-            {
-                id: 'canvas_and_beer',
-                itemElement: composeEventItemElement({
-                    title: 'Canvas and Beer',
-                    date: '8.06.2024',
-                    description:
-                        'Canvas and Beer: Artistic Expressions Over Ales Unleash your inner artist in a delightful fusion of creativity and craft beer! "Canvas and Beer" invites you to paint your masterpiece while sipping on our specially selected ales. Let the flavors inspire your brushstrokes as you create art in the cozy ambiance of "Z Nosem W Piwie."',
-                    imgSrc: event_3,
-                }),
-            },
-        ],
-        [composeEventItemElement],
-    ) satisfies TCarouselItems
+        if (events) setEventsItems(events)
+    }, [])
 
-    const merchItems = [
-        {
-            id: 'tshirt',
-            itemElement: <S.MerchImg src={merch_1} />,
-        },
-    ] satisfies TCarouselItems
+    const updateMerch = useCallback(async () => {
+        const merchItems = await fetchMerch()
+
+        if (merchItems) setMerchItems(merchItems)
+    }, [])
+
+    useEffect(() => {
+        updateEvents().catch(console.error)
+        updateMerch().catch(console.error)
+    }, [updateEvents, updateMerch])
 
     return (
         <S.AboutSection id='about'>
@@ -266,7 +254,7 @@ const About = () => {
                     <h3 className='decorative' style={{ textAlign: 'center' }}>
                         <FormattedMessage {...messages.eventsTitle} />
                     </h3>
-                    <Carousel autoChange items={eventsItems} />
+                    <Carousel autoChange items={translatedEventsItems} />
                 </Card>
                 <S.ContactAndMerchContainer id='contact' $isTablet={isTablet}>
                     <Card size='full'>
@@ -284,7 +272,7 @@ const About = () => {
                             <FormattedMessage {...messages.merchTitle} />
                             <Icon variant='merch' />
                         </S.MerchTitle>
-                        <Carousel autoChange items={merchItems} />
+                        <Carousel autoChange items={merchItemsElements} />
                     </Card>
                 </S.ContactAndMerchContainer>
             </S.AboutSectionInner>
