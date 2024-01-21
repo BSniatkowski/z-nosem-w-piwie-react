@@ -1,0 +1,158 @@
+{
+  "app.about.address": {
+    "defaultMessage": "Kraków, Rynek Główny 0, 00-000",
+    "description": "Physical address of the establishment."
+  },
+  "app.about.contactTitle": {
+    "defaultMessage": "Skontaktuj się z nami",
+    "description": "Title for the contact section."
+  },
+  "app.about.email": {
+    "defaultMessage": "contact@znosemwpiwie.com",
+    "description": "Email address for contacting the establishment."
+  },
+  "app.about.emailTitle": {
+    "defaultMessage": "e-mail",
+    "description": "Title for the email contact information."
+  },
+  "app.about.eventsTitle": {
+    "defaultMessage": "Nadchodzące wydarzenia",
+    "description": "Title for the upcoming events section."
+  },
+  "app.about.fullDescription1": {
+    "defaultMessage": "W \"Z Nosem W Piwie\" starannie stworzyliśmy miejsce, które przekracza granice zwykłości, zapraszając cię do wejścia w wyobrażony świat, gdzie nostalgia splata się z nieograniczonymi pomysłami. Nasz kapryśny lokal, noszący zabawną nazwę \"Z Nosem W Piwie\" (przekładająca się na \"Z Nosem w Piwie\"), to więcej niż tylko fikcyjny pub/kawiarnia – to przeżycie, w którym każda wizyta to podróż w niezwykłość.",
+    "description": "First part of the full description of the establishment."
+  },
+  "app.about.fullDescription2": {
+    "defaultMessage": "Wstąp w przytulny kąt ozdobiony eklektycznymi dekoracjami, plakatami z epoki i ciepłym blaskiem migoczącego światła świec. Atmosfera w \"Z Nosem W Piwie\" to starannie skomponowane połączenie rustykalnego uroku i pełnej energii wibracji. To środowisko zaprojektowane tak, abyś mógł się zrelaksować, nawiązać kontakt z innymi i rozkoszować się każdym momentem, tworząc bezczasową przestrzeń, gdzie rozmowy płyną swobodnie.",
+    "description": "Second part of the full description of the establishment."
+  },
+  "app.about.fullDescription3": {
+    "defaultMessage": "Chociaż nasz pub/kawiarnia może mieć swoje korzenie w wyobraźni, smaki, które serwujemy, są zakorzenione w prawdziwej radości eksploracji kulinariów. Nasze menu to dowód inspiracji z całego świata, oferujące treściwe dania pubowe, aromatyczne kawy i starannie wyselekcjonowany wybór wymyślnych napojów. Od uroków fikcyjnych piw rzemieślniczych po fantazyjne drinki – każdy łyk i kęs w \"Z Nosem W Piwie\" są zaprojektowane, aby przenieść cię do świata rozkosznej gastronomii.",
+    "description": "Third part of the full description of the establishment."
+  },
+  "app.about.fullDescription4": {
+    "defaultMessage": "Dusza wyobraźni ożywa dzięki różnorodności wydarzeń w \"Z Nosem W Piwie.\" Od koncertów na żywo, które rezonują w ścianach, po tematyczne imprezy wykraczające poza zwyczajność, i dziwaczne wieczory z quizami, które stawiają wyzwanie wyobraźni – nasz kalendarz wydarzeń zawsze pulsuje magicznymi wydarzeniami. Sprawdzaj regularnie aktualizacje i zanurzaj się w magii naszego świata wyobraźni.",
+    "description": "Fourth part of the full description of the establishment."
+  },
+  "app.about.merchTitle": {
+    "defaultMessage": "Sprawdź nasze produkty!",
+    "description": "Title for the merchandise section."
+  },
+  "app.about.newsletter": {
+    "defaultMessage": "Dołącz do naszego biuletynu",
+    "description": "Invitation to join the establishment's newsletter."
+  },
+  "app.about.oHFS": {
+    "defaultMessage": "Piątek - Sobota",
+    "description": "Abbreviation for opening hours on Friday and Saturday."
+  },
+  "app.about.oHFSHours": {
+    "defaultMessage": "10:00 - 1:30",
+    "description": "Opening hours for Friday and Saturday."
+  },
+  "app.about.oHMT": {
+    "defaultMessage": "Poniedziałek - Czwartek",
+    "description": "Abbreviation for opening hours from Monday to Thursday."
+  },
+  "app.about.oHMTHours": {
+    "defaultMessage": "8:00 - 22:30",
+    "description": "Opening hours from Monday to Thursday."
+  },
+  "app.about.oHS": {
+    "defaultMessage": "Niedziela",
+    "description": "Abbreviation for opening hours on Sunday."
+  },
+  "app.about.oHSHours": {
+    "defaultMessage": "10:00 - 18:00",
+    "description": "Opening hours on Sunday."
+  },
+  "app.about.openingHours": {
+    "defaultMessage": "Godziny otwarcia",
+    "description": "Title for the section displaying opening hours."
+  },
+  "app.about.phone": {
+    "defaultMessage": "+48 000 000 000",
+    "description": "Contact phone number for the establishment."
+  },
+  "app.about.phoneTitle": {
+    "defaultMessage": "telefon",
+    "description": "Title for the phone contact information."
+  },
+  "app.about.pubName": {
+    "defaultMessage": "Z Nosem W Piwie",
+    "description": "Name of the pub/cafe establishment."
+  },
+  "app.home.about": {
+    "defaultMessage": "O nas",
+    "description": "Navigation link to the 'About' section."
+  },
+  "app.home.contact": {
+    "defaultMessage": "Kontakt",
+    "description": "Navigation link to the 'Contact' section."
+  },
+  "app.home.follow": {
+    "defaultMessage": "Zaobserwuj nas",
+    "description": "Invitation to follow the establishment on social media."
+  },
+  "app.home.home": {
+    "defaultMessage": "Strona główna",
+    "description": "Navigation link to the 'Home' page."
+  },
+  "app.home.offer": {
+    "defaultMessage": "Oferta",
+    "description": "Navigation link to the 'Offer' section."
+  },
+  "app.home.pubName": {
+    "defaultMessage": "Z Nosem W Piwie",
+    "description": "Name of the pub/cafe establishment on the home page."
+  },
+  "app.home.welcome": {
+    "defaultMessage": "Witaj w miejscu, gdzie przeszłość i wyobraźnia splatają się, tworząc wyjątkowe doświadczenie pub/kawiarni! Zanurz się w uroku rustykalnej dekoracji, popijaj wymyślne trunki i pozwól, by każdy moment przeniósł cię w miejsce, gdzie śmiech nie zna granic. Zdrowie dla magii \"Z Nosem W Piwie\" - twojego ucieczki do niezwykłego świata wyobraźni!",
+    "description": "Welcome message on the home page."
+  },
+  "app.layout.about": {
+    "defaultMessage": "O nas",
+    "description": "Navigation link to the 'About' section."
+  },
+  "app.layout.contact": {
+    "defaultMessage": "Kontakt",
+    "description": "Navigation link to the 'Contact' section."
+  },
+  "app.layout.footer.altLinks": {
+    "defaultMessage": "Alternatywne wersje tej strony",
+    "description": "Footer link to alternative versions of the site."
+  },
+  "app.layout.footer.myLinks": {
+    "defaultMessage": "Moje linki",
+    "description": "Footer link to personal links or information."
+  },
+  "app.layout.footer.siteLinks": {
+    "defaultMessage": "Linki do strony",
+    "description": "Footer link to general site links."
+  },
+  "app.layout.home": {
+    "defaultMessage": "Strona główna",
+    "description": "Navigation link to the 'Home' page."
+  },
+  "app.layout.offer": {
+    "defaultMessage": "Oferta",
+    "description": "Navigation link to the 'Offer' section."
+  },
+  "app.offer.beers": {
+    "defaultMessage": "P i w a",
+    "description": "Title for the beers section in the menu."
+  },
+  "app.offer.beersM": {
+    "defaultMessage": "Piwa",
+    "description": "Title for the beers section in a condensed format."
+  },
+  "app.offer.coffee": {
+    "defaultMessage": "K a w a",
+    "description": "Title for the coffee section in the menu."
+  },
+  "app.offer.coffeeM": {
+    "defaultMessage": "Kawa",
+    "description": "Title for the coffee section in a condensed format."
+  }
+}

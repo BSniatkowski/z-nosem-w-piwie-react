@@ -1,5 +1,6 @@
 import { useCallback, useMemo } from 'react'
 import { SubmitHandler } from 'react-hook-form'
+import { FormattedMessage } from 'react-intl'
 import * as yup from 'yup'
 
 import event_1 from '/imgs/event_1.png'
@@ -15,6 +16,7 @@ import Icon from '../../atoms/Icon/Icon'
 import Carousel from '../../organisms/Carousel/Carousel'
 import { TCarouselItems } from '../../organisms/Carousel/Carousel.types'
 import Form from '../../organisms/Form/Form'
+import messages from './About.messages'
 import * as S from './About.style'
 import { IContactFieldsValues, TContactFields } from './About.types'
 
@@ -121,85 +123,93 @@ const About = () => {
         <S.AboutSection id='about'>
             <S.AboutSectionInner>
                 <Card size='full'>
-                    <h1 className='decorative'>Z Nosem W Piwie</h1>
+                    <h1 className='decorative'>
+                        <FormattedMessage {...messages.pubName} />
+                    </h1>
                     <p>
-                        At "Z Nosem W Piwie," we've meticulously crafted a haven that transcends the
-                        ordinary, inviting you to step into an imaginary realm where nostalgia
-                        intertwines with boundless creativity. Our whimsical establishment, bearing
-                        the playful moniker "Z Nosem W Piwie" (translating to "With a Nose in
-                        Beer"), is more than just a fictitious pub/cafe—it's an immersive experience
-                        where every visit is a journey into the extraordinary.
+                        <FormattedMessage {...messages.descriptionPart1} />
                         <br />
-                        <br /> Step into a cozy corner adorned with eclectic decorations, vintage
-                        posters, and the warm glow of flickering candlelight. The ambiance at "Z
-                        Nosem W Piwie" is a carefully curated blend of rustic charm and vibrant
-                        energy. It's an environment designed to invite you to unwind, connect with
-                        others, and savor each moment, creating a timeless escape where
-                        conversations flow freely.
                         <br />
-                        <br /> While our pub/cafe might be born from imagination, the flavors we
-                        serve are grounded in the real joy of culinary exploration. Our menu is a
-                        testament to global inspirations, featuring hearty pub fare, aromatic
-                        coffees, and an artfully curated selection of imaginative beverages. From
-                        the allure of fictional craft beers to the whimsy of creatively crafted
-                        cocktails, every sip and bite at "Z Nosem W Piwie" is designed to transport
-                        you to a world of delightful gastronomy.
+                        <FormattedMessage {...messages.descriptionPart2} />
                         <br />
-                        <br /> The spirit of make-believe comes alive with an array of events at "Z
-                        Nosem W Piwie." From live music performances that resonate through the walls
-                        to themed parties that transcend the ordinary, and quirky trivia nights that
-                        challenge the imagination - our event calendar is always buzzing with
-                        make-believe happenings. Check regularly for updates and immerse yourself in
-                        the magic of our make-believe world.
+                        <br />
+                        <FormattedMessage {...messages.descriptionPart3} />
+                        <br />
+                        <br />
+                        <FormattedMessage {...messages.descriptionPart4} />
                     </p>
                     <S.MapContainer>
                         <img src={map} />
                     </S.MapContainer>
                     <h4 className='decorative' style={{ textAlign: 'center' }}>
-                        Cracow, Main Square 0, 00-000
+                        <FormattedMessage {...messages.address} />
                     </h4>
                 </Card>
                 <S.CardsContainer>
                     <Card size='fit'>
-                        <h4 className='decorative'>Opening hours</h4>
+                        <h4 className='decorative'>
+                            <FormattedMessage {...messages.openingHours} />
+                        </h4>
                         <S.ContentRow>
-                            <span>Monday - Thursday</span>
-                            <span>8:00 - 22:30</span>
+                            <span>
+                                <FormattedMessage {...messages.oHMT} />
+                            </span>
+                            <span>
+                                <FormattedMessage {...messages.oHMTHours} />
+                            </span>
                         </S.ContentRow>
                         <S.ContentRow>
-                            <span>Friday - Saturday</span>
-                            <span>10:00 - 1:30</span>
+                            <span>
+                                <FormattedMessage {...messages.oHFS} />
+                            </span>
+                            <span>
+                                <FormattedMessage {...messages.oHFSHours} />
+                            </span>
                         </S.ContentRow>
                         <S.ContentRow>
-                            <span>Sunday</span>
-                            <span>10:00 - 18:00</span>
+                            <span>
+                                <FormattedMessage {...messages.oHS} />
+                            </span>
+                            <span>
+                                <FormattedMessage {...messages.oHSHours} />
+                            </span>
                         </S.ContentRow>
                     </Card>
                     <Card size='fit'>
                         <S.ContentRow>
-                            <h4 className='decorative'>email</h4>
-                            <span>contact@znosemwpiwie.com</span>
+                            <h4 className='decorative'>
+                                <FormattedMessage {...messages.emailTitle} />
+                            </h4>
+                            <span>
+                                <FormattedMessage {...messages.email} />
+                            </span>
                         </S.ContentRow>
                         <S.ContentRow>
-                            <h4 className='decorative'>phone</h4>
-                            <span>+48 000 000 000</span>
+                            <h4 className='decorative'>
+                                <FormattedMessage {...messages.phoneTitle} />
+                            </h4>
+                            <span>
+                                <FormattedMessage {...messages.phone} />
+                            </span>
                         </S.ContentRow>
                     </Card>
                     <Card size={34}>
-                        <h4 className='decorative'>Join our newsletter</h4>
+                        <h4 className='decorative'>
+                            <FormattedMessage {...messages.newsletter} />
+                        </h4>
                         <Button size='full' label='Ok!' onClick={() => 'Click'} />
                     </Card>
                 </S.CardsContainer>
                 <Card size='full'>
                     <h3 className='decorative' style={{ textAlign: 'center' }}>
-                        Upcoming events
+                        <FormattedMessage {...messages.eventsTitle} />
                     </h3>
                     <Carousel autoChange items={eventsItems} />
                 </Card>
                 <S.ContactAndMerchContainer id='contact' $isTablet={isTablet}>
                     <Card size='full'>
                         <h4 className='decorative' style={{ textAlign: 'center' }}>
-                            Contact Us
+                            <FormattedMessage {...messages.contactTitle} />
                         </h4>
                         <Form<IContactFieldsValues>
                             fields={fields}
@@ -209,7 +219,7 @@ const About = () => {
                     </Card>
                     <Card size={40}>
                         <S.MerchTitle>
-                            Checkout our merch!
+                            <FormattedMessage {...messages.merchTitle} />
                             <Icon variant='merch' />
                         </S.MerchTitle>
                         <Carousel autoChange items={merchItems} />

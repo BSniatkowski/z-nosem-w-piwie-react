@@ -1,3 +1,5 @@
+import { FormattedMessage } from 'react-intl'
+
 import beer_1 from '/imgs/beer_1.png'
 import beer_2 from '/imgs/beer_2.png'
 import beer_3 from '/imgs/beer_3.png'
@@ -8,6 +10,7 @@ import coffee_3 from '/imgs/coffee_3.png'
 import { useBreakpoint } from '../../../hooks/useBreakpoint/useBreakpoint'
 import MenuItem from '../../molecules/MenuItem/MenuItem'
 import { IMenuItemProps } from '../../molecules/MenuItem/MenuItem.types'
+import messages from './Offer.messages'
 import * as S from './Offer.style'
 
 const Offer = () => {
@@ -121,7 +124,11 @@ const Offer = () => {
                 <S.ItemsCategoryContainer $isMobile={isMobile}>
                     <S.ItemsCategoryNameContainer>
                         <S.ItemsCategoryName>
-                            {isMobile ? 'Beers' : 'B e e r s'}
+                            {isMobile ? (
+                                <FormattedMessage {...messages.beersM} />
+                            ) : (
+                                <FormattedMessage {...messages.beers} />
+                            )}
                         </S.ItemsCategoryName>
                     </S.ItemsCategoryNameContainer>
                     <S.ItemsList>
@@ -142,7 +149,11 @@ const Offer = () => {
                 <S.ItemsCategoryContainer $isMobile={isMobile} $direction='reverse'>
                     <S.ItemsCategoryNameContainer>
                         <S.ItemsCategoryName>
-                            {isMobile ? 'Coffee' : 'C o f f e e'}
+                            {isMobile ? (
+                                <FormattedMessage {...messages.coffeeM} />
+                            ) : (
+                                <FormattedMessage {...messages.coffee} />
+                            )}
                         </S.ItemsCategoryName>
                     </S.ItemsCategoryNameContainer>
                     <S.ItemsList>

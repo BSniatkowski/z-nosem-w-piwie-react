@@ -1,0 +1,236 @@
+{
+  "app.about.address": [
+    {
+      "type": 0,
+      "value": "Kraków, Rynek Główny 0, 00-000"
+    }
+  ],
+  "app.about.contactTitle": [
+    {
+      "type": 0,
+      "value": "Skontaktuj się z nami"
+    }
+  ],
+  "app.about.email": [
+    {
+      "type": 0,
+      "value": "contact@znosemwpiwie.com"
+    }
+  ],
+  "app.about.emailTitle": [
+    {
+      "type": 0,
+      "value": "e-mail"
+    }
+  ],
+  "app.about.eventsTitle": [
+    {
+      "type": 0,
+      "value": "Nadchodzące wydarzenia"
+    }
+  ],
+  "app.about.fullDescription1": [
+    {
+      "type": 0,
+      "value": "W \"Z Nosem W Piwie\" starannie stworzyliśmy miejsce, które przekracza granice zwykłości, zapraszając cię do wejścia w wyobrażony świat, gdzie nostalgia splata się z nieograniczonymi pomysłami. Nasz kapryśny lokal, noszący zabawną nazwę \"Z Nosem W Piwie\" (przekładająca się na \"Z Nosem w Piwie\"), to więcej niż tylko fikcyjny pub/kawiarnia – to przeżycie, w którym każda wizyta to podróż w niezwykłość."
+    }
+  ],
+  "app.about.fullDescription2": [
+    {
+      "type": 0,
+      "value": "Wstąp w przytulny kąt ozdobiony eklektycznymi dekoracjami, plakatami z epoki i ciepłym blaskiem migoczącego światła świec. Atmosfera w \"Z Nosem W Piwie\" to starannie skomponowane połączenie rustykalnego uroku i pełnej energii wibracji. To środowisko zaprojektowane tak, abyś mógł się zrelaksować, nawiązać kontakt z innymi i rozkoszować się każdym momentem, tworząc bezczasową przestrzeń, gdzie rozmowy płyną swobodnie."
+    }
+  ],
+  "app.about.fullDescription3": [
+    {
+      "type": 0,
+      "value": "Chociaż nasz pub/kawiarnia może mieć swoje korzenie w wyobraźni, smaki, które serwujemy, są zakorzenione w prawdziwej radości eksploracji kulinariów. Nasze menu to dowód inspiracji z całego świata, oferujące treściwe dania pubowe, aromatyczne kawy i starannie wyselekcjonowany wybór wymyślnych napojów. Od uroków fikcyjnych piw rzemieślniczych po fantazyjne drinki – każdy łyk i kęs w \"Z Nosem W Piwie\" są zaprojektowane, aby przenieść cię do świata rozkosznej gastronomii."
+    }
+  ],
+  "app.about.fullDescription4": [
+    {
+      "type": 0,
+      "value": "Dusza wyobraźni ożywa dzięki różnorodności wydarzeń w \"Z Nosem W Piwie.\" Od koncertów na żywo, które rezonują w ścianach, po tematyczne imprezy wykraczające poza zwyczajność, i dziwaczne wieczory z quizami, które stawiają wyzwanie wyobraźni – nasz kalendarz wydarzeń zawsze pulsuje magicznymi wydarzeniami. Sprawdzaj regularnie aktualizacje i zanurzaj się w magii naszego świata wyobraźni."
+    }
+  ],
+  "app.about.merchTitle": [
+    {
+      "type": 0,
+      "value": "Sprawdź nasze produkty!"
+    }
+  ],
+  "app.about.newsletter": [
+    {
+      "type": 0,
+      "value": "Dołącz do naszego biuletynu"
+    }
+  ],
+  "app.about.oHFS": [
+    {
+      "type": 0,
+      "value": "Piątek - Sobota"
+    }
+  ],
+  "app.about.oHFSHours": [
+    {
+      "type": 0,
+      "value": "10:00 - 1:30"
+    }
+  ],
+  "app.about.oHMT": [
+    {
+      "type": 0,
+      "value": "Poniedziałek - Czwartek"
+    }
+  ],
+  "app.about.oHMTHours": [
+    {
+      "type": 0,
+      "value": "8:00 - 22:30"
+    }
+  ],
+  "app.about.oHS": [
+    {
+      "type": 0,
+      "value": "Niedziela"
+    }
+  ],
+  "app.about.oHSHours": [
+    {
+      "type": 0,
+      "value": "10:00 - 18:00"
+    }
+  ],
+  "app.about.openingHours": [
+    {
+      "type": 0,
+      "value": "Godziny otwarcia"
+    }
+  ],
+  "app.about.phone": [
+    {
+      "type": 0,
+      "value": "+48 000 000 000"
+    }
+  ],
+  "app.about.phoneTitle": [
+    {
+      "type": 0,
+      "value": "telefon"
+    }
+  ],
+  "app.about.pubName": [
+    {
+      "type": 0,
+      "value": "Z Nosem W Piwie"
+    }
+  ],
+  "app.home.about": [
+    {
+      "type": 0,
+      "value": "O nas"
+    }
+  ],
+  "app.home.contact": [
+    {
+      "type": 0,
+      "value": "Kontakt"
+    }
+  ],
+  "app.home.follow": [
+    {
+      "type": 0,
+      "value": "Zaobserwuj nas"
+    }
+  ],
+  "app.home.home": [
+    {
+      "type": 0,
+      "value": "Strona główna"
+    }
+  ],
+  "app.home.offer": [
+    {
+      "type": 0,
+      "value": "Oferta"
+    }
+  ],
+  "app.home.pubName": [
+    {
+      "type": 0,
+      "value": "Z Nosem W Piwie"
+    }
+  ],
+  "app.home.welcome": [
+    {
+      "type": 0,
+      "value": "Witaj w miejscu, gdzie przeszłość i wyobraźnia splatają się, tworząc wyjątkowe doświadczenie pub/kawiarni! Zanurz się w uroku rustykalnej dekoracji, popijaj wymyślne trunki i pozwól, by każdy moment przeniósł cię w miejsce, gdzie śmiech nie zna granic. Zdrowie dla magii \"Z Nosem W Piwie\" - twojego ucieczki do niezwykłego świata wyobraźni!"
+    }
+  ],
+  "app.layout.about": [
+    {
+      "type": 0,
+      "value": "O nas"
+    }
+  ],
+  "app.layout.contact": [
+    {
+      "type": 0,
+      "value": "Kontakt"
+    }
+  ],
+  "app.layout.footer.altLinks": [
+    {
+      "type": 0,
+      "value": "Alternatywne wersje tej strony"
+    }
+  ],
+  "app.layout.footer.myLinks": [
+    {
+      "type": 0,
+      "value": "Moje linki"
+    }
+  ],
+  "app.layout.footer.siteLinks": [
+    {
+      "type": 0,
+      "value": "Linki do strony"
+    }
+  ],
+  "app.layout.home": [
+    {
+      "type": 0,
+      "value": "Strona główna"
+    }
+  ],
+  "app.layout.offer": [
+    {
+      "type": 0,
+      "value": "Oferta"
+    }
+  ],
+  "app.offer.beers": [
+    {
+      "type": 0,
+      "value": "P i w a"
+    }
+  ],
+  "app.offer.beersM": [
+    {
+      "type": 0,
+      "value": "Piwa"
+    }
+  ],
+  "app.offer.coffee": [
+    {
+      "type": 0,
+      "value": "K a w a"
+    }
+  ],
+  "app.offer.coffeeM": [
+    {
+      "type": 0,
+      "value": "Kawa"
+    }
+  ]
+}
