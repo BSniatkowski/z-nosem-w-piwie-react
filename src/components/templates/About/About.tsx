@@ -8,6 +8,8 @@ import map from '/imgs/map.png'
 import { ContactFormData, fetchEvents, fetchMerch } from '../../../../api/api'
 import { IEventItemElement, IMerchItemElement } from '../../../../api/api.types'
 import { useBreakpoint } from '../../../hooks/useBreakpoint/useBreakpoint'
+import { useSnackbarDispatch } from '../../../providers/SnackbarProvider/hooks/useSnackbarDispatch'
+import { ESnackbarDispatchActions } from '../../../providers/SnackbarProvider/SnackbarProvider.types'
 import Button from '../../atoms/Button/Button'
 import Card from '../../atoms/Card/Card'
 import Icon from '../../atoms/Icon/Icon'
@@ -26,6 +28,8 @@ const About = () => {
     const isTablet = useBreakpoint('tablet')
     const isMobile = useBreakpoint('mobile')
 
+    const dispatch = useSnackbarDispatch()
+
     const composeEventItemElement = useCallback(
         ({ title, date, description, imgSrc }: ITranslatedEventItem) => (
             <S.EventContainer $isMobile={isMobile}>
@@ -38,9 +42,29 @@ const About = () => {
                                 await navigator.clipboard.writeText(
                                     'https://www.facebook.com/fake_event_link',
                                 )
-                                console.log('Content copied to clipboard')
-                            } catch (err) {
-                                console.error('Failed to copy: ', err)
+
+                                if (dispatch)
+                                    dispatch({
+                                        type: ESnackbarDispatchActions.SHOW_SNACKBAR,
+                                        payload: {
+                                            variant: 'info',
+                                            message: intl.formatMessage(
+                                                messages.eventSnackbarMessageSuccess,
+                                            ),
+                                        },
+                                    })
+                            } catch (error) {
+                                if (dispatch)
+                                    dispatch({
+                                        type: ESnackbarDispatchActions.SHOW_SNACKBAR,
+                                        payload: {
+                                            variant: 'error',
+                                            message: intl.formatMessage(
+                                                messages.eventSnackbarMessageError,
+                                                { error: String(error) },
+                                            ),
+                                        },
+                                    })
                             }
                         }}
                     />
@@ -49,7 +73,7 @@ const About = () => {
                 {imgSrc && <S.EventImg src={imgSrc} />}
             </S.EventContainer>
         ),
-        [isMobile],
+        [dispatch, intl, isMobile],
     )
 
     const [eventsItems, setEventsItems] = useState<Array<IEventItemElement>>([])
@@ -149,13 +173,24 @@ const About = () => {
         [intl],
     )
 
-    const onSubmit: SubmitHandler<IContactFieldsValues> = useCallback(async (data) => {
-        setIsContactFormLoading(true)
-        const response = await ContactFormData(data)
+    const onSubmit: SubmitHandler<IContactFieldsValues> = useCallback(
+        async (data) => {
+            setIsContactFormLoading(true)
+            const response = await ContactFormData(data)
 
-        console.log(response)
-        setIsContactFormLoading(false)
-    }, [])
+            console.log(response)
+            if (dispatch)
+                dispatch({
+                    type: ESnackbarDispatchActions.SHOW_SNACKBAR,
+                    payload: {
+                        variant: 'info',
+                        message: intl.formatMessage(messages.contactFormSnackbarMessage),
+                    },
+                })
+            setIsContactFormLoading(false)
+        },
+        [dispatch, intl],
+    )
 
     const updateEvents = useCallback(async () => {
         const events = await fetchEvents()
