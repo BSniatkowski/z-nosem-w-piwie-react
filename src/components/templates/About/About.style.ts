@@ -48,6 +48,11 @@ export const ContactAndMerchContainer = styled.section<{ $isTablet: boolean }>`
     gap: 4rem;
 `
 
+export const ContactCardTitle = styled.h4.attrs({ className: 'decorative' })`
+    text-align: center;
+    margin-bottom: 2rem;
+`
+
 export const ContentRow = styled.div`
     width: 100%;
     display: flex;
