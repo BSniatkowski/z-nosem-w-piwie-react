@@ -13,6 +13,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
     args: {
+        isMobile: false,
         variant: 'info',
         message: 'Event data successfully copied to clipboard.',
         isActive: true,
@@ -23,6 +24,14 @@ export const Default: Story = {
             <Snackbar {...args} />
         </div>
     ),
+}
+
+export const Mobile: Story = {
+    ...Default,
+    args: {
+        ...Default.args,
+        isMobile: true,
+    },
 }
 
 export const Warning: Story = {

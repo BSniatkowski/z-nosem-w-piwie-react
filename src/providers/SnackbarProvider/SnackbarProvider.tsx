@@ -1,6 +1,7 @@
 import { createContext, Dispatch, useEffect, useReducer } from 'react'
 
 import Snackbar from '../../components/molecules/Snackbar/Snackbar'
+import { useBreakpoint } from '../../hooks/useBreakpoint/useBreakpoint'
 import {
     ESnackbarDispatchActions,
     IInitialSnackbarState,
@@ -35,6 +36,8 @@ export const SnackbarDispatchContext = createContext<Dispatch<TSnackbarActions> 
 const SnackbarProvider: React.FC<ISnackbarProviderProps> = ({ children }) => {
     const [snackbarState, snackbarDispatch] = useReducer(snackbarStateReducer, initialSnackbarState)
 
+    const isMobile = useBreakpoint('mobile')
+
     useEffect(() => {
         const closeSnackbarTimeout = setTimeout(() => {
             if (snackbarState.isActive)
@@ -50,6 +53,7 @@ const SnackbarProvider: React.FC<ISnackbarProviderProps> = ({ children }) => {
                 {children}
                 <Snackbar
                     {...snackbarState}
+                    isMobile={isMobile}
                     onClose={() =>
                         snackbarDispatch({ type: ESnackbarDispatchActions.CLOSE_SNACKBAR })
                     }

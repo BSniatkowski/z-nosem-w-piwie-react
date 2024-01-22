@@ -4,7 +4,7 @@ export interface ISnackbarProviderProps {
     children: React.ReactElement
 }
 
-export interface IInitialSnackbarState extends Omit<ISnackbarProps, 'onClose'> {}
+export interface IInitialSnackbarState extends Omit<ISnackbarProps, 'onClose' | 'isMobile'> {}
 
 export enum ESnackbarDispatchActions {
     SHOW_SNACKBAR = 'showSnackbar',
