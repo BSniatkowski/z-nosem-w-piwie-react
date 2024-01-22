@@ -1,4 +1,5 @@
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useEffect } from 'react'
 import { Controller, FieldValues, useForm } from 'react-hook-form'
 import * as yup from 'yup'
 
@@ -18,11 +19,16 @@ const Form = <T extends FieldValues>({ fields, validationSchema, onSubmit }: IFo
     const {
         control,
         handleSubmit,
-        formState: { errors },
+        reset,
+        formState: { errors, isSubmitSuccessful },
     } = useForm<FormData>({
         defaultValues,
         resolver: yupResolver(validationSchema),
     })
+
+    useEffect(() => {
+        reset()
+    }, [isSubmitSuccessful, reset])
 
     return (
         <S.SForm>

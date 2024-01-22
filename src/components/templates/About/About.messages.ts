@@ -120,6 +120,11 @@ export default defineMessages({
         description: 'Message field of contact form.',
         defaultMessage: 'Message',
     },
+    contactFormLoaderMessage: {
+        id: 'app.about.contactFormLoaderMessage',
+        description: 'Form sending loader message.',
+        defaultMessage: 'Sending',
+    },
     merchTitle: {
         id: 'app.about.merchTitle',
         description: 'Title for the merchandise section.',

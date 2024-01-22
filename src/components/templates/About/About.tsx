@@ -16,6 +16,7 @@ import Carousel from '../../organisms/Carousel/Carousel'
 import { TCarouselItems } from '../../organisms/Carousel/Carousel.types'
 import Form from '../../organisms/Form/Form'
 import formMessages from '../../organisms/Form/Form.messages'
+import Loader from '../../organisms/Loader/Loader'
 import messages from './About.messages'
 import * as S from './About.style'
 import { IContactFieldsValues, ITranslatedEventItem, TContactFields } from './About.types'
@@ -72,6 +73,8 @@ const About = () => {
             })),
         [merchItems],
     )
+
+    const [isContactFormLoading, setIsContactFormLoading] = useState<boolean>(false)
 
     const fields = [
         {
@@ -147,9 +150,11 @@ const About = () => {
     )
 
     const onSubmit: SubmitHandler<IContactFieldsValues> = useCallback(async (data) => {
+        setIsContactFormLoading(true)
         const response = await ContactFormData(data)
 
         console.log(response)
+        setIsContactFormLoading(false)
     }, [])
 
     const updateEvents = useCallback(async () => {
@@ -258,14 +263,23 @@ const About = () => {
                 </Card>
                 <S.ContactAndMerchContainer id='contact' $isTablet={isTablet}>
                     <Card size='full'>
-                        <h4 className='decorative' style={{ textAlign: 'center' }}>
-                            <FormattedMessage {...messages.contactTitle} />
-                        </h4>
-                        <Form<IContactFieldsValues>
-                            fields={fields}
-                            validationSchema={validationSchema}
-                            onSubmit={onSubmit}
-                        />
+                        <Loader
+                            isLoading={isContactFormLoading}
+                            loadingMessage={
+                                <FormattedMessage {...messages.contactFormLoaderMessage} />
+                            }
+                        >
+                            <>
+                                <S.ContactCardTitle>
+                                    <FormattedMessage {...messages.contactTitle} />
+                                </S.ContactCardTitle>
+                                <Form<IContactFieldsValues>
+                                    fields={fields}
+                                    validationSchema={validationSchema}
+                                    onSubmit={onSubmit}
+                                />
+                            </>
+                        </Loader>
                     </Card>
                     <Card size={40}>
                         <S.MerchTitle>
