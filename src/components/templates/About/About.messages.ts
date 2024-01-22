@@ -100,6 +100,16 @@ export default defineMessages({
         description: 'Title for the upcoming events section.',
         defaultMessage: 'Upcoming events',
     },
+    eventSnackbarMessageSuccess: {
+        id: 'app.about.eventSnackbarMessageSuccess',
+        description: 'Snackabar message after successful copied event data to clipboard.',
+        defaultMessage: 'Event data copied to clipboard!',
+    },
+    eventSnackbarMessageError: {
+        id: 'app.about.eventSnackbarMessageError',
+        description: 'Snackabar message after error while copying event data to clipboard.',
+        defaultMessage: 'Something went wrong: {error}.',
+    },
     contactTitle: {
         id: 'app.about.contactTitle',
         description: 'Title for the contact section.',
@@ -124,6 +134,11 @@ export default defineMessages({
         id: 'app.about.contactFormLoaderMessage',
         description: 'Form sending loader message.',
         defaultMessage: 'Sending',
+    },
+    contactFormSnackbarMessage: {
+        id: 'app.about.contactFormSnackbarMessage',
+        description: 'Snackabar message after contact form message sent.',
+        defaultMessage: 'Message sent!',
     },
     merchTitle: {
         id: 'app.about.merchTitle',

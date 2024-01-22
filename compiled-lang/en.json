@@ -5,6 +5,18 @@
       "value": "Cracow, Main Square 0, 00-000"
     }
   ],
+  "app.about.contactFormLoaderMessage": [
+    {
+      "type": 0,
+      "value": "Sending"
+    }
+  ],
+  "app.about.contactFormSnackbarMessage": [
+    {
+      "type": 0,
+      "value": "Message sent!"
+    }
+  ],
   "app.about.contactTitle": [
     {
       "type": 0,
@@ -27,6 +39,26 @@
     {
       "type": 0,
       "value": "email"
+    }
+  ],
+  "app.about.eventSnackbarMessageError": [
+    {
+      "type": 0,
+      "value": "Something went wrong: "
+    },
+    {
+      "type": 1,
+      "value": "error"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "app.about.eventSnackbarMessageSuccess": [
+    {
+      "type": 0,
+      "value": "Event data copied to clipboard!"
     }
   ],
   "app.about.eventsTitle": [

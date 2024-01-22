@@ -3,6 +3,14 @@
     "defaultMessage": "Cracow, Main Square 0, 00-000",
     "description": "Physical address of the establishment."
   },
+  "app.about.contactFormLoaderMessage": {
+    "defaultMessage": "Sending",
+    "description": "Form sending loader message."
+  },
+  "app.about.contactFormSnackbarMessage": {
+    "defaultMessage": "Message sent!",
+    "description": "Snackabar message after contact form message sent."
+  },
   "app.about.contactTitle": {
     "defaultMessage": "Contact Us",
     "description": "Title for the contact section."
@@ -18,6 +26,14 @@
   "app.about.emailTitle": {
     "defaultMessage": "email",
     "description": "Title for the email contact information."
+  },
+  "app.about.eventSnackbarMessageError": {
+    "defaultMessage": "Something went wrong: {error}.",
+    "description": "Snackabar message after error while copying event data to clipboard."
+  },
+  "app.about.eventSnackbarMessageSuccess": {
+    "defaultMessage": "Event data copied to clipboard!",
+    "description": "Snackabar message after successful copied event data to clipboard."
   },
   "app.about.eventsTitle": {
     "defaultMessage": "Upcoming events",

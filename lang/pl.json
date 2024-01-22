@@ -3,6 +3,14 @@
     "defaultMessage": "Kraków, Rynek Główny 0, 00-000",
     "description": "Physical address of the establishment."
   },
+  "app.about.contactFormLoaderMessage": {
+    "defaultMessage": "Wysyłanie",
+    "description": "Form sending loader message."
+  },
+  "app.about.contactFormSnackbarMessage": {
+    "defaultMessage": "Wiadomośc wysłana!",
+    "description": "Snackabar message after contact form message sent."
+  },
   "app.about.contactTitle": {
     "defaultMessage": "Skontaktuj się z nami",
     "description": "Title for the contact section."
@@ -18,6 +26,14 @@
   "app.about.emailTitle": {
     "defaultMessage": "e-mail",
     "description": "Title for the email contact information."
+  },
+  "app.about.eventSnackbarMessageError": {
+    "defaultMessage": "Coś poszło nie tak: {error}.",
+    "description": "Snackabar message after error while copying event data to clipboard."
+  },
+  "app.about.eventSnackbarMessageSuccess": {
+    "defaultMessage": "Wydarzenie skopiowane do schowka!",
+    "description": "Snackabar message after successful copied event data to clipboard."
   },
   "app.about.eventsTitle": {
     "defaultMessage": "Nadchodzące wydarzenia",
