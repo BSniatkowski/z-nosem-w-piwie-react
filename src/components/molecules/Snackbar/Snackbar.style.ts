@@ -1,15 +1,14 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { IconWrapper } from '../../atoms/Icon/Icon.style'
 
 export const SSnackbar = styled.div<{
+    $isMobile: boolean
     $variant?: 'info' | 'warning' | 'error'
     $isActive: boolean
 }>`
     position: fixed;
     bottom: ${({ $isActive }) => ($isActive ? '1rem' : '-100%')};
-    left: 50%;
-    transform: translateX(-50%);
     width: fit-content;
     max-width: 100%;
     display: flex;
@@ -20,6 +19,19 @@ export const SSnackbar = styled.div<{
     padding: 2rem;
     transition: bottom 0.3s ease-out;
     box-shadow: 0 0 0.8rem ${({ theme }) => theme.palette.shades.black[38]};
+
+    ${({ $isMobile }) =>
+        $isMobile
+            ? css`
+                  margin: 0 auto;
+                  max-width: calc(100% - 4rem);
+                  left: 0;
+                  right: 0;
+              `
+            : css`
+                  left: 50%;
+                  transform: translateX(-50%);
+              `}
 
     color: ${({ theme }) => theme.palette.white};
     background-color: ${({ $variant = 'info', theme }) =>
