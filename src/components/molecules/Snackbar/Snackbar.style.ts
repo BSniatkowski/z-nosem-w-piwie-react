@@ -18,7 +18,7 @@ export const SSnackbar = styled.div<{
     border-radius: 1rem;
     padding: 2rem;
     transition: bottom 0.3s ease-out;
-    box-shadow: 0 0 0.8rem ${({ theme }) => theme.palette.shades.black[38]};
+    box-shadow: ${({ theme }) => theme.boxShadow.primary};
 
     ${({ $isMobile }) =>
         $isMobile

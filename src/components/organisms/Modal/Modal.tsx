@@ -1,0 +1,34 @@
+import { useEffect } from 'react'
+
+import * as S from './Modal.style'
+import { IModalProps } from './Modal.types'
+
+const Modal: React.FC<IModalProps> = ({
+    children,
+    isActive,
+    isOverlayVisible = true,
+    isScrollBehindPossible = true,
+    position = 'center',
+}) => {
+    useEffect(() => {
+        if (isActive && !isScrollBehindPossible) {
+            const body = document.getElementsByTagName('body')[0]
+
+            if (body) body.style.overflow = 'hidden'
+        }
+
+        return () => {
+            const body = document.getElementsByTagName('body')[0]
+
+            if (body) body.style.overflow = 'unset'
+        }
+    }, [isActive, isScrollBehindPossible])
+
+    return (
+        <S.ModalOverlay $isOverlayVisible={isOverlayVisible} $position={position}>
+            <S.SModal $position={position}>{children}</S.SModal>
+        </S.ModalOverlay>
+    )
+}
+
+export default Modal
