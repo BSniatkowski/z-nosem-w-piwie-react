@@ -2,9 +2,9 @@ import { forwardRef, useMemo, useState } from 'react'
 
 import Icon from '../Icon/Icon'
 import * as S from './Textarea.style'
-import { ITextInputProps } from './Textarea.types'
+import { ITextareaProps } from './Textarea.types'
 
-const Textarea = forwardRef<HTMLTextAreaElement, ITextInputProps>(
+const Textarea = forwardRef<HTMLTextAreaElement, ITextareaProps>(
     ({ label, iconVariant, onIconClick, ...props }, ref) => {
         const [isFocused, setIsFocused] = useState(false)
         const isLabelSmall = useMemo(() => !!props.value || isFocused, [props.value, isFocused])

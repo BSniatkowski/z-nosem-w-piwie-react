@@ -1,4 +1,28 @@
 {
+  "app.about.NewsletterForm.FormLoaderMessage": [
+    {
+      "type": 0,
+      "value": "Zapisywanie do newslettera"
+    }
+  ],
+  "app.about.NewsletterForm.FormSnackbarMessage": [
+    {
+      "type": 0,
+      "value": "Dziękujemy za dołączenie do naszego newslettera. Do zobaczenia wkrótce!"
+    }
+  ],
+  "app.about.NewsletterForm.newsletter": [
+    {
+      "type": 0,
+      "value": "Zapisz się do newslettera"
+    }
+  ],
+  "app.about.NewsletterForm.newsletterJoinButton": [
+    {
+      "type": 0,
+      "value": "Jasne!"
+    }
+  ],
   "app.about.address": [
     {
       "type": 0,
@@ -70,7 +94,7 @@
   "app.about.fullDescription1": [
     {
       "type": 0,
-      "value": "W \"Z Nosem W Piwie\" starannie stworzyliśmy miejsce, które przekracza granice zwykłości, zapraszając cię do wejścia w wyobrażony świat, gdzie nostalgia splata się z nieograniczonymi pomysłami. Nasz kapryśny lokal, noszący zabawną nazwę \"Z Nosem W Piwie\" (przekładająca się na \"Z Nosem w Piwie\"), to więcej niż tylko fikcyjny pub/kawiarnia – to przeżycie, w którym każda wizyta to podróż w niezwykłość."
+      "value": "W \"Z Nosem W Piwie\" starannie stworzyliśmy miejsce, które przekracza granice zwykłości, zapraszając cię do wejścia w wyobrażony świat, gdzie nostalgia splata się z nieograniczonymi pomysłami. Nasz kapryśny lokal, noszący zabawną nazwę \"Z Nosem W Piwie\", to więcej niż tylko fikcyjny pub/kawiarnia – to przeżycie, w którym każda wizyta to podróż w niezwykłość."
     }
   ],
   "app.about.fullDescription2": [
@@ -82,13 +106,13 @@
   "app.about.fullDescription3": [
     {
       "type": 0,
-      "value": "Chociaż nasz pub/kawiarnia może mieć swoje korzenie w wyobraźni, smaki, które serwujemy, są zakorzenione w prawdziwej radości eksploracji kulinariów. Nasze menu to dowód inspiracji z całego świata, oferujące treściwe dania pubowe, aromatyczne kawy i starannie wyselekcjonowany wybór wymyślnych napojów. Od uroków fikcyjnych piw rzemieślniczych po fantazyjne drinki – każdy łyk i kęs w \"Z Nosem W Piwie\" są zaprojektowane, aby przenieść cię do świata rozkosznej gastronomii."
+      "value": "Chociaż nasz pub/kawiarnia może mieć swoje korzenie w wyobraźni, smaki, które serwujemy, są zakorzenione w prawdziwej radości eksploracji kulinariów. Nasze menu to dowód inspiracji z całego świata, oferujące treściwe dania pubowe, aromatyczne kawy i starannie wyselekcjonowany wybór wymyślnych napojów. Od uroków fikcyjnych piw rzemieślniczych po fantazyjne drinki - każdy łyk i kęs w \"Z Nosem W Piwie\" są zaprojektowane, aby przenieść cię do świata rozkosznej gastronomii."
     }
   ],
   "app.about.fullDescription4": [
     {
       "type": 0,
-      "value": "Dusza wyobraźni ożywa dzięki różnorodności wydarzeń w \"Z Nosem W Piwie.\" Od koncertów na żywo, które rezonują w ścianach, po tematyczne imprezy wykraczające poza zwyczajność, i dziwaczne wieczory z quizami, które stawiają wyzwanie wyobraźni – nasz kalendarz wydarzeń zawsze pulsuje magicznymi wydarzeniami. Sprawdzaj regularnie aktualizacje i zanurzaj się w magii naszego świata wyobraźni."
+      "value": "Dusza wyobraźni ożywa dzięki różnorodności wydarzeń w \"Z Nosem W Piwie.\" Od koncertów na żywo, które rezonują w ścianach, po tematyczne imprezy wykraczające poza zwyczajność, i dziwaczne wieczory z quizami, które stawiają wyzwanie wyobraźni - nasz kalendarz wydarzeń zawsze pulsuje magicznymi wydarzeniami. Sprawdzaj regularnie aktualizacje i zanurzaj się w magii naszego świata wyobraźni."
     }
   ],
   "app.about.fullnameLabel": [
@@ -107,12 +131,6 @@
     {
       "type": 0,
       "value": "Treść wiadomości"
-    }
-  ],
-  "app.about.newsletter": [
-    {
-      "type": 0,
-      "value": "Dołącz do naszego biuletynu"
     }
   ],
   "app.about.oHFS": [
@@ -193,6 +211,12 @@
     {
       "type": 0,
       "value": "\" jest wymagane"
+    }
+  ],
+  "app.form.send": [
+    {
+      "type": 0,
+      "value": "Wyślij"
     }
   ],
   "app.form.tooLongField": [

@@ -1,5 +1,11 @@
 import { eventsData, merchData, offerData } from './api.fakeData'
-import { TContactFormData, TFetchEvents, TFetchMerch, TFetchOffer } from './api.types'
+import {
+    TContactFormRequest,
+    TFetchEvents,
+    TFetchMerch,
+    TFetchOffer,
+    TNewsletterFormRequest,
+} from './api.types'
 
 const fakeServerResponseDelay = async (minDelay?: number) =>
     new Promise((res) => {
@@ -24,7 +30,13 @@ export const fetchMerch: TFetchMerch = async () => {
     return merchData
 }
 
-export const ContactFormData: TContactFormData = async () => {
+export const NewsletterRequest: TNewsletterFormRequest = async () => {
+    await fakeServerResponseDelay(1000)
+
+    return { status: 200 }
+}
+
+export const ContactFormRequest: TContactFormRequest = async () => {
     await fakeServerResponseDelay(1000)
 
     return { status: 200 }

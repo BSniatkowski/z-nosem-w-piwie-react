@@ -1,4 +1,20 @@
 {
+  "app.about.NewsletterForm.FormLoaderMessage": {
+    "defaultMessage": "Zapisywanie do newslettera",
+    "description": "Form newsletter loader message."
+  },
+  "app.about.NewsletterForm.FormSnackbarMessage": {
+    "defaultMessage": "Dziękujemy za dołączenie do naszego newslettera. Do zobaczenia wkrótce!",
+    "description": "Snackabar message after newsletter signed."
+  },
+  "app.about.NewsletterForm.newsletter": {
+    "defaultMessage": "Zapisz się do newslettera",
+    "description": "Invitation to join the establishment's newsletter."
+  },
+  "app.about.NewsletterForm.newsletterJoinButton": {
+    "defaultMessage": "Jasne!",
+    "description": "Form activating button for joining establishment's newsletter."
+  },
   "app.about.address": {
     "defaultMessage": "Kraków, Rynek Główny 0, 00-000",
     "description": "Physical address of the establishment."
@@ -40,7 +56,7 @@
     "description": "Title for the upcoming events section."
   },
   "app.about.fullDescription1": {
-    "defaultMessage": "W \"Z Nosem W Piwie\" starannie stworzyliśmy miejsce, które przekracza granice zwykłości, zapraszając cię do wejścia w wyobrażony świat, gdzie nostalgia splata się z nieograniczonymi pomysłami. Nasz kapryśny lokal, noszący zabawną nazwę \"Z Nosem W Piwie\" (przekładająca się na \"Z Nosem w Piwie\"), to więcej niż tylko fikcyjny pub/kawiarnia – to przeżycie, w którym każda wizyta to podróż w niezwykłość.",
+    "defaultMessage": "W \"Z Nosem W Piwie\" starannie stworzyliśmy miejsce, które przekracza granice zwykłości, zapraszając cię do wejścia w wyobrażony świat, gdzie nostalgia splata się z nieograniczonymi pomysłami. Nasz kapryśny lokal, noszący zabawną nazwę \"Z Nosem W Piwie\", to więcej niż tylko fikcyjny pub/kawiarnia – to przeżycie, w którym każda wizyta to podróż w niezwykłość.",
     "description": "First part of the full description of the establishment."
   },
   "app.about.fullDescription2": {
@@ -48,11 +64,11 @@
     "description": "Second part of the full description of the establishment."
   },
   "app.about.fullDescription3": {
-    "defaultMessage": "Chociaż nasz pub/kawiarnia może mieć swoje korzenie w wyobraźni, smaki, które serwujemy, są zakorzenione w prawdziwej radości eksploracji kulinariów. Nasze menu to dowód inspiracji z całego świata, oferujące treściwe dania pubowe, aromatyczne kawy i starannie wyselekcjonowany wybór wymyślnych napojów. Od uroków fikcyjnych piw rzemieślniczych po fantazyjne drinki – każdy łyk i kęs w \"Z Nosem W Piwie\" są zaprojektowane, aby przenieść cię do świata rozkosznej gastronomii.",
+    "defaultMessage": "Chociaż nasz pub/kawiarnia może mieć swoje korzenie w wyobraźni, smaki, które serwujemy, są zakorzenione w prawdziwej radości eksploracji kulinariów. Nasze menu to dowód inspiracji z całego świata, oferujące treściwe dania pubowe, aromatyczne kawy i starannie wyselekcjonowany wybór wymyślnych napojów. Od uroków fikcyjnych piw rzemieślniczych po fantazyjne drinki - każdy łyk i kęs w \"Z Nosem W Piwie\" są zaprojektowane, aby przenieść cię do świata rozkosznej gastronomii.",
     "description": "Third part of the full description of the establishment."
   },
   "app.about.fullDescription4": {
-    "defaultMessage": "Dusza wyobraźni ożywa dzięki różnorodności wydarzeń w \"Z Nosem W Piwie.\" Od koncertów na żywo, które rezonują w ścianach, po tematyczne imprezy wykraczające poza zwyczajność, i dziwaczne wieczory z quizami, które stawiają wyzwanie wyobraźni – nasz kalendarz wydarzeń zawsze pulsuje magicznymi wydarzeniami. Sprawdzaj regularnie aktualizacje i zanurzaj się w magii naszego świata wyobraźni.",
+    "defaultMessage": "Dusza wyobraźni ożywa dzięki różnorodności wydarzeń w \"Z Nosem W Piwie.\" Od koncertów na żywo, które rezonują w ścianach, po tematyczne imprezy wykraczające poza zwyczajność, i dziwaczne wieczory z quizami, które stawiają wyzwanie wyobraźni - nasz kalendarz wydarzeń zawsze pulsuje magicznymi wydarzeniami. Sprawdzaj regularnie aktualizacje i zanurzaj się w magii naszego świata wyobraźni.",
     "description": "Fourth part of the full description of the establishment."
   },
   "app.about.fullnameLabel": {
@@ -66,10 +82,6 @@
   "app.about.messageLabel": {
     "defaultMessage": "Treść wiadomości",
     "description": "Message field of contact form."
-  },
-  "app.about.newsletter": {
-    "defaultMessage": "Dołącz do naszego biuletynu",
-    "description": "Invitation to join the establishment's newsletter."
   },
   "app.about.oHFS": {
     "defaultMessage": "Piątek - Sobota",
@@ -118,6 +130,10 @@
   "app.form.requiredField": {
     "defaultMessage": "Pole \"{fieldName}\" jest wymagane",
     "description": "Form error message when field is required."
+  },
+  "app.form.send": {
+    "defaultMessage": "Wyślij",
+    "description": "Form submit button text."
   },
   "app.form.tooLongField": {
     "defaultMessage": "Tekst w polu \"{fieldName}\" nie może przekroczyć długości {max} znaków",

@@ -1,4 +1,28 @@
 {
+  "app.about.NewsletterForm.FormLoaderMessage": [
+    {
+      "type": 0,
+      "value": "Signing you to newsletter"
+    }
+  ],
+  "app.about.NewsletterForm.FormSnackbarMessage": [
+    {
+      "type": 0,
+      "value": "Thank you for joining our newsletter. See you soon!"
+    }
+  ],
+  "app.about.NewsletterForm.newsletter": [
+    {
+      "type": 0,
+      "value": "Join our newsletter"
+    }
+  ],
+  "app.about.NewsletterForm.newsletterJoinButton": [
+    {
+      "type": 0,
+      "value": "Ok!"
+    }
+  ],
   "app.about.address": [
     {
       "type": 0,
@@ -88,7 +112,7 @@
   "app.about.fullDescription4": [
     {
       "type": 0,
-      "value": "The spirit of make-believe comes alive with an array of events at \"Z Nosem W Piwie.\" From live music performances that resonate through the walls to themed parties that transcend the ordinary, and quirky trivia nights that challenge the imagination – our event calendar is always buzzing with make-believe happenings. Check regularly for updates and immerse yourself in the magic of our make-believe world."
+      "value": "The spirit of make-believe comes alive with an array of events at \"Z Nosem W Piwie.\" From live music performances that resonate through the walls to themed parties that transcend the ordinary, and quirky trivia nights that challenge the imagination - our event calendar is always buzzing with make-believe happenings. Check regularly for updates and immerse yourself in the magic of our make-believe world."
     }
   ],
   "app.about.fullnameLabel": [
@@ -107,12 +131,6 @@
     {
       "type": 0,
       "value": "Message"
-    }
-  ],
-  "app.about.newsletter": [
-    {
-      "type": 0,
-      "value": "Join our newsletter"
     }
   ],
   "app.about.oHFS": [
@@ -189,6 +207,12 @@
     {
       "type": 0,
       "value": " is required"
+    }
+  ],
+  "app.form.send": [
+    {
+      "type": 0,
+      "value": "Send"
     }
   ],
   "app.form.tooLongField": [
