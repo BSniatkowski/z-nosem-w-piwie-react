@@ -9,4 +9,8 @@ export const SNewsletterInsideContainer = styled.div<{ $isFormActive: boolean }>
         css`
             padding-bottom: 1.2rem;
         `};
+
+    & > h4 {
+        text-align: center;
+    }
 `

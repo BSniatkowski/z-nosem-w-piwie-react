@@ -21,7 +21,9 @@ export const LoaderContent = styled.div`
 
 export const LoaderMessage = styled.span.attrs({ className: 'decorative' })`
     font-size: 3.2rem;
+    line-height: 1em;
     color: var(--color);
+    text-align: center;
 `
 
 export const SLoader = styled.span`
