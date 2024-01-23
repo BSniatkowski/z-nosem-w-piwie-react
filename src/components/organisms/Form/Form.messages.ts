@@ -16,4 +16,9 @@ export default defineMessages({
         description: 'Form error message when field is required.',
         defaultMessage: 'Field must be valid email',
     },
+    send: {
+        id: 'app.form.send',
+        description: 'Form submit button text.',
+        defaultMessage: 'Send',
+    },
 })

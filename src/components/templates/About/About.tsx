@@ -5,7 +5,7 @@ import * as yup from 'yup'
 
 import map from '/imgs/map.png'
 
-import { ContactFormData, fetchEvents, fetchMerch } from '../../../../api/api'
+import { ContactFormRequest, fetchEvents, fetchMerch } from '../../../../api/api'
 import { IEventItemElement, IMerchItemElement } from '../../../../api/api.types'
 import { useBreakpoint } from '../../../hooks/useBreakpoint/useBreakpoint'
 import { useSnackbarDispatch } from '../../../providers/SnackbarProvider/hooks/useSnackbarDispatch'
@@ -22,6 +22,7 @@ import Loader from '../../organisms/Loader/Loader'
 import messages from './About.messages'
 import * as S from './About.style'
 import { IContactFieldsValues, ITranslatedEventItem, TContactFields } from './About.types'
+import NewsletterForm from './components/NewsletterForm/NewsletterForm'
 
 const About = () => {
     const intl = useIntl()
@@ -100,7 +101,7 @@ const About = () => {
 
     const [isContactFormLoading, setIsContactFormLoading] = useState<boolean>(false)
 
-    const fields = [
+    const contactFields = [
         {
             name: 'fullname',
             label: intl.formatMessage(messages.fullnameLabel),
@@ -121,7 +122,7 @@ const About = () => {
         },
     ] satisfies TContactFields
 
-    const validationSchema = useMemo(
+    const contactValidationSchema = useMemo(
         () =>
             yup
                 .object({
@@ -173,10 +174,10 @@ const About = () => {
         [intl],
     )
 
-    const onSubmit: SubmitHandler<IContactFieldsValues> = useCallback(
+    const onContactSubmit: SubmitHandler<IContactFieldsValues> = useCallback(
         async (data) => {
             setIsContactFormLoading(true)
-            const response = await ContactFormData(data)
+            const response = await ContactFormRequest(data)
 
             console.log(response)
             if (dispatch)
@@ -283,12 +284,7 @@ const About = () => {
                             </span>
                         </S.ContentRow>
                     </Card>
-                    <Card size={34}>
-                        <h4 className='decorative'>
-                            <FormattedMessage {...messages.newsletter} />
-                        </h4>
-                        <Button size='full' label='Ok!' onClick={() => 'Click'} />
-                    </Card>
+                    <NewsletterForm />
                 </S.CardsContainer>
                 <Card size='full'>
                     <h3 className='decorative' style={{ textAlign: 'center' }}>
@@ -309,9 +305,9 @@ const About = () => {
                                     <FormattedMessage {...messages.contactTitle} />
                                 </S.ContactCardTitle>
                                 <Form<IContactFieldsValues>
-                                    fields={fields}
-                                    validationSchema={validationSchema}
-                                    onSubmit={onSubmit}
+                                    fields={contactFields}
+                                    validationSchema={contactValidationSchema}
+                                    onSubmit={onContactSubmit}
                                 />
                             </>
                         </Loader>

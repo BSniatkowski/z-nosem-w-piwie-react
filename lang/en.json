@@ -1,4 +1,20 @@
 {
+  "app.about.NewsletterForm.FormLoaderMessage": {
+    "defaultMessage": "Signing you to newsletter",
+    "description": "Form newsletter loader message."
+  },
+  "app.about.NewsletterForm.FormSnackbarMessage": {
+    "defaultMessage": "Thank you for joining our newsletter. See you soon!",
+    "description": "Snackabar message after newsletter signed."
+  },
+  "app.about.NewsletterForm.newsletter": {
+    "defaultMessage": "Join our newsletter",
+    "description": "Invitation to join the establishment's newsletter."
+  },
+  "app.about.NewsletterForm.newsletterJoinButton": {
+    "defaultMessage": "Ok!",
+    "description": "Form activating button for joining establishment's newsletter."
+  },
   "app.about.address": {
     "defaultMessage": "Cracow, Main Square 0, 00-000",
     "description": "Physical address of the establishment."
@@ -52,7 +68,7 @@
     "description": "Third part of the full description of the establishment."
   },
   "app.about.fullDescription4": {
-    "defaultMessage": "The spirit of make-believe comes alive with an array of events at \"Z Nosem W Piwie.\" From live music performances that resonate through the walls to themed parties that transcend the ordinary, and quirky trivia nights that challenge the imagination – our event calendar is always buzzing with make-believe happenings. Check regularly for updates and immerse yourself in the magic of our make-believe world.",
+    "defaultMessage": "The spirit of make-believe comes alive with an array of events at \"Z Nosem W Piwie.\" From live music performances that resonate through the walls to themed parties that transcend the ordinary, and quirky trivia nights that challenge the imagination - our event calendar is always buzzing with make-believe happenings. Check regularly for updates and immerse yourself in the magic of our make-believe world.",
     "description": "Fourth part of the full description of the establishment."
   },
   "app.about.fullnameLabel": {
@@ -66,10 +82,6 @@
   "app.about.messageLabel": {
     "defaultMessage": "Message",
     "description": "Message field of contact form."
-  },
-  "app.about.newsletter": {
-    "defaultMessage": "Join our newsletter",
-    "description": "Invitation to join the establishment's newsletter."
   },
   "app.about.oHFS": {
     "defaultMessage": "Friday - Saturday",
@@ -118,6 +130,10 @@
   "app.form.requiredField": {
     "defaultMessage": "{fieldName} is required",
     "description": "Form error message when field is required."
+  },
+  "app.form.send": {
+    "defaultMessage": "Send",
+    "description": "Form submit button text."
   },
   "app.form.tooLongField": {
     "defaultMessage": "{fieldName} cannot be longer than {max}",

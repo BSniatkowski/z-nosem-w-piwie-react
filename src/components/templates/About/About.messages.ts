@@ -90,11 +90,6 @@ export default defineMessages({
         description: 'Contact phone number for the establishment.',
         defaultMessage: '+48 000 000 000',
     },
-    newsletter: {
-        id: 'app.about.newsletter',
-        description: "Invitation to join the establishment's newsletter.",
-        defaultMessage: 'Join our newsletter',
-    },
     eventsTitle: {
         id: 'app.about.eventsTitle',
         description: 'Title for the upcoming events section.',

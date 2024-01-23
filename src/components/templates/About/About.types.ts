@@ -6,11 +6,11 @@ export interface IContactFieldsValues {
     message: string
 }
 
+export type TContactFields = TFields<IContactFieldsValues>
+
 export interface ITranslatedEventItem {
     title: string
     date: string
     description: string
     imgSrc: string
 }
-
-export type TContactFields = TFields<IContactFieldsValues>

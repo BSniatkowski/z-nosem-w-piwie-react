@@ -1,4 +1,5 @@
 import { IContactFieldsValues } from '../src/components/templates/About/About.types'
+import { INewsletterFieldsValues } from '../src/components/templates/About/components/NewsletterForm/NewsletterForm.types'
 
 export interface IOfferItem {
     translations: {
@@ -43,6 +44,8 @@ export type TFetchOffer = () => Promise<{ beers: Array<IOfferItem>; coffee: Arra
 
 export type TFetchEvents = () => Promise<Array<IEventItemElement>>
 
-export type TContactFormData = (data: IContactFieldsValues) => Promise<{ status: 200 }>
+export type TNewsletterFormRequest = (data: INewsletterFieldsValues) => Promise<{ status: 200 }>
+
+export type TContactFormRequest = (data: IContactFieldsValues) => Promise<{ status: 200 }>
 
 export type TFetchMerch = () => Promise<Array<IMerchItemElement>>
