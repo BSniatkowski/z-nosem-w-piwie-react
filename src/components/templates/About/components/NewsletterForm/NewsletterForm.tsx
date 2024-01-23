@@ -15,8 +15,8 @@ import { ErrorMessage, FieldContainer, SForm } from '../../../../organisms/Form/
 import { TField } from '../../../../organisms/Form/Form.types'
 import Loader from '../../../../organisms/Loader/Loader'
 import aboutMessages from '../../About.messages'
-import messages from './Newsletter.messages'
 import { SNewsletterInsideContainer } from './Newsletter.style'
+import messages from './NewsletterForm.messages'
 import { INewsletterFieldsValues } from './NewsletterForm.types'
 
 const NewsletterForm = () => {
