@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 
+import Icon from '../../atoms/Icon/Icon'
 import * as S from './Modal.style'
 import { IModalProps } from './Modal.types'
 
@@ -9,6 +10,7 @@ const Modal: React.FC<IModalProps> = ({
     isOverlayVisible = true,
     isScrollBehindPossible = true,
     position = 'center',
+    onClose = undefined,
 }) => {
     useEffect(() => {
         if (isActive && !isScrollBehindPossible) {
@@ -26,7 +28,10 @@ const Modal: React.FC<IModalProps> = ({
 
     return (
         <S.ModalOverlay $isOverlayVisible={isOverlayVisible} $position={position}>
-            <S.SModal $position={position}>{children}</S.SModal>
+            <S.SModal $position={position}>
+                {children}
+                {onClose && <Icon variant='close' onClick={onClose} />}
+            </S.SModal>
         </S.ModalOverlay>
     )
 }

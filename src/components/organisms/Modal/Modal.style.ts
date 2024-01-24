@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 
+import { IconWrapper } from '../../atoms/Icon/Icon.style'
+
 export const ModalOverlay = styled.div<{
     $isOverlayVisible: boolean
     $position: 'bottom' | 'center'
@@ -68,4 +70,13 @@ export const SModal = styled.div<{ $position: 'bottom' | 'center' }>`
                 max-width: 100%;
             `,
         })[$position]}
+
+    & > ${IconWrapper} {
+        position: absolute;
+        top: 0;
+        right: 0;
+        --size: 2.4rem;
+        overflow: hidden;
+        fill: ${({ theme }) => theme.palette.secondary};
+    }
 `

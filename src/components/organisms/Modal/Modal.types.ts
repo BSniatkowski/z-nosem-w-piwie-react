@@ -4,4 +4,5 @@ export interface IModalProps {
     isOverlayVisible?: boolean
     isScrollBehindPossible?: boolean
     position?: 'bottom' | 'center'
+    onClose?: () => void
 }
