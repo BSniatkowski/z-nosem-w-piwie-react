@@ -33,6 +33,6 @@ declare module 'styled-components' {
             }
         }
         border: { primary: string; secondary: string }
-        boxShadow: string
+        boxShadow: { primary: string; secondary: string }
     }
 }

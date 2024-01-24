@@ -32,5 +32,5 @@ export const theme = {
         },
     },
     border: { primary: '1rem solid #FFE0B2', secondary: '2px solid #5D40377A' },
-    boxShadow: '-10px -10px 0 0 #FFE0B280',
+    boxShadow: { primary: '0 0 8px #00000061', secondary: '-10px -10px 0 0 #FFE0B280' },
 } satisfies DefaultTheme
