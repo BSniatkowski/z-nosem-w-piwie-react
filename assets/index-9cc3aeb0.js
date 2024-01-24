@@ -173,7 +173,7 @@ attempted value: ${a}
     border-radius: 1rem;
     padding: 2rem;
     transition: bottom 0.3s ease-out;
-    box-shadow: 0 0 0.8rem ${({theme:e})=>e.palette.shades.black[38]};
+    box-shadow: ${({theme:e})=>e.boxShadow.primary};
 
     ${({$isMobile:e})=>e?Y`
                   margin: 0 auto;
@@ -220,7 +220,7 @@ attempted value: ${a}
 `,Bc=({size:e,label:t,iconVariant:r,onClick:n})=>g.jsxs(Yx,{className:"decorative",$size:e,$isSingleItem:!(t&&r),onClick:n,children:[t,r&&g.jsx(rt,{variant:r})]}),V0=L.div`
     padding: 2rem;
     background-color: ${({theme:e})=>e.palette.primary};
-    box-shadow: ${({theme:e})=>e.boxShadow};
+    box-shadow: ${({theme:e})=>e.boxShadow.secondary};
 
     height: fit-content;
     ${({$size:e})=>typeof e=="number"?Y`
@@ -967,4 +967,4 @@ attempted value: ${a}
     display: flex;
     flex-direction: column;
     background-color: ${({theme:e})=>e.palette.primary};
-`,P3=({children:e})=>{const t=yr(),r=[{label:t.formatMessage(Ro.home),href:"#home"},{label:t.formatMessage(Ro.offer),href:"#offer"},{label:t.formatMessage(Ro.about),href:"#about"},{label:t.formatMessage(Ro.contact),href:"#contact"}],n=[{label:"React (current)",href:"#",isCurrent:!0},{label:"Vue",href:"#"},{label:"Angular",href:"#"}],i=[{label:"LinkedIn",href:"https://www.linkedin.com/in/bartlomiej-sniatkowski/"},{label:"Github",href:"https://github.com/BSniatkowski"}];return g.jsxs(z3,{children:[e,g.jsx(T3,{siteLinks:r,altLinks:n,myLinks:i})]})},A3={palette:{primary:"#FFE0B2",secondary:"#5D4037",accent:"#FFCA28",error:"#FF5252",info:"#2196F3",success:"#4CAF50",warning:"#FB8C00",white:"#fff",black:"#000",grey:"#9E9E9E",greyLighten1:"#BDBDBD",greyLighten2:"#E0E0E0",shades:{black:{18:"#0000002E",38:"#00000061",87:"#000000DE"},primary:{48:"#FFE0B280",87:"#FFE0B2DE"},secondary:{18:"#5D40372E",38:"#5D403761",48:"#5D40377A"}}},border:{primary:"1rem solid #FFE0B2",secondary:"2px solid #5D40377A"},boxShadow:"-10px -10px 0 0 #FFE0B280"},F3=({children:e})=>g.jsx(Bx,{theme:A3,children:e});function j3({messages:e,locale:t}){const[r,n]=A.useState(t),i=A.useMemo(()=>e[r],[r,e]);return g.jsx(F3,{children:g.jsx(C2,{locale:r,messages:i,defaultLocale:"en-GB",children:g.jsx(Qx,{children:g.jsx(P3,{children:g.jsx(k3,{actualLocale:r,setActualIntlLocale:n})})})})})}const gh=e=>C1(Object.assign({"../compiled-lang/en.json":()=>ef(()=>import("./en-adb8ac1c.js"),[],import.meta.url),"../compiled-lang/pl.json":()=>ef(()=>import("./pl-ed14e0ad.js"),[],import.meta.url)}),`../compiled-lang/${e}.json`);(async()=>{var r,n;const e=(r=await gh("en"))==null?void 0:r.default,t=(n=await gh("pl"))==null?void 0:n.default;pl.createRoot(document.getElementById("root")).render(g.jsx(ee.StrictMode,{children:g.jsx(j3,{messages:{"en-GB":e,"pl-PL":t},locale:w0.includes(navigator.language)?navigator.language:"en-GB"})}))})();
+`,P3=({children:e})=>{const t=yr(),r=[{label:t.formatMessage(Ro.home),href:"#home"},{label:t.formatMessage(Ro.offer),href:"#offer"},{label:t.formatMessage(Ro.about),href:"#about"},{label:t.formatMessage(Ro.contact),href:"#contact"}],n=[{label:"React (current)",href:"#",isCurrent:!0},{label:"Vue",href:"#"},{label:"Angular",href:"#"}],i=[{label:"LinkedIn",href:"https://www.linkedin.com/in/bartlomiej-sniatkowski/"},{label:"Github",href:"https://github.com/BSniatkowski"}];return g.jsxs(z3,{children:[e,g.jsx(T3,{siteLinks:r,altLinks:n,myLinks:i})]})},A3={palette:{primary:"#FFE0B2",secondary:"#5D4037",accent:"#FFCA28",error:"#FF5252",info:"#2196F3",success:"#4CAF50",warning:"#FB8C00",white:"#fff",black:"#000",grey:"#9E9E9E",greyLighten1:"#BDBDBD",greyLighten2:"#E0E0E0",shades:{black:{18:"#0000002E",38:"#00000061",87:"#000000DE"},primary:{48:"#FFE0B280",87:"#FFE0B2DE"},secondary:{18:"#5D40372E",38:"#5D403761",48:"#5D40377A"}}},border:{primary:"1rem solid #FFE0B2",secondary:"2px solid #5D40377A"},boxShadow:{primary:"0 0 8px #00000061",secondary:"-10px -10px 0 0 #FFE0B280"}},F3=({children:e})=>g.jsx(Bx,{theme:A3,children:e});function j3({messages:e,locale:t}){const[r,n]=A.useState(t),i=A.useMemo(()=>e[r],[r,e]);return g.jsx(F3,{children:g.jsx(C2,{locale:r,messages:i,defaultLocale:"en-GB",children:g.jsx(Qx,{children:g.jsx(P3,{children:g.jsx(k3,{actualLocale:r,setActualIntlLocale:n})})})})})}const gh=e=>C1(Object.assign({"../compiled-lang/en.json":()=>ef(()=>import("./en-adb8ac1c.js"),[],import.meta.url),"../compiled-lang/pl.json":()=>ef(()=>import("./pl-ed14e0ad.js"),[],import.meta.url)}),`../compiled-lang/${e}.json`);(async()=>{var r,n;const e=(r=await gh("en"))==null?void 0:r.default,t=(n=await gh("pl"))==null?void 0:n.default;pl.createRoot(document.getElementById("root")).render(g.jsx(ee.StrictMode,{children:g.jsx(j3,{messages:{"en-GB":e,"pl-PL":t},locale:w0.includes(navigator.language)?navigator.language:"en-GB"})}))})();
