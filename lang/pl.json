@@ -123,6 +123,98 @@
     "defaultMessage": "Z Nosem W Piwie",
     "description": "Name of the pub/cafe establishment."
   },
+  "app.cookiesModal.accept": {
+    "defaultMessage": "Akceptuję",
+    "description": "Cookies agreement accept button label."
+  },
+  "app.cookiesModal.advancedCookiesSettingsForm.advertisingDescription": {
+    "defaultMessage": "Pliki cookie reklamowe są używane do dostosowywania reklam do Twoich zainteresowań. Pomagają również mierzyć skuteczność naszych kampanii reklamowych. Bądź pewien, że Twoje dane są używane anonimowo i nie są udostępniane osobom trzecim.",
+    "description": "Advertising Cookies description label."
+  },
+  "app.cookiesModal.advancedCookiesSettingsForm.advertisingLabel": {
+    "defaultMessage": "Pliki cookie reklamowe",
+    "description": "Advertising Cookies field label."
+  },
+  "app.cookiesModal.advancedCookiesSettingsForm.analyticsDescription": {
+    "defaultMessage": "Pliki cookie analityczne pomagają nam zrozumieć, w jaki sposób odwiedzający korzystają z naszej strony internetowej. Zebrane dane są anonimowe i pomagają nam podejmować świadome decyzje w celu poprawy ogólnej jakości użytkownika.",
+    "description": "Analytics Cookies description label."
+  },
+  "app.cookiesModal.advancedCookiesSettingsForm.analyticsLabel": {
+    "defaultMessage": "Pliki cookie analityczne",
+    "description": "Analytics Cookies field label."
+  },
+  "app.cookiesModal.advancedCookiesSettingsForm.essentialDescription": {
+    "defaultMessage": "Podstawowe pliki cookie zapewniają podstawową funkcjonalność naszej strony internetowej. Bez tych plików cookie możesz mieć utrudniony dostęp do niektórych funkcji lub nawigację po stronie.",
+    "description": "Essential Cookies description label."
+  },
+  "app.cookiesModal.advancedCookiesSettingsForm.essentialLabel": {
+    "defaultMessage": "Podstawowe pliki cookie",
+    "description": "Essential Cookies field label."
+  },
+  "app.cookiesModal.advancedCookiesSettingsForm.functionalDescription": {
+    "defaultMessage": "Pliki cookie funkcjonalne ulepszają Twoje doświadczenie, zapamiętując Twoje preferencje i ustawienia. Pozwala nam to dostarczyć Ci bardziej spersonalizowaną i efektywną wizytę.",
+    "description": "Functional Cookies description label."
+  },
+  "app.cookiesModal.advancedCookiesSettingsForm.functionalLabel": {
+    "defaultMessage": "Pliki cookie funkcjonalne",
+    "description": "Functional Cookies field label."
+  },
+  "app.cookiesModal.advancedCookiesSettingsForm.performanceDescription": {
+    "defaultMessage": "Pliki cookie wydajnościowe pomagają nam zrozumieć, w jaki sposób korzystasz z naszej strony internetowej, zbierając informacje o Twojej wizycie. Dane te są agregowane i anonimowe, pozwalając nam poprawić wydajność i użyteczność naszej witryny.",
+    "description": "Performance Cookies description label."
+  },
+  "app.cookiesModal.advancedCookiesSettingsForm.performanceLabel": {
+    "defaultMessage": "Pliki cookie wydajnościowe",
+    "description": "Performance Cookies field label."
+  },
+  "app.cookiesModal.advancedCookiesSettingsForm.socialDescription": {
+    "defaultMessage": "Pliki cookie mediów społecznościowych umożliwiają udostępnianie naszych treści na różnych platformach mediów społecznościowych oraz interakcję z zintegrowanymi funkcjami mediów społecznościowych. Pliki te mogą również zbierać informacje o Twoich działaniach w mediach społecznościowych na naszej stronie.",
+    "description": "Social Media Cookies description label."
+  },
+  "app.cookiesModal.advancedCookiesSettingsForm.socialLabel": {
+    "defaultMessage": "Pliki cookie mediów społecznościowych",
+    "description": "Social Media Cookies field label."
+  },
+  "app.cookiesModal.cookiePolicy": {
+    "defaultMessage": "Polityka Plików Cookie",
+    "description": "Cookies agreement main text."
+  },
+  "app.cookiesModal.disclaimer": {
+    "defaultMessage": "Następujący tekst został wygenerowany przez sztuczną inteligencję i nie ma wartości prawnej. Służy jako demonstracja dla fikcyjnego lokalu „Z Nosem W Piwie”, prezentując moje umiejętności jako programisty. Treść i rozwiązania przedstawione tutaj służą wyłącznie celom ilustracyjnym.",
+    "description": "Disclaimer text at Cookies GDPR."
+  },
+  "app.cookiesModal.disclaimerTitle": {
+    "defaultMessage": "Ostrzeżenie:",
+    "description": "Disclaimer title at Cookies GDPR."
+  },
+  "app.cookiesModal.mainCookiesTextPart1": {
+    "defaultMessage": "Witaj w „Z Nosem W Piwie”! Aby ulepszyć Twoje doświadczenie, używamy plików cookie na naszej stronie internetowej. Te małe pliki tekstowe pomagają nam zrozumieć, w jaki sposób korzystasz z naszej witryny, spersonalizować treść i poprawić ogólną funkcjonalność.",
+    "description": "Cookies agreement main text part 1."
+  },
+  "app.cookiesModal.mainCookiesTextPart2": {
+    "defaultMessage": "Kontynuując korzystanie z naszej strony internetowej, zgadzasz się na korzystanie z plików cookie zgodnie z tą Umową o Zgode na Pliki Cookie. Masz opcję zarządzania preferencjami dotyczącymi plików cookie za pomocą naszego zaawansowanego okna z ustawieniami plików cookie.",
+    "description": "Cookies agreement main text part 2."
+  },
+  "app.cookiesModal.mainCookiesTextPart3": {
+    "defaultMessage": "Aby uzyskać więcej informacji na temat rodzajów plików cookie, których używamy, i ich wpływu na Twoje doświadczenie, zapoznaj się z naszą {privacyPolicy} i {cookiePolicy}.",
+    "description": "Cookies agreement main text part 3."
+  },
+  "app.cookiesModal.mainCookiesTextPart4": {
+    "defaultMessage": "Dziękujemy, że wybrałeś „Z Nosem W Piwie”.",
+    "description": "Cookies agreement main text part 4."
+  },
+  "app.cookiesModal.openAdvancedSettings": {
+    "defaultMessage": "Zaawansowane ustawienia",
+    "description": "Cookies advanced settings button label."
+  },
+  "app.cookiesModal.privacyPolicy": {
+    "defaultMessage": "Polityka Prywatności",
+    "description": "Cookies agreement main text."
+  },
+  "app.cookiesModal.saveAdvancedSettings": {
+    "defaultMessage": "Zapisz ustawienia",
+    "description": "Cookies advanced settings save button label."
+  },
   "app.form.emailField": {
     "defaultMessage": "Pole musi zawierać prawidłowy email",
     "description": "Form error message when field is required."

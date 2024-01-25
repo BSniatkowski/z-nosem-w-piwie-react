@@ -62,7 +62,7 @@ export default defineMessages({
         defaultMessage: 'Analytics Cookies',
     },
     analyticsDescription: {
-        id: 'app.cookiesModal.advancedCookiesSettingsForm.analyticsLabel',
+        id: 'app.cookiesModal.advancedCookiesSettingsForm.analyticsDescription',
         description: 'Analytics Cookies description label.',
         defaultMessage:
             'Analytics cookies assist us in understanding how visitors interact with our website. The data collected is anonymous and helps us make informed decisions to improve the overall user experience.',

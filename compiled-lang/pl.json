@@ -193,6 +193,160 @@
       "value": "Z Nosem W Piwie"
     }
   ],
+  "app.cookiesModal.accept": [
+    {
+      "type": 0,
+      "value": "Akceptuję"
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.advertisingDescription": [
+    {
+      "type": 0,
+      "value": "Pliki cookie reklamowe są używane do dostosowywania reklam do Twoich zainteresowań. Pomagają również mierzyć skuteczność naszych kampanii reklamowych. Bądź pewien, że Twoje dane są używane anonimowo i nie są udostępniane osobom trzecim."
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.advertisingLabel": [
+    {
+      "type": 0,
+      "value": "Pliki cookie reklamowe"
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.analyticsDescription": [
+    {
+      "type": 0,
+      "value": "Pliki cookie analityczne pomagają nam zrozumieć, w jaki sposób odwiedzający korzystają z naszej strony internetowej. Zebrane dane są anonimowe i pomagają nam podejmować świadome decyzje w celu poprawy ogólnej jakości użytkownika."
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.analyticsLabel": [
+    {
+      "type": 0,
+      "value": "Pliki cookie analityczne"
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.essentialDescription": [
+    {
+      "type": 0,
+      "value": "Podstawowe pliki cookie zapewniają podstawową funkcjonalność naszej strony internetowej. Bez tych plików cookie możesz mieć utrudniony dostęp do niektórych funkcji lub nawigację po stronie."
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.essentialLabel": [
+    {
+      "type": 0,
+      "value": "Podstawowe pliki cookie"
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.functionalDescription": [
+    {
+      "type": 0,
+      "value": "Pliki cookie funkcjonalne ulepszają Twoje doświadczenie, zapamiętując Twoje preferencje i ustawienia. Pozwala nam to dostarczyć Ci bardziej spersonalizowaną i efektywną wizytę."
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.functionalLabel": [
+    {
+      "type": 0,
+      "value": "Pliki cookie funkcjonalne"
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.performanceDescription": [
+    {
+      "type": 0,
+      "value": "Pliki cookie wydajnościowe pomagają nam zrozumieć, w jaki sposób korzystasz z naszej strony internetowej, zbierając informacje o Twojej wizycie. Dane te są agregowane i anonimowe, pozwalając nam poprawić wydajność i użyteczność naszej witryny."
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.performanceLabel": [
+    {
+      "type": 0,
+      "value": "Pliki cookie wydajnościowe"
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.socialDescription": [
+    {
+      "type": 0,
+      "value": "Pliki cookie mediów społecznościowych umożliwiają udostępnianie naszych treści na różnych platformach mediów społecznościowych oraz interakcję z zintegrowanymi funkcjami mediów społecznościowych. Pliki te mogą również zbierać informacje o Twoich działaniach w mediach społecznościowych na naszej stronie."
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.socialLabel": [
+    {
+      "type": 0,
+      "value": "Pliki cookie mediów społecznościowych"
+    }
+  ],
+  "app.cookiesModal.cookiePolicy": [
+    {
+      "type": 0,
+      "value": "Polityka Plików Cookie"
+    }
+  ],
+  "app.cookiesModal.disclaimer": [
+    {
+      "type": 0,
+      "value": "Następujący tekst został wygenerowany przez sztuczną inteligencję i nie ma wartości prawnej. Służy jako demonstracja dla fikcyjnego lokalu „Z Nosem W Piwie”, prezentując moje umiejętności jako programisty. Treść i rozwiązania przedstawione tutaj służą wyłącznie celom ilustracyjnym."
+    }
+  ],
+  "app.cookiesModal.disclaimerTitle": [
+    {
+      "type": 0,
+      "value": "Ostrzeżenie:"
+    }
+  ],
+  "app.cookiesModal.mainCookiesTextPart1": [
+    {
+      "type": 0,
+      "value": "Witaj w „Z Nosem W Piwie”! Aby ulepszyć Twoje doświadczenie, używamy plików cookie na naszej stronie internetowej. Te małe pliki tekstowe pomagają nam zrozumieć, w jaki sposób korzystasz z naszej witryny, spersonalizować treść i poprawić ogólną funkcjonalność."
+    }
+  ],
+  "app.cookiesModal.mainCookiesTextPart2": [
+    {
+      "type": 0,
+      "value": "Kontynuując korzystanie z naszej strony internetowej, zgadzasz się na korzystanie z plików cookie zgodnie z tą Umową o Zgode na Pliki Cookie. Masz opcję zarządzania preferencjami dotyczącymi plików cookie za pomocą naszego zaawansowanego okna z ustawieniami plików cookie."
+    }
+  ],
+  "app.cookiesModal.mainCookiesTextPart3": [
+    {
+      "type": 0,
+      "value": "Aby uzyskać więcej informacji na temat rodzajów plików cookie, których używamy, i ich wpływu na Twoje doświadczenie, zapoznaj się z naszą "
+    },
+    {
+      "type": 1,
+      "value": "privacyPolicy"
+    },
+    {
+      "type": 0,
+      "value": " i "
+    },
+    {
+      "type": 1,
+      "value": "cookiePolicy"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "app.cookiesModal.mainCookiesTextPart4": [
+    {
+      "type": 0,
+      "value": "Dziękujemy, że wybrałeś „Z Nosem W Piwie”."
+    }
+  ],
+  "app.cookiesModal.openAdvancedSettings": [
+    {
+      "type": 0,
+      "value": "Zaawansowane ustawienia"
+    }
+  ],
+  "app.cookiesModal.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "Polityka Prywatności"
+    }
+  ],
+  "app.cookiesModal.saveAdvancedSettings": [
+    {
+      "type": 0,
+      "value": "Zapisz ustawienia"
+    }
+  ],
   "app.form.emailField": [
     {
       "type": 0,

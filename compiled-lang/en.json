@@ -112,7 +112,7 @@
   "app.about.fullDescription4": [
     {
       "type": 0,
-      "value": "The spirit of make-believe comes alive with an array of events at \"Z Nosem W Piwie.\" From live music performances that resonate through the walls to themed parties that transcend the ordinary, and quirky trivia nights that challenge the imagination - our event calendar is always buzzing with make-believe happenings. Check regularly for updates and immerse yourself in the magic of our make-believe world."
+      "value": "The spirit of make-believe comes alive with an array of events at \"Z Nosem W Piwie.\" From live music performances that resonate through the walls to themed parties that transcend the ordinary, and quirky trivia nights that challenge the imagination – our event calendar is always buzzing with make-believe happenings. Check regularly for updates and immerse yourself in the magic of our make-believe world."
     }
   ],
   "app.about.fullnameLabel": [
@@ -191,6 +191,160 @@
     {
       "type": 0,
       "value": "Z Nosem W Piwie"
+    }
+  ],
+  "app.cookiesModal.accept": [
+    {
+      "type": 0,
+      "value": "Accept"
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.advertisingDescription": [
+    {
+      "type": 0,
+      "value": "Advertising cookies are used to tailor the ads you see to your interests. They also assist in measuring the effectiveness of our advertising campaigns. Rest assured, your data is used anonymously and is not shared with third parties"
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.advertisingLabel": [
+    {
+      "type": 0,
+      "value": "Advertising Cookies"
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.analyticsDescription": [
+    {
+      "type": 0,
+      "value": "Analytics cookies assist us in understanding how visitors interact with our website. The data collected is anonymous and helps us make informed decisions to improve the overall user experience."
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.analyticsLabel": [
+    {
+      "type": 0,
+      "value": "Analytics Cookies"
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.essentialDescription": [
+    {
+      "type": 0,
+      "value": "Essential cookies ensure the basic functionality of our website. Without these cookies, you may not be able to access certain features or navigate the site effectively."
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.essentialLabel": [
+    {
+      "type": 0,
+      "value": "Essential Cookies"
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.functionalDescription": [
+    {
+      "type": 0,
+      "value": "Functional cookies enhance your experience by remembering your preferences and settings. This allows us to provide you with a more personalized and efficient visit."
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.functionalLabel": [
+    {
+      "type": 0,
+      "value": "Functional Cookies"
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.performanceDescription": [
+    {
+      "type": 0,
+      "value": "Performance cookies help us understand how you interact with our website by collecting information about your visit. This data is aggregated and anonymous, allowing us to enhance the performance and usability of our site."
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.performanceLabel": [
+    {
+      "type": 0,
+      "value": "Performance Cookies"
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.socialDescription": [
+    {
+      "type": 0,
+      "value": "Social media cookies enable you to share our content on various social media platforms and interact with integrated social media features. These cookies may also collect information about your social media activities on our site."
+    }
+  ],
+  "app.cookiesModal.advancedCookiesSettingsForm.socialLabel": [
+    {
+      "type": 0,
+      "value": "Social Media Cookies"
+    }
+  ],
+  "app.cookiesModal.cookiePolicy": [
+    {
+      "type": 0,
+      "value": "Cookie Policy"
+    }
+  ],
+  "app.cookiesModal.disclaimer": [
+    {
+      "type": 0,
+      "value": "The following text is AI-generated and has no legal standing. It serves as a demonstration for a fictitious entity, “Z Nosem W Piwie” showcasing my skills as a Software Developer. The content and solutions presented here are solely for illustrative purposes."
+    }
+  ],
+  "app.cookiesModal.disclaimerTitle": [
+    {
+      "type": 0,
+      "value": "Disclaimer:"
+    }
+  ],
+  "app.cookiesModal.mainCookiesTextPart1": [
+    {
+      "type": 0,
+      "value": "Welcome to “Z Nosem W Piwie”! To enhance your experience, we use cookies on our website. These small text files help us understand how you interact with our site, personalize content, and improve overall functionality."
+    }
+  ],
+  "app.cookiesModal.mainCookiesTextPart2": [
+    {
+      "type": 0,
+      "value": "By continuing to use our website, you consent to the use of cookies in accordance with this Cookie Consent Agreement. You have the option to manage your cookie preferences through our advanced cookies modal."
+    }
+  ],
+  "app.cookiesModal.mainCookiesTextPart3": [
+    {
+      "type": 0,
+      "value": "For more details on the types of cookies we use and how they impact your experience, please review our "
+    },
+    {
+      "type": 1,
+      "value": "privacyPolicy"
+    },
+    {
+      "type": 0,
+      "value": " and "
+    },
+    {
+      "type": 1,
+      "value": "cookiePolicy"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "app.cookiesModal.mainCookiesTextPart4": [
+    {
+      "type": 0,
+      "value": "Thank you for choosing “Z Nosem W Piwie”."
+    }
+  ],
+  "app.cookiesModal.openAdvancedSettings": [
+    {
+      "type": 0,
+      "value": "Advanced settings"
+    }
+  ],
+  "app.cookiesModal.privacyPolicy": [
+    {
+      "type": 0,
+      "value": "Privacy Policy"
+    }
+  ],
+  "app.cookiesModal.saveAdvancedSettings": [
+    {
+      "type": 0,
+      "value": "Save settings"
     }
   ],
   "app.form.emailField": [
