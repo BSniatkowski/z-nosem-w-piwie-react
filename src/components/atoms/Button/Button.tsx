@@ -2,10 +2,17 @@ import Icon from '../Icon/Icon'
 import { SButton } from './Button.style'
 import { IButtonProps } from './Button.types'
 
-const Button: React.FC<IButtonProps> = ({ size, label, iconVariant, onClick }) => {
+const Button: React.FC<IButtonProps> = ({
+    variant = 'normal',
+    size,
+    label,
+    iconVariant,
+    onClick,
+}) => {
     return (
         <SButton
             className='decorative'
+            $variant={variant}
             $size={size}
             $isSingleItem={!(label && iconVariant)}
             onClick={onClick}

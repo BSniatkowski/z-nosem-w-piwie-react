@@ -5,17 +5,34 @@ import { useIntl } from 'react-intl'
 import * as yup from 'yup'
 
 import Button from '../../atoms/Button/Button'
+import Switch from '../../atoms/Switch/Switch'
 import Textarea from '../../atoms/Textarea/Textarea'
 import TextInput from '../../atoms/TextInput/TextInput'
+import Accordion from '../../molecules/Accordion/Accordion'
+import AccordionHeadWithSwitch from '../../molecules/Accordion/AccordionHeads/AccordionHeadWithSwitch/AccordionHeadWithSwitch'
 import messages from './Form.messages'
 import * as S from './Form.style'
 import { IFormProps, TDefaultValues } from './Form.types'
 
-const Form = <T extends FieldValues>({ fields, validationSchema, onSubmit }: IFormProps<T>) => {
+const Form = <T extends FieldValues>({
+    fields,
+    validationSchema,
+    buttonsElement,
+    onSubmit,
+}: IFormProps<T>) => {
     const intl = useIntl()
 
     const defaultValues = Object.fromEntries(
-        fields.map((field) => [field.name, field.defaultValue]),
+        fields.map((field) => {
+            switch (field.type) {
+                case 'switch':
+                    return [field.name, field.defaultChecked]
+                case 'accordionSwitch':
+                    return [field.name, field.defaultChecked]
+                default:
+                    return [field.name, field.defaultValue]
+            }
+        }),
     ) as TDefaultValues<T>
 
     type FormData = yup.InferType<typeof validationSchema>
@@ -64,6 +81,25 @@ const Form = <T extends FieldValues>({ fields, validationSchema, onSubmit }: IFo
                                             />
                                         )
                                     }
+                                    case 'switch': {
+                                        return (
+                                            <S.SwitchWrapper>
+                                                {field.label && <S.SLabel>{field.label}</S.SLabel>}
+                                                <Switch {...cField} />
+                                            </S.SwitchWrapper>
+                                        )
+                                    }
+                                    case 'accordionSwitch': {
+                                        return (
+                                            <Accordion
+                                                title={field.title}
+                                                headElement={AccordionHeadWithSwitch}
+                                                {...cField}
+                                            >
+                                                <p>{field.children}</p>
+                                            </Accordion>
+                                        )
+                                    }
                                 }
                             }}
                         />
@@ -72,11 +108,15 @@ const Form = <T extends FieldValues>({ fields, validationSchema, onSubmit }: IFo
                         </S.ErrorMessage>
                     </S.FieldContainer>
                 ))}
-            <Button
-                label={intl.formatMessage(messages.send)}
-                iconVariant='send'
-                onClick={handleSubmit(onSubmit)}
-            />
+            {buttonsElement ? (
+                buttonsElement
+            ) : (
+                <Button
+                    label={intl.formatMessage(messages.send)}
+                    iconVariant='send'
+                    onClick={handleSubmit(onSubmit)}
+                />
+            )}
         </S.SForm>
     )
 }

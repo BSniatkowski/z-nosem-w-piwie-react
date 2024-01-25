@@ -23,6 +23,12 @@ export const FieldContainer = styled.div<{ $isErrorActive: boolean }>`
               `}
 `
 
+export const SLabel = styled.label`
+    font-size: 2.4rem;
+`
+
+export const SwitchWrapper = styled.div``
+
 export const ErrorMessage = styled.span`
     font-size: 1.6rem;
     line-height: 1em;

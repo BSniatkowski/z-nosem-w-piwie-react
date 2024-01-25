@@ -8,6 +8,7 @@ import {
 } from './components/molecules/LanguagePicker/LanguagePicker.types'
 import Main from './components/pages/Main/Main'
 import Layout from './components/templates/Layout/Layout'
+import CookiesProvider from './providers/CookiesProvider/CookiesProvider'
 import SnackbarProvider from './providers/SnackbarProvider/SnackbarProvider'
 import ThemeProvider from './providers/ThemeProvider/ThemeProviding'
 
@@ -23,12 +24,14 @@ function App({ messages, locale }: { messages: TAllLocalesMessages; locale: TLoc
         <ThemeProvider>
             <IntlProvider locale={actualIntlLocale} messages={actualMessages} defaultLocale='en-GB'>
                 <SnackbarProvider>
-                    <Layout>
-                        <Main
-                            actualLocale={actualIntlLocale}
-                            setActualIntlLocale={setActualIntlLocale}
-                        />
-                    </Layout>
+                    <CookiesProvider>
+                        <Layout>
+                            <Main
+                                actualLocale={actualIntlLocale}
+                                setActualIntlLocale={setActualIntlLocale}
+                            />
+                        </Layout>
+                    </CookiesProvider>
                 </SnackbarProvider>
             </IntlProvider>
         </ThemeProvider>

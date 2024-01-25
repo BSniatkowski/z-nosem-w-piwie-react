@@ -58,7 +58,7 @@ export const SModal = styled.div<{ $position: 'bottom' | 'center' }>`
                 transform: translate(-50%, -50%);
                 height: fit-content;
                 max-height: var(--maxSize);
-                width: 100%;
+                width: 80rem;
                 max-width: var(--maxSize);
             `,
             bottom: css`
