@@ -84,7 +84,7 @@ const CookiesModal = () => {
                                     size={isMobile ? 'full' : 'fit'}
                                     variant='outlined'
                                     label={intl.formatMessage(messages.saveAdvancedSettings)}
-                                    onClick={() => setIsAdvanceActive(true)}
+                                    onClick={onAcceptClick}
                                 />
                                 <Button
                                     size={isMobile ? 'full' : 'fit'}

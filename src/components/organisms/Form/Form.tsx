@@ -58,6 +58,7 @@ const Form = <T extends FieldValues>({
                     <S.FieldContainer key={field.name} $isErrorActive={!!errors[field.name]}>
                         <Controller
                             name={field.name}
+                            disabled={field.disabled}
                             control={control}
                             render={({ field: cField }) => {
                                 switch (field.type) {
