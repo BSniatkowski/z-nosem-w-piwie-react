@@ -21,10 +21,10 @@ export const HeaderNav: Story = {
     args: {
         variant: 'header',
         links: [
-            { label: 'Home', href: '#home' },
-            { label: 'Offer', href: '#offer' },
-            { label: 'About', href: '#about' },
-            { label: 'Contact', href: '#contact' },
+            { children: 'Home', href: '#home' },
+            { children: 'Offer', href: '#offer' },
+            { children: 'About', href: '#about' },
+            { children: 'Contact', href: '#contact' },
         ],
     },
 }

@@ -275,6 +275,10 @@
     "defaultMessage": "Kontakt",
     "description": "Navigation link to the 'Contact' section."
   },
+  "app.layout.figma": {
+    "defaultMessage": "Projekt strony w Figmie",
+    "description": "Navigation link to the project's figma section."
+  },
   "app.layout.footer.altLinks": {
     "defaultMessage": "Alternatywne wersje tej witryny",
     "description": "Footer link to alternative versions of the site."
@@ -294,6 +298,14 @@
   "app.layout.offer": {
     "defaultMessage": "Oferta",
     "description": "Navigation link to the 'Offer' section."
+  },
+  "app.layout.react": {
+    "defaultMessage": "React (aktualny)",
+    "description": "Navigation link to the react verssion of app."
+  },
+  "app.layout.repository": {
+    "defaultMessage": "Repozytorium projektu",
+    "description": "Navigation link to the project's repository section."
   },
   "app.offer.beers": {
     "defaultMessage": "P i w a",

@@ -2,6 +2,7 @@ import { FormattedMessage, useIntl } from 'react-intl'
 
 import { useBreakpoint } from '../../../hooks/useBreakpoint/useBreakpoint'
 import Icon from '../../atoms/Icon/Icon'
+import Link from '../../atoms/Link/Link'
 import Header from '../../organisms/Header/Header'
 import messages from './Home.messages'
 import * as S from './Home.style'
@@ -11,10 +12,10 @@ const Home: React.FC<IHomeProps> = ({ actualLocale, setActualIntlLocale }) => {
     const intl = useIntl()
 
     const links = [
-        { label: intl.formatMessage(messages.home), href: '#home' },
-        { label: intl.formatMessage(messages.offer), href: '#offer' },
-        { label: intl.formatMessage(messages.about), href: '#about' },
-        { label: intl.formatMessage(messages.contact), href: '#contact' },
+        { children: intl.formatMessage(messages.home), href: '#home' },
+        { children: intl.formatMessage(messages.offer), href: '#offer' },
+        { children: intl.formatMessage(messages.about), href: '#about' },
+        { children: intl.formatMessage(messages.contact), href: '#contact' },
     ]
 
     const isMobile = useBreakpoint('mobile')
@@ -41,11 +42,21 @@ const Home: React.FC<IHomeProps> = ({ actualLocale, setActualIntlLocale }) => {
                         <FormattedMessage {...messages.follow} />
                     </S.FollowUsTextContainer>
                     <S.FollowUsIconsContainer>
-                        <Icon variant='facebook' />
-                        <Icon variant='instagram' />
-                        <Icon variant='tiktok' />
-                        <Icon variant='x' />
-                        <Icon variant='youtube' />
+                        <Link href='https://www.facebook.com/'>
+                            <Icon variant='facebook' />
+                        </Link>
+                        <Link href='https://www.instagram.com/'>
+                            <Icon variant='instagram' />
+                        </Link>
+                        <Link href='https://www.tiktok.com/'>
+                            <Icon variant='tiktok' />
+                        </Link>
+                        <Link href='https://twitter.com/'>
+                            <Icon variant='x' />
+                        </Link>
+                        <Link href='https://www.youtube.com/'>
+                            <Icon variant='youtube' />
+                        </Link>
                     </S.FollowUsIconsContainer>
                 </S.FollowUs>
             </S.SHome>

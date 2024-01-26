@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import home_background from '/imgs/home_background.png'
 
 import { IconWrapper } from '../../atoms/Icon/Icon.style'
+import { SLink } from '../../atoms/Link/Link.style'
 
 export const HeaderSection = styled.section`
     height: 100vh;
@@ -65,7 +66,7 @@ export const FollowUsIconsContainer = styled.div`
     flex-wrap: wrap;
     gap: 2rem;
 
-    & > ${IconWrapper} {
+    & > ${SLink} > ${IconWrapper} {
         fill: ${({ theme }) => theme.palette.primary};
     }
 `
