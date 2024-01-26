@@ -20,6 +20,8 @@ const Modal: React.FC<IModalProps> = ({
         }
 
         return () => {
+            if (isScrollBehindPossible) return
+
             const body = document.getElementsByTagName('body')[0]
 
             if (body) body.style.overflow = 'unset'

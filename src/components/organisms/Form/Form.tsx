@@ -1,5 +1,5 @@
 import { yupResolver } from '@hookform/resolvers/yup'
-import { useEffect } from 'react'
+import { FormEvent, useEffect, useMemo } from 'react'
 import { Controller, FieldValues, useForm } from 'react-hook-form'
 import { useIntl } from 'react-intl'
 import * as yup from 'yup'
@@ -57,12 +57,17 @@ const Form = <T extends FieldValues>({
         }
     }
 
+    const formOnSubmit = useMemo(
+        () => (buttonsElement ? (e: FormEvent) => e.preventDefault() : handleSubmit(onSubmit)),
+        [buttonsElement, handleSubmit, onSubmit],
+    )
+
     useEffect(() => {
         reset()
     }, [isSubmitSuccessful, reset])
 
     return (
-        <S.SForm $variant={variant}>
+        <S.SForm onSubmit={formOnSubmit} $variant={variant}>
             {fields.length > 0 &&
                 fields.map((field) => (
                     <S.FieldContainer
@@ -111,7 +116,11 @@ const Form = <T extends FieldValues>({
                                             <Accordion
                                                 title={field.title}
                                                 headElement={(props) => (
-                                                    <AccordionHeadWithSwitch {...props} ref={ref} />
+                                                    <AccordionHeadWithSwitch
+                                                        {...props}
+                                                        readOnly={field.readOnly}
+                                                        ref={ref}
+                                                    />
                                                 )}
                                                 {...props}
                                             >
@@ -127,8 +136,12 @@ const Form = <T extends FieldValues>({
                         </S.ErrorMessage>
                     </S.FieldContainer>
                 ))}
-            {buttonsElement ? (
-                buttonsElement
+            {typeof buttonsElement === 'function' ? (
+                buttonsElement({
+                    submitWith: (additionalProps) => {
+                        handleSubmit((data) => onSubmit({ ...data, ...additionalProps }))()
+                    },
+                })
             ) : (
                 <Button
                     label={intl.formatMessage(messages.send)}

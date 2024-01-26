@@ -1,70 +1,21 @@
-import { useMemo } from 'react'
-import { SubmitHandler } from 'react-hook-form'
-import { FormattedMessage, useIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import * as yup from 'yup'
 
+import Button from '../../../../atoms/Button/Button'
 import Form from '../../../../organisms/Form/Form'
-import { EFieldType } from '../../../../organisms/Form/Form.types'
-import messages from './AdvancedCookiesSettingsForm.messages'
+import cookiesMessages from '../../CookiesModal.messages'
+import * as S from '../../CookiesModal.style'
 import {
     IAdvancedCookiesSettingsFormFieldsValues,
     IAdvancedCookiesSettingsFormProps,
-    TAdvancedCookiesSettingsFormFields,
 } from './AdvancedCookiesSettingsForm.types'
 
 const AdvancedCookiesSettingsForm: React.FC<IAdvancedCookiesSettingsFormProps> = ({
-    buttonsElement,
+    isMobile,
+    fields,
+    onSubmit,
 }) => {
     const intl = useIntl()
-
-    const fields = useMemo<TAdvancedCookiesSettingsFormFields>(
-        () => [
-            {
-                name: 'essential',
-                type: EFieldType.accordionSwitch,
-                title: intl.formatMessage(messages.essentialLabel),
-                children: <FormattedMessage {...messages.essentialDescription} />,
-                defaultChecked: true,
-                disabled: true,
-            },
-            {
-                name: 'performance',
-                type: EFieldType.accordionSwitch,
-                title: intl.formatMessage(messages.performanceLabel),
-                children: <FormattedMessage {...messages.performanceDescription} />,
-                defaultChecked: true,
-            },
-            {
-                name: 'functional',
-                type: EFieldType.accordionSwitch,
-                title: intl.formatMessage(messages.functionalLabel),
-                children: <FormattedMessage {...messages.functionalDescription} />,
-                defaultChecked: true,
-            },
-            {
-                name: 'advertising',
-                type: EFieldType.accordionSwitch,
-                title: intl.formatMessage(messages.advertisingLabel),
-                children: <FormattedMessage {...messages.advertisingDescription} />,
-                defaultChecked: true,
-            },
-            {
-                name: 'social',
-                type: EFieldType.accordionSwitch,
-                title: intl.formatMessage(messages.socialLabel),
-                children: <FormattedMessage {...messages.socialDescription} />,
-                defaultChecked: true,
-            },
-            {
-                name: 'analytics',
-                type: EFieldType.accordionSwitch,
-                title: intl.formatMessage(messages.analyticsLabel),
-                children: <FormattedMessage {...messages.analyticsDescription} />,
-                defaultChecked: true,
-            },
-        ],
-        [intl],
-    )
 
     const validationSchema = yup
         .object({
@@ -74,19 +25,34 @@ const AdvancedCookiesSettingsForm: React.FC<IAdvancedCookiesSettingsFormProps> =
             advertising: yup.boolean().required(),
             social: yup.boolean().required(),
             analytics: yup.boolean().required(),
+            submitType: yup.string().oneOf(['save', 'accept']).optional(),
         })
         .required()
-
-    const onSubmit: SubmitHandler<IAdvancedCookiesSettingsFormFieldsValues> = (data) => {
-        console.log(data)
-    }
 
     return (
         <Form<IAdvancedCookiesSettingsFormFieldsValues>
             fields={fields}
             validationSchema={validationSchema}
             variant='collapsed'
-            buttonsElement={buttonsElement}
+            buttonsElement={({ submitWith }) => (
+                <S.ButtonsContainer $isMobile={isMobile}>
+                    <Button
+                        size={isMobile ? 'full' : 'fit'}
+                        variant='outlined'
+                        label={intl.formatMessage(cookiesMessages.saveAdvancedSettings)}
+                        onClick={() => {
+                            submitWith({ submitType: 'save' })
+                        }}
+                    />
+                    <Button
+                        size={isMobile ? 'full' : 'fit'}
+                        label={intl.formatMessage(cookiesMessages.accept)}
+                        onClick={() => {
+                            submitWith({ submitType: 'accept' })
+                        }}
+                    />
+                </S.ButtonsContainer>
+            )}
             onSubmit={onSubmit}
         />
     )

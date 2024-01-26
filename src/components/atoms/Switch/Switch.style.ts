@@ -55,7 +55,7 @@ export const SSwitchButton = styled.div<{ $isActive?: boolean; $isDisabled?: boo
               `};
 `
 
-export const HiddenInput = styled.input.attrs({ type: 'checkbox' })`
+export const HiddenInput = styled.input.attrs({ type: 'checkbox' })<{ $disabled?: boolean }>`
     position: absolute;
     top: 0;
     left: 0;
@@ -64,4 +64,10 @@ export const HiddenInput = styled.input.attrs({ type: 'checkbox' })`
     margin: 0;
     opacity: 0;
     cursor: pointer;
+
+    ${({ $disabled }) =>
+        $disabled &&
+        css`
+            pointer-events: none;
+        `}
 `

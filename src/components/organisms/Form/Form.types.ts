@@ -37,7 +37,11 @@ export interface IFormProps<T extends FieldValues> {
     fields: TFields<InferType<ObjectSchema<T>>>
     validationSchema: ObjectSchema<T>
     variant?: 'normal' | 'collapsed'
-    buttonsElement?: React.ReactElement
+    buttonsElement?: ({
+        submitWith,
+    }: {
+        submitWith: (additionalProps: Partial<InferType<ObjectSchema<T>>>) => void
+    }) => React.ReactElement
     onSubmit: SubmitHandler<InferType<ObjectSchema<T>>>
 }
 

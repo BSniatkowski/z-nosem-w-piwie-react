@@ -50,14 +50,90 @@ export default defineMessages({
         description: 'Cookies advanced settings button label.',
         defaultMessage: 'Advanced settings',
     },
+    accept: {
+        id: 'app.cookiesModal.accept',
+        description: 'Cookies agreement accept button label.',
+        defaultMessage: 'Accept',
+    },
+    essentialLabel: {
+        id: 'app.cookiesModal.essentialLabel',
+        description: 'Essential Cookies field label.',
+        defaultMessage: 'Essential Cookies',
+    },
+    essentialDescription: {
+        id: 'app.cookiesModal.essentialDescription',
+        description: 'Essential Cookies description label.',
+        defaultMessage:
+            'Essential cookies ensure the basic functionality of our website. Without these cookies, you may not be able to access certain features or navigate the site effectively.',
+    },
+    performanceLabel: {
+        id: 'app.cookiesModal.performanceLabel',
+        description: 'Performance Cookies field label.',
+        defaultMessage: 'Performance Cookies',
+    },
+    performanceDescription: {
+        id: 'app.cookiesModal.performanceDescription',
+        description: 'Performance Cookies description label.',
+        defaultMessage:
+            'Performance cookies help us understand how you interact with our website by collecting information about your visit. This data is aggregated and anonymous, allowing us to enhance the performance and usability of our site.',
+    },
+    functionalLabel: {
+        id: 'app.cookiesModal.functionalLabel',
+        description: 'Functional Cookies field label.',
+        defaultMessage: 'Functional Cookies',
+    },
+    functionalDescription: {
+        id: 'app.cookiesModal.functionalDescription',
+        description: 'Functional Cookies description label.',
+        defaultMessage:
+            'Functional cookies enhance your experience by remembering your preferences and settings. This allows us to provide you with a more personalized and efficient visit.',
+    },
+    advertisingLabel: {
+        id: 'app.cookiesModal.advertisingLabel',
+        description: 'Advertising Cookies field label.',
+        defaultMessage: 'Advertising Cookies',
+    },
+    advertisingDescription: {
+        id: 'app.cookiesModal.advertisingDescription',
+        description: 'Advertising Cookies description label.',
+        defaultMessage:
+            'Advertising cookies are used to tailor the ads you see to your interests. They also assist in measuring the effectiveness of our advertising campaigns. Rest assured, your data is used anonymously and is not shared with third parties',
+    },
+    socialLabel: {
+        id: 'app.cookiesModal.socialLabel',
+        description: 'Social Media Cookies field label.',
+        defaultMessage: 'Social Media Cookies',
+    },
+    socialDescription: {
+        id: 'app.cookiesModal.socialDescription',
+        description: 'Social Media Cookies description label.',
+        defaultMessage:
+            'Social media cookies enable you to share our content on various social media platforms and interact with integrated social media features. These cookies may also collect information about your social media activities on our site.',
+    },
+    analyticsLabel: {
+        id: 'app.cookiesModal.analyticsLabel',
+        description: 'Analytics Cookies field label.',
+        defaultMessage: 'Analytics Cookies',
+    },
+    analyticsDescription: {
+        id: 'app.cookiesModal.analyticsDescription',
+        description: 'Analytics Cookies description label.',
+        defaultMessage:
+            'Analytics cookies assist us in understanding how visitors interact with our website. The data collected is anonymous and helps us make informed decisions to improve the overall user experience.',
+    },
     saveAdvancedSettings: {
         id: 'app.cookiesModal.saveAdvancedSettings',
         description: 'Cookies advanced settings save button label.',
         defaultMessage: 'Save settings',
     },
-    accept: {
-        id: 'app.cookiesModal.accept',
-        description: 'Cookies agreement accept button label.',
-        defaultMessage: 'Accept',
+    accepted: {
+        id: 'app.cookiesModal.accepted',
+        description: 'Cookies agreement settings accepted snackbar message.',
+        defaultMessage: 'Cookies accepted',
+    },
+    saved: {
+        id: 'app.cookiesModal.saved',
+        description: 'Cookies agreement settings saved snackbar message.',
+        defaultMessage: 'Your custom cookies settings have been saved!',
     },
 })

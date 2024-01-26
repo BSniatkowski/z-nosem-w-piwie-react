@@ -1,3 +1,5 @@
+import { SubmitHandler } from 'react-hook-form'
+
 import { TFields } from '../../../../organisms/Form/Form.types'
 
 export interface IAdvancedCookiesSettingsFormFieldsValues {
@@ -7,10 +9,13 @@ export interface IAdvancedCookiesSettingsFormFieldsValues {
     advertising: boolean
     social: boolean
     analytics: boolean
+    submitType?: 'save' | 'accept'
 }
 
 export type TAdvancedCookiesSettingsFormFields = TFields<IAdvancedCookiesSettingsFormFieldsValues>
 
 export interface IAdvancedCookiesSettingsFormProps {
-    buttonsElement: React.ReactElement
+    isMobile: boolean
+    fields: TAdvancedCookiesSettingsFormFields
+    onSubmit: SubmitHandler<IAdvancedCookiesSettingsFormFieldsValues>
 }
