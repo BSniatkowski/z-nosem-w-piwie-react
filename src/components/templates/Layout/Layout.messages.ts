@@ -21,4 +21,19 @@ export default defineMessages({
         description: "Navigation link to the 'Contact' section.",
         defaultMessage: 'Contact',
     },
+    react: {
+        id: 'app.layout.react',
+        description: 'Navigation link to the react verssion of app.',
+        defaultMessage: 'React (current)',
+    },
+    repository: {
+        id: 'app.layout.repository',
+        description: "Navigation link to the project's repository section.",
+        defaultMessage: "Current project's repository",
+    },
+    figma: {
+        id: 'app.layout.figma',
+        description: "Navigation link to the project's figma section.",
+        defaultMessage: 'Website Figma project',
+    },
 })

@@ -1,4 +1,4 @@
 export interface ILinkProps {
-    label?: string
+    children: React.ReactElement | string
     href: string
 }

@@ -6,14 +6,14 @@ const Navigation: React.FC<INavigationProps> = ({ variant, links, onItemClickCal
     return (
         <S.NavigationList $variant={variant}>
             {links.length > 0 &&
-                links.map(({ isCurrent, label, href }, index) => (
+                links.map(({ isCurrent, children, href }, index) => (
                     <S.NavigationItem
                         $isCurrent={isCurrent}
                         $variant={variant}
                         onClick={onItemClickCallback}
                         key={index}
                     >
-                        <Link label={label} href={href} />
+                        <Link href={href}>{children}</Link>
                     </S.NavigationItem>
                 ))}
         </S.NavigationList>

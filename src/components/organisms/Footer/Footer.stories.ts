@@ -22,13 +22,13 @@ export const Default: Story = {
     args: {
         siteLinks: FooterNav.args.links,
         altLinks: [
-            { label: 'React (current)', href: '#', isCurrent: true },
-            { label: 'Vue', href: '#' },
-            { label: 'Angular', href: '#' },
+            { children: 'React (current)', href: '#', isCurrent: true },
+            { children: 'Vue', href: '#' },
+            { children: 'Angular', href: '#' },
         ],
         myLinks: [
-            { label: 'LinkedIn', href: '#' },
-            { label: 'Github', href: '#' },
+            { children: 'LinkedIn', href: '#' },
+            { children: 'Github', href: '#' },
         ],
     },
 }

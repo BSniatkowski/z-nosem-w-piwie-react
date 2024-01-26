@@ -449,6 +449,12 @@
       "value": "Contact"
     }
   ],
+  "app.layout.figma": [
+    {
+      "type": 0,
+      "value": "Website Figma project"
+    }
+  ],
   "app.layout.footer.altLinks": [
     {
       "type": 0,
@@ -477,6 +483,18 @@
     {
       "type": 0,
       "value": "Offer"
+    }
+  ],
+  "app.layout.react": [
+    {
+      "type": 0,
+      "value": "React (current)"
+    }
+  ],
+  "app.layout.repository": [
+    {
+      "type": 0,
+      "value": "Current project's repository"
     }
   ],
   "app.offer.beers": [

@@ -449,6 +449,12 @@
       "value": "Kontakt"
     }
   ],
+  "app.layout.figma": [
+    {
+      "type": 0,
+      "value": "Projekt strony w Figmie"
+    }
+  ],
   "app.layout.footer.altLinks": [
     {
       "type": 0,
@@ -477,6 +483,18 @@
     {
       "type": 0,
       "value": "Oferta"
+    }
+  ],
+  "app.layout.react": [
+    {
+      "type": 0,
+      "value": "React (aktualny)"
+    }
+  ],
+  "app.layout.repository": [
+    {
+      "type": 0,
+      "value": "Repozytorium projektu"
     }
   ],
   "app.offer.beers": [
