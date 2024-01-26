@@ -18,6 +18,7 @@ import Carousel from '../../organisms/Carousel/Carousel'
 import { TCarouselItems } from '../../organisms/Carousel/Carousel.types'
 import Form from '../../organisms/Form/Form'
 import formMessages from '../../organisms/Form/Form.messages'
+import { EFieldType } from '../../organisms/Form/Form.types'
 import Loader from '../../organisms/Loader/Loader'
 import messages from './About.messages'
 import * as S from './About.style'
@@ -105,19 +106,19 @@ const About = () => {
         {
             name: 'fullname',
             label: intl.formatMessage(messages.fullnameLabel),
-            type: 'text',
+            type: EFieldType.text,
             defaultValue: '',
         },
         {
             name: 'email',
             label: intl.formatMessage(messages.emailLabel),
-            type: 'text',
+            type: EFieldType.text,
             defaultValue: '',
         },
         {
             name: 'message',
             label: intl.formatMessage(messages.messageLabel),
-            type: 'textarea',
+            type: EFieldType.textarea,
             defaultValue: '',
         },
     ] satisfies TContactFields

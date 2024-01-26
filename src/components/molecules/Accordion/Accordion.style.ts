@@ -26,6 +26,7 @@ export const AccordionContent = styled.div<{
               `
             : css`
                   height: 0;
+                  pointer-events: none;
 
                   & * {
                       opacity: 0;

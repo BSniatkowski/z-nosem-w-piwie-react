@@ -4,6 +4,7 @@ import { FormattedMessage, useIntl } from 'react-intl'
 import * as yup from 'yup'
 
 import Form from '../../../../organisms/Form/Form'
+import { EFieldType } from '../../../../organisms/Form/Form.types'
 import messages from './AdvancedCookiesSettingsForm.messages'
 import {
     IAdvancedCookiesSettingsFormFieldsValues,
@@ -20,7 +21,7 @@ const AdvancedCookiesSettingsForm: React.FC<IAdvancedCookiesSettingsFormProps> =
         () => [
             {
                 name: 'essential',
-                type: 'accordionSwitch',
+                type: EFieldType.accordionSwitch,
                 title: intl.formatMessage(messages.essentialLabel),
                 children: <FormattedMessage {...messages.essentialDescription} />,
                 defaultChecked: true,
@@ -28,35 +29,35 @@ const AdvancedCookiesSettingsForm: React.FC<IAdvancedCookiesSettingsFormProps> =
             },
             {
                 name: 'performance',
-                type: 'accordionSwitch',
+                type: EFieldType.accordionSwitch,
                 title: intl.formatMessage(messages.performanceLabel),
                 children: <FormattedMessage {...messages.performanceDescription} />,
                 defaultChecked: true,
             },
             {
                 name: 'functional',
-                type: 'accordionSwitch',
+                type: EFieldType.accordionSwitch,
                 title: intl.formatMessage(messages.functionalLabel),
                 children: <FormattedMessage {...messages.functionalDescription} />,
                 defaultChecked: true,
             },
             {
                 name: 'advertising',
-                type: 'accordionSwitch',
+                type: EFieldType.accordionSwitch,
                 title: intl.formatMessage(messages.advertisingLabel),
                 children: <FormattedMessage {...messages.advertisingDescription} />,
                 defaultChecked: true,
             },
             {
                 name: 'social',
-                type: 'accordionSwitch',
+                type: EFieldType.accordionSwitch,
                 title: intl.formatMessage(messages.socialLabel),
                 children: <FormattedMessage {...messages.socialDescription} />,
                 defaultChecked: true,
             },
             {
                 name: 'analytics',
-                type: 'accordionSwitch',
+                type: EFieldType.accordionSwitch,
                 title: intl.formatMessage(messages.analyticsLabel),
                 children: <FormattedMessage {...messages.analyticsDescription} />,
                 defaultChecked: true,
@@ -84,6 +85,7 @@ const AdvancedCookiesSettingsForm: React.FC<IAdvancedCookiesSettingsFormProps> =
         <Form<IAdvancedCookiesSettingsFormFieldsValues>
             fields={fields}
             validationSchema={validationSchema}
+            variant='collapsed'
             buttonsElement={buttonsElement}
             onSubmit={onSubmit}
         />

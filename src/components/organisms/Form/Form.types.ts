@@ -7,31 +7,36 @@ import { ITextInputProps } from '../../atoms/TextInput/TextInput.types'
 import { IAccordionProps } from '../../molecules/Accordion/Accordion.types'
 import { IAccordionHeadWithSwitchProps } from '../../molecules/Accordion/AccordionHeads/AccordionHeadWithSwitch/AccordionHeadWithSwitch.types'
 
-export type TField<T> =
+export enum EFieldType {
+    text = 'text',
+    textarea = 'textarea',
+    switch = 'switch',
+    accordionSwitch = 'accordionSwitch',
+}
+
+export type TField<T> = { name: Path<T> } & (
     | (Omit<ITextInputProps, 'name'> & {
-          name: Path<T>
-          type: 'text'
+          type: EFieldType.text
       })
     | (Omit<ITextareaProps, 'name'> & {
-          name: Path<T>
-          type: 'textarea'
+          type: EFieldType.textarea
       })
     | (Omit<ISwitchProps, 'name'> & {
-          name: Path<T>
-          type: 'switch'
+          type: EFieldType.switch
           label: string
       })
     | (Omit<IAccordionProps, 'name' | 'headElement' | 'title'> &
           IAccordionHeadWithSwitchProps & {
-              name: Path<T>
-              type: 'accordionSwitch'
+              type: EFieldType.accordionSwitch
           })
+)
 
 export type TFields<T> = Array<TField<T>>
 
 export interface IFormProps<T extends FieldValues> {
     fields: TFields<InferType<ObjectSchema<T>>>
     validationSchema: ObjectSchema<T>
+    variant?: 'normal' | 'collapsed'
     buttonsElement?: React.ReactElement
     onSubmit: SubmitHandler<InferType<ObjectSchema<T>>>
 }

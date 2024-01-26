@@ -1,26 +1,38 @@
 import styled, { css } from 'styled-components'
 
-export const SForm = styled.form`
+export const SForm = styled.form<{ $variant?: 'normal' | 'collapsed' }>`
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    row-gap: 1rem;
+
+    ${({ $variant = 'normal' }) =>
+        ({
+            normal: css`
+                row-gap: 1rem;
+            `,
+            collapsed: css``,
+        })[$variant]}
 `
 
-export const FieldContainer = styled.div<{ $isErrorActive: boolean }>`
+export const FieldContainer = styled.div<{
+    $withoutErrorMessage?: boolean
+    $isErrorActive: boolean
+}>`
     width: 100%;
     display: flex;
     flex-direction: column;
 
-    ${({ $isErrorActive }) =>
-        $isErrorActive
-            ? css`
-                  row-gap: 0.4rem;
-              `
-            : css`
-                  padding-bottom: 2rem;
-              `}
+    ${({ $withoutErrorMessage, $isErrorActive }) =>
+        $withoutErrorMessage
+            ? ''
+            : $isErrorActive
+              ? css`
+                    row-gap: 0.4rem;
+                `
+              : css`
+                    padding-bottom: 2rem;
+                `}
 `
 
 export const SLabel = styled.label`

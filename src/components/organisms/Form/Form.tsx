@@ -12,11 +12,12 @@ import Accordion from '../../molecules/Accordion/Accordion'
 import AccordionHeadWithSwitch from '../../molecules/Accordion/AccordionHeads/AccordionHeadWithSwitch/AccordionHeadWithSwitch'
 import messages from './Form.messages'
 import * as S from './Form.style'
-import { IFormProps, TDefaultValues } from './Form.types'
+import { EFieldType, IFormProps, TDefaultValues } from './Form.types'
 
 const Form = <T extends FieldValues>({
     fields,
     validationSchema,
+    variant,
     buttonsElement,
     onSubmit,
 }: IFormProps<T>) => {
@@ -47,22 +48,35 @@ const Form = <T extends FieldValues>({
         resolver: yupResolver(validationSchema),
     })
 
+    const isWithoutErrorMessage = (fieldType: EFieldType) => {
+        switch (fieldType) {
+            case EFieldType.accordionSwitch:
+                return true
+            default:
+                return false
+        }
+    }
+
     useEffect(() => {
         reset()
     }, [isSubmitSuccessful, reset])
 
     return (
-        <S.SForm>
+        <S.SForm $variant={variant}>
             {fields.length > 0 &&
                 fields.map((field) => (
-                    <S.FieldContainer key={field.name} $isErrorActive={!!errors[field.name]}>
+                    <S.FieldContainer
+                        key={field.name}
+                        $withoutErrorMessage={isWithoutErrorMessage(field.type)}
+                        $isErrorActive={!!errors[field.name]}
+                    >
                         <Controller
                             name={field.name}
                             disabled={field.disabled}
                             control={control}
                             render={({ field: cField }) => {
                                 switch (field.type) {
-                                    case 'text': {
+                                    case EFieldType.text: {
                                         return (
                                             <TextInput
                                                 {...cField}
@@ -72,7 +86,7 @@ const Form = <T extends FieldValues>({
                                             />
                                         )
                                     }
-                                    case 'textarea': {
+                                    case EFieldType.textarea: {
                                         return (
                                             <Textarea
                                                 {...cField}
@@ -82,7 +96,7 @@ const Form = <T extends FieldValues>({
                                             />
                                         )
                                     }
-                                    case 'switch': {
+                                    case EFieldType.switch: {
                                         return (
                                             <S.SwitchWrapper>
                                                 {field.label && <S.SLabel>{field.label}</S.SLabel>}
@@ -90,12 +104,16 @@ const Form = <T extends FieldValues>({
                                             </S.SwitchWrapper>
                                         )
                                     }
-                                    case 'accordionSwitch': {
+                                    case EFieldType.accordionSwitch: {
+                                        const { ref, ...props } = cField
+
                                         return (
                                             <Accordion
                                                 title={field.title}
-                                                headElement={AccordionHeadWithSwitch}
-                                                {...cField}
+                                                headElement={(props) => (
+                                                    <AccordionHeadWithSwitch {...props} ref={ref} />
+                                                )}
+                                                {...props}
                                             >
                                                 <p>{field.children}</p>
                                             </Accordion>

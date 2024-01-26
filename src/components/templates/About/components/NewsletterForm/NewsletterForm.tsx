@@ -12,7 +12,7 @@ import Card from '../../../../atoms/Card/Card'
 import TextInput from '../../../../atoms/TextInput/TextInput'
 import formMessages from '../../../../organisms/Form/Form.messages'
 import { ErrorMessage, FieldContainer, SForm } from '../../../../organisms/Form/Form.style'
-import { TField } from '../../../../organisms/Form/Form.types'
+import { EFieldType, TField } from '../../../../organisms/Form/Form.types'
 import Loader from '../../../../organisms/Loader/Loader'
 import aboutMessages from '../../About.messages'
 import { SNewsletterInsideContainer } from './Newsletter.style'
@@ -29,7 +29,7 @@ const NewsletterForm = () => {
 
     const emailField = {
         name: 'email' as const,
-        type: 'text',
+        type: EFieldType.text,
         label: intl.formatMessage(aboutMessages.emailLabel),
         defaultValue: '',
     } satisfies TField<'email'>
