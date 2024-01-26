@@ -1,5 +1,6 @@
 import { IContactFieldsValues } from '../src/components/templates/About/About.types'
 import { INewsletterFieldsValues } from '../src/components/templates/About/components/NewsletterForm/NewsletterForm.types'
+import { IAdvancedCookiesSettingsFormFieldsValues } from '../src/components/templates/CookiesModal/components/AdvancedCookiesSettingsForm/AdvancedCookiesSettingsForm.types'
 
 export interface IOfferItem {
     translations: {
@@ -47,5 +48,9 @@ export type TFetchEvents = () => Promise<Array<IEventItemElement>>
 export type TNewsletterFormRequest = (data: INewsletterFieldsValues) => Promise<{ status: 200 }>
 
 export type TContactFormRequest = (data: IContactFieldsValues) => Promise<{ status: 200 }>
+
+export type TCookiesFormRequest = (
+    data: IAdvancedCookiesSettingsFormFieldsValues,
+) => Promise<{ status: 200 }>
 
 export type TFetchMerch = () => Promise<Array<IMerchItemElement>>

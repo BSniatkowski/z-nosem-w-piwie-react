@@ -1,6 +1,7 @@
 import { eventsData, merchData, offerData } from './api.fakeData'
 import {
     TContactFormRequest,
+    TCookiesFormRequest,
     TFetchEvents,
     TFetchMerch,
     TFetchOffer,
@@ -38,6 +39,12 @@ export const NewsletterRequest: TNewsletterFormRequest = async () => {
 
 export const ContactFormRequest: TContactFormRequest = async () => {
     await fakeServerResponseDelay(1000)
+
+    return { status: 200 }
+}
+
+export const CookiesFormRequest: TCookiesFormRequest = async () => {
+    await fakeServerResponseDelay(300)
 
     return { status: 200 }
 }

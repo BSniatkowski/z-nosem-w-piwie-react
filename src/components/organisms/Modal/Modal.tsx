@@ -8,7 +8,7 @@ const Modal: React.FC<IModalProps> = ({
     children,
     isActive,
     isOverlayVisible = true,
-    isScrollBehindPossible = true,
+    isScrollBehindPossible,
     position = 'center',
     onClose = undefined,
 }) => {
@@ -20,6 +20,8 @@ const Modal: React.FC<IModalProps> = ({
         }
 
         return () => {
+            if (isScrollBehindPossible) return
+
             const body = document.getElementsByTagName('body')[0]
 
             if (body) body.style.overflow = 'unset'
@@ -27,12 +29,14 @@ const Modal: React.FC<IModalProps> = ({
     }, [isActive, isScrollBehindPossible])
 
     return (
-        <S.ModalOverlay $isOverlayVisible={isOverlayVisible} $position={position}>
-            <S.SModal $position={position}>
-                {children}
-                {onClose && <Icon variant='close' onClick={onClose} />}
-            </S.SModal>
-        </S.ModalOverlay>
+        isActive && (
+            <S.ModalOverlay $isOverlayVisible={isOverlayVisible} $position={position}>
+                <S.SModal $position={position}>
+                    {children}
+                    {onClose && <Icon variant='close' onClick={onClose} />}
+                </S.SModal>
+            </S.ModalOverlay>
+        )
     )
 }
 

@@ -6,6 +6,7 @@ export const SSwitch = styled.div<{ $isActive?: boolean; $isDisabled?: boolean }
     width: 6rem;
     border-radius: 2rem;
     border: ${({ theme }) => theme.border.secondary};
+    transition: background-color 0.15s ease-out;
 
     background-color: ${({ $isActive, theme }) =>
         $isActive ? theme.palette.shades.secondary[48] : theme.palette.shades.secondary[18]};
@@ -27,7 +28,9 @@ export const SSwitchButton = styled.div<{ $isActive?: boolean; $isDisabled?: boo
     border-radius: 50%;
     height: 2rem;
     width: 2rem;
-    transition: left 0.1s ease-out;
+    transition:
+        left 0.15s ease-out,
+        background-color 0.15s ease-out;
 
     ${({ $isActive, theme }) =>
         $isActive
@@ -52,7 +55,7 @@ export const SSwitchButton = styled.div<{ $isActive?: boolean; $isDisabled?: boo
               `};
 `
 
-export const HiddenInput = styled.input.attrs({ type: 'checkbox' })`
+export const HiddenInput = styled.input.attrs({ type: 'checkbox' })<{ $disabled?: boolean }>`
     position: absolute;
     top: 0;
     left: 0;
@@ -61,4 +64,10 @@ export const HiddenInput = styled.input.attrs({ type: 'checkbox' })`
     margin: 0;
     opacity: 0;
     cursor: pointer;
+
+    ${({ $disabled }) =>
+        $disabled &&
+        css`
+            pointer-events: none;
+        `}
 `

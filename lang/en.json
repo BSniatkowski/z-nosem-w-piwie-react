@@ -68,7 +68,7 @@
     "description": "Third part of the full description of the establishment."
   },
   "app.about.fullDescription4": {
-    "defaultMessage": "The spirit of make-believe comes alive with an array of events at \"Z Nosem W Piwie.\" From live music performances that resonate through the walls to themed parties that transcend the ordinary, and quirky trivia nights that challenge the imagination - our event calendar is always buzzing with make-believe happenings. Check regularly for updates and immerse yourself in the magic of our make-believe world.",
+    "defaultMessage": "The spirit of make-believe comes alive with an array of events at \"Z Nosem W Piwie.\" From live music performances that resonate through the walls to themed parties that transcend the ordinary, and quirky trivia nights that challenge the imagination – our event calendar is always buzzing with make-believe happenings. Check regularly for updates and immerse yourself in the magic of our make-believe world.",
     "description": "Fourth part of the full description of the establishment."
   },
   "app.about.fullnameLabel": {
@@ -122,6 +122,106 @@
   "app.about.pubName": {
     "defaultMessage": "Z Nosem W Piwie",
     "description": "Name of the pub/cafe establishment."
+  },
+  "app.cookiesModal.accept": {
+    "defaultMessage": "Accept",
+    "description": "Cookies agreement accept button label."
+  },
+  "app.cookiesModal.accepted": {
+    "defaultMessage": "Cookies accepted",
+    "description": "Cookies agreement settings accepted snackbar message."
+  },
+  "app.cookiesModal.advertisingDescription": {
+    "defaultMessage": "Advertising cookies are used to tailor the ads you see to your interests. They also assist in measuring the effectiveness of our advertising campaigns. Rest assured, your data is used anonymously and is not shared with third parties",
+    "description": "Advertising Cookies description label."
+  },
+  "app.cookiesModal.advertisingLabel": {
+    "defaultMessage": "Advertising Cookies",
+    "description": "Advertising Cookies field label."
+  },
+  "app.cookiesModal.analyticsDescription": {
+    "defaultMessage": "Analytics cookies assist us in understanding how visitors interact with our website. The data collected is anonymous and helps us make informed decisions to improve the overall user experience.",
+    "description": "Analytics Cookies description label."
+  },
+  "app.cookiesModal.analyticsLabel": {
+    "defaultMessage": "Analytics Cookies",
+    "description": "Analytics Cookies field label."
+  },
+  "app.cookiesModal.cookiePolicy": {
+    "defaultMessage": "Cookie Policy",
+    "description": "Cookies agreement main text."
+  },
+  "app.cookiesModal.disclaimer": {
+    "defaultMessage": "The following text is AI-generated and has no legal standing. It serves as a demonstration for a fictitious entity, “Z Nosem W Piwie” showcasing my skills as a Software Developer. The content and solutions presented here are solely for illustrative purposes.",
+    "description": "Disclaimer text at Cookies GDPR."
+  },
+  "app.cookiesModal.disclaimerTitle": {
+    "defaultMessage": "Disclaimer:",
+    "description": "Disclaimer title at Cookies GDPR."
+  },
+  "app.cookiesModal.essentialDescription": {
+    "defaultMessage": "Essential cookies ensure the basic functionality of our website. Without these cookies, you may not be able to access certain features or navigate the site effectively.",
+    "description": "Essential Cookies description label."
+  },
+  "app.cookiesModal.essentialLabel": {
+    "defaultMessage": "Essential Cookies",
+    "description": "Essential Cookies field label."
+  },
+  "app.cookiesModal.functionalDescription": {
+    "defaultMessage": "Functional cookies enhance your experience by remembering your preferences and settings. This allows us to provide you with a more personalized and efficient visit.",
+    "description": "Functional Cookies description label."
+  },
+  "app.cookiesModal.functionalLabel": {
+    "defaultMessage": "Functional Cookies",
+    "description": "Functional Cookies field label."
+  },
+  "app.cookiesModal.mainCookiesTextPart1": {
+    "defaultMessage": "Welcome to “Z Nosem W Piwie”! To enhance your experience, we use cookies on our website. These small text files help us understand how you interact with our site, personalize content, and improve overall functionality.",
+    "description": "Cookies agreement main text part 1."
+  },
+  "app.cookiesModal.mainCookiesTextPart2": {
+    "defaultMessage": "By continuing to use our website, you consent to the use of cookies in accordance with this Cookie Consent Agreement. You have the option to manage your cookie preferences through our advanced cookies modal.",
+    "description": "Cookies agreement main text part 2."
+  },
+  "app.cookiesModal.mainCookiesTextPart3": {
+    "defaultMessage": "For more details on the types of cookies we use and how they impact your experience, please review our {privacyPolicy} and {cookiePolicy}.",
+    "description": "Cookies agreement main text part 3."
+  },
+  "app.cookiesModal.mainCookiesTextPart4": {
+    "defaultMessage": "Thank you for choosing “Z Nosem W Piwie”.",
+    "description": "Cookies agreement main text part 4."
+  },
+  "app.cookiesModal.openAdvancedSettings": {
+    "defaultMessage": "Advanced settings",
+    "description": "Cookies advanced settings button label."
+  },
+  "app.cookiesModal.performanceDescription": {
+    "defaultMessage": "Performance cookies help us understand how you interact with our website by collecting information about your visit. This data is aggregated and anonymous, allowing us to enhance the performance and usability of our site.",
+    "description": "Performance Cookies description label."
+  },
+  "app.cookiesModal.performanceLabel": {
+    "defaultMessage": "Performance Cookies",
+    "description": "Performance Cookies field label."
+  },
+  "app.cookiesModal.privacyPolicy": {
+    "defaultMessage": "Privacy Policy",
+    "description": "Cookies agreement main text."
+  },
+  "app.cookiesModal.saveAdvancedSettings": {
+    "defaultMessage": "Save settings",
+    "description": "Cookies advanced settings save button label."
+  },
+  "app.cookiesModal.saved": {
+    "defaultMessage": "Your custom cookies settings have been saved!",
+    "description": "Cookies agreement settings saved snackbar message."
+  },
+  "app.cookiesModal.socialDescription": {
+    "defaultMessage": "Social media cookies enable you to share our content on various social media platforms and interact with integrated social media features. These cookies may also collect information about your social media activities on our site.",
+    "description": "Social Media Cookies description label."
+  },
+  "app.cookiesModal.socialLabel": {
+    "defaultMessage": "Social Media Cookies",
+    "description": "Social Media Cookies field label."
   },
   "app.form.emailField": {
     "defaultMessage": "Field must be valid email",
