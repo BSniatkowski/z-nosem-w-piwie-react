@@ -104,7 +104,7 @@ const NewsletterForm = () => {
                         <FormattedMessage {...messages.newsletter} />
                     </h4>
                     {isFormActive ? (
-                        <SForm>
+                        <SForm onSubmit={handleSubmit(onNewsletterSubmit)}>
                             <FieldContainer $isErrorActive={!!errors[emailField.name]}>
                                 <Controller
                                     name={emailField.name}
