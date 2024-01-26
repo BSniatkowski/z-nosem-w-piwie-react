@@ -8,6 +8,7 @@ const Accordion: React.FC<IAccordionProps> = ({
     isActiveByDefault,
     isActive,
     toggleIsActive,
+    isWithoutTopBorder,
     headElement,
     children,
     ...props
@@ -23,7 +24,10 @@ const Accordion: React.FC<IAccordionProps> = ({
     )
 
     return (
-        <S.SAccordion $isActive={isActive ?? innerIsActive}>
+        <S.SAccordion
+            $isActive={isActive ?? innerIsActive}
+            $isWithoutTopBorder={isWithoutTopBorder}
+        >
             <S.AccordionHead>
                 {headElement({
                     title,

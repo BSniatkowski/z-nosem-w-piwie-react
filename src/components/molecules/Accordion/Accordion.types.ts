@@ -6,6 +6,7 @@ export interface IAccordionProps {
     isActiveByDefault?: boolean
     isActive?: boolean
     toggleIsActive?: () => void
+    isWithoutTopBorder?: boolean
     headElement: React.FC<IDefaultAccordionHeadProps | IAccordionHeadWithSwitchProps>
     children?: React.ReactElement
 }

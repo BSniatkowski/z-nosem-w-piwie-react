@@ -69,7 +69,7 @@ const Form = <T extends FieldValues>({
     return (
         <S.SForm onSubmit={formOnSubmit} $variant={variant}>
             {fields.length > 0 &&
-                fields.map((field) => (
+                fields.map((field, index) => (
                     <S.FieldContainer
                         key={field.name}
                         $withoutErrorMessage={isWithoutErrorMessage(field.type)}
@@ -112,9 +112,13 @@ const Form = <T extends FieldValues>({
                                     case EFieldType.accordionSwitch: {
                                         const { ref, ...props } = cField
 
+                                        const isWithoutTopBorder =
+                                            fields?.[index - 1]?.type === EFieldType.accordionSwitch
+
                                         return (
                                             <Accordion
                                                 title={field.title}
+                                                isWithoutTopBorder={isWithoutTopBorder}
                                                 headElement={(props) => (
                                                     <AccordionHeadWithSwitch
                                                         {...props}

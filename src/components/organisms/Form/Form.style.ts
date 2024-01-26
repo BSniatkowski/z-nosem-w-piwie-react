@@ -11,7 +11,11 @@ export const SForm = styled.form<{ $variant?: 'normal' | 'collapsed' }>`
             normal: css`
                 row-gap: 1rem;
             `,
-            collapsed: css``,
+            collapsed: css`
+                & > *:last-of-type {
+                    margin-top: 2rem;
+                }
+            `,
         })[$variant]}
 `
 
