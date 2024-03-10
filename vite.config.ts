@@ -5,7 +5,7 @@ import checker from 'vite-plugin-checker'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: '/',
+    base: '/z-nosem-w-piwie-react/',
     plugins: [
         vike({
             prerender: true,
