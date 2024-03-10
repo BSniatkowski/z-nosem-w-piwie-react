@@ -1,13 +1,14 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { SubmitHandler } from 'react-hook-form'
 import { FormattedMessage, useIntl } from 'react-intl'
 import * as yup from 'yup'
 
 import map from '/imgs/map.png'
 
-import { ContactFormRequest, fetchEvents, fetchMerch } from '../../../../api/api'
-import { IEventItemElement, IMerchItemElement } from '../../../../api/api.types'
+import { ContactFormRequest } from '../../../../api/api'
 import { useBreakpoint } from '../../../hooks/useBreakpoint/useBreakpoint'
+import { useEvents } from '../../../hooks/useData/useEvents'
+import { useMerch } from '../../../hooks/useData/useMerch'
 import { useSnackbarDispatch } from '../../../providers/SnackbarProvider/hooks/useSnackbarDispatch'
 import { ESnackbarDispatchActions } from '../../../providers/SnackbarProvider/SnackbarProvider.types'
 import Button from '../../atoms/Button/Button'
@@ -78,26 +79,32 @@ const About = () => {
         [dispatch, intl, isMobile],
     )
 
-    const [eventsItems, setEventsItems] = useState<Array<IEventItemElement>>([])
-    const [merchItems, setMerchItems] = useState<Array<IMerchItemElement>>([])
+    const { data: eventsData, isLoading: eventsIsLoading, isSuccess: eventsIsSuccess } = useEvents()
+    const { data: merchData, isLoading: merchIsLoading, isSuccess: merchIsSuccess } = useMerch()
 
     const translatedEventsItems = useMemo<TCarouselItems>(
         () =>
-            eventsItems.map((event) => {
-                const text = event.translations[intl.locale as TLocales]
+            (!eventsIsLoading &&
+                eventsIsSuccess &&
+                eventsData.map((event) => {
+                    const text = event.translations[intl.locale as TLocales]
 
-                return { id: event.id, itemElement: composeEventItemElement(text) }
-            }),
-        [composeEventItemElement, eventsItems, intl.locale],
+                    return { id: event.id, itemElement: composeEventItemElement(text) }
+                })) ||
+            [],
+        [composeEventItemElement, eventsData, eventsIsLoading, eventsIsSuccess, intl.locale],
     )
 
     const merchItemsElements = useMemo<TCarouselItems>(
         () =>
-            merchItems.map((merchItem) => ({
-                id: merchItem.id,
-                itemElement: <S.MerchImg src={merchItem.imgSrc} />,
-            })),
-        [merchItems],
+            (!merchIsLoading &&
+                merchIsSuccess &&
+                merchData.map((merchItem) => ({
+                    id: merchItem.id,
+                    itemElement: <S.MerchImg src={merchItem.imgSrc} />,
+                }))) ||
+            [],
+        [merchData, merchIsLoading, merchIsSuccess],
     )
 
     const [isContactFormLoading, setIsContactFormLoading] = useState<boolean>(false)
@@ -193,23 +200,6 @@ const About = () => {
         },
         [dispatch, intl],
     )
-
-    const updateEvents = useCallback(async () => {
-        const events = await fetchEvents()
-
-        if (events) setEventsItems(events)
-    }, [])
-
-    const updateMerch = useCallback(async () => {
-        const merchItems = await fetchMerch()
-
-        if (merchItems) setMerchItems(merchItems)
-    }, [])
-
-    useEffect(() => {
-        updateEvents().catch(console.error)
-        updateMerch().catch(console.error)
-    }, [updateEvents, updateMerch])
 
     return (
         <S.AboutSection id='about'>

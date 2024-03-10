@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import { OnRenderClientSync } from 'vike/types'
 
-import { main } from '../main'
+import { IStaticProps, main } from '../main'
 import Page from '../pages/index/+Page'
 
 const onRenderClient: OnRenderClientSync = (pageContext): ReturnType<OnRenderClientSync> => {
@@ -9,7 +9,7 @@ const onRenderClient: OnRenderClientSync = (pageContext): ReturnType<OnRenderCli
 
     let root
     ;(async () => {
-        const page = await main(Page)
+        const page = await main(Page, pageContext.data as IStaticProps)
 
         if (container.innerHTML !== '' && pageContext.isHydration) {
             // First render (hydration)
