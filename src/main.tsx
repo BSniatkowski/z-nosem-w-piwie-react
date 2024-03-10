@@ -1,29 +1,34 @@
 import './index.css'
 
+import { DehydratedState } from '@tanstack/react-query'
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 
 import App from './App.tsx'
-import { locales } from './components/molecules/LanguagePicker/LanguagePicker.consts.ts'
-import { TLocales } from './components/molecules/LanguagePicker/LanguagePicker.types.ts'
+import { IMainPageProps } from './pages/index/+Page.types.ts'
 
 const loadLocaleData = (locale: string) => import(`../compiled-lang/${locale}.json`)
 
-;(async () => {
+export interface IStaticProps {
+    dehydratedState: DehydratedState
+}
+
+export type TMain = (
+    Page: React.FC<IMainPageProps>,
+    staticProps: IStaticProps,
+) => Promise<React.ReactElement>
+
+export const main: TMain = async (Page, staticProps) => {
     const en = (await loadLocaleData('en'))?.default
     const pl = (await loadLocaleData('pl'))?.default
 
-    ReactDOM.createRoot(document.getElementById('root')!).render(
+    return (
         <React.StrictMode>
             <App
                 messages={{ 'en-GB': en, 'pl-PL': pl }}
-                locale={
-                    // @ts-expect-error To clear lang code later
-                    locales.includes(navigator.language)
-                        ? (navigator.language as TLocales)
-                        : 'en-GB'
-                }
+                locale={'en-GB'}
+                Page={Page}
+                staticProps={staticProps}
             />
-        </React.StrictMode>,
+        </React.StrictMode>
     )
-})()
+}

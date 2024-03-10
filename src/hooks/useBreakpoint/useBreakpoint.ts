@@ -1,25 +1,15 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo } from 'react'
 
+import { useResize } from '../useResize/useResize'
 import { breakpoints } from './breakpoints.consts'
 import { TBreakpointKey } from './useBreakpoint.types'
 
 export const useBreakpoint = (breakpoint: TBreakpointKey) => {
     const breakpointWidth = breakpoints[breakpoint]
 
-    const [actualWidth, setActualWidth] = useState<number>(window.innerWidth)
-    const isActive = useMemo(() => actualWidth <= breakpointWidth, [actualWidth, breakpointWidth])
+    const { width } = useResize()
 
-    const resize = () => {
-        setActualWidth(window.innerWidth)
-    }
-
-    useEffect(() => {
-        window.addEventListener('resize', resize)
-
-        return () => {
-            window.removeEventListener('resize', resize)
-        }
-    }, [])
+    const isActive = useMemo(() => width <= breakpointWidth, [width, breakpointWidth])
 
     return isActive
 }

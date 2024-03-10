@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
+import { useResize } from '../../../hooks/useResize/useResize'
 import Icon from '../../atoms/Icon/Icon'
 import * as S from './Carousel.style'
 import { ICarouselProps } from './Carousel.types'
@@ -49,17 +50,9 @@ const Carousel: React.FC<ICarouselProps> = ({ autoChange, items = [] }) => {
         [showElement],
     )
 
-    useEffect(() => {
-        const onResizeCorrectPosition = () => {
-            if (actualItemId) showElement(actualItemId)
-        }
-
-        window.addEventListener('resize', onResizeCorrectPosition)
-
-        return () => {
-            window.removeEventListener('resize', onResizeCorrectPosition)
-        }
-    }, [actualItemId, showElement])
+    useResize(() => {
+        if (actualItemId) showElement(actualItemId)
+    })
 
     useEffect(() => {
         if (!items.length || !autoChange) return
