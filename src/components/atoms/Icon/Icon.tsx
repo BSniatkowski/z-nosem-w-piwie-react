@@ -14,7 +14,29 @@ import x from '/icons/x.svg?raw'
 import youtube from '/icons/youtube.svg?raw'
 
 import * as S from './Icon.style'
-import { IIconProps } from './Icon.types'
+import { IIconProps, TSizes } from './Icon.types'
+
+const adjustSizes = (rawSvg: string, size: TSizes) => {
+    const sizeValue = { normal: 3.2, big: 4.2 }[size]
+
+    const width = 'width="'
+    const height = 'height="'
+
+    const startIndexOfWidth = rawSvg.indexOf(width)
+    const endIndexOfWidth = rawSvg.indexOf('"', startIndexOfWidth + width.length)
+
+    const oldWidth = rawSvg.slice(startIndexOfWidth, endIndexOfWidth + 1)
+
+    const startIndexOfHeight = rawSvg.indexOf(height)
+    const endIndexOfHeight = rawSvg.indexOf('"', startIndexOfHeight + height.length)
+
+    const oldHeight = rawSvg.slice(startIndexOfHeight, endIndexOfHeight + 1)
+
+    const newWidth = `${width}${sizeValue}rem"`
+    const newHeight = `${height}${sizeValue}rem"`
+
+    return rawSvg.replace(oldWidth, newWidth).replace(oldHeight, newHeight)
+}
 
 const Icon = ({ size = 'normal', variant = 'close', onClick }: IIconProps) => {
     const svg = {
@@ -38,7 +60,7 @@ const Icon = ({ size = 'normal', variant = 'close', onClick }: IIconProps) => {
             onClick={onClick}
             $size={size}
             $isClickable={!!onClick}
-            dangerouslySetInnerHTML={{ __html: svg }}
+            dangerouslySetInnerHTML={{ __html: adjustSizes(svg, size) }}
         />
     )
 }

@@ -6,13 +6,20 @@ import {
     TLocaleMessages,
     TLocales,
 } from './components/molecules/LanguagePicker/LanguagePicker.types'
-import Main from './components/pages/Main/Main'
 import Layout from './components/templates/Layout/Layout'
 import CookiesProvider from './providers/CookiesProvider/CookiesProvider'
 import SnackbarProvider from './providers/SnackbarProvider/SnackbarProvider'
 import ThemeProvider from './providers/ThemeProvider/ThemeProviding'
 
-function App({ messages, locale }: { messages: TAllLocalesMessages; locale: TLocales }) {
+function App({
+    messages,
+    locale,
+    Page,
+}: {
+    messages: TAllLocalesMessages
+    locale: TLocales
+    Page: React.FC<unknown>
+}) {
     const [actualIntlLocale, setActualIntlLocale] = useState(locale)
 
     const actualMessages = useMemo<TLocaleMessages>(
@@ -26,7 +33,7 @@ function App({ messages, locale }: { messages: TAllLocalesMessages; locale: TLoc
                 <SnackbarProvider>
                     <CookiesProvider>
                         <Layout>
-                            <Main
+                            <Page
                                 actualLocale={actualIntlLocale}
                                 setActualIntlLocale={setActualIntlLocale}
                             />
