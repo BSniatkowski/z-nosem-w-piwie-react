@@ -18,5 +18,8 @@ export default defineConfig({
             },
         }),
     ],
+    ssr: {
+        noExternal: ['styled-components', '@emotion/*'],
+    },
     assetsInclude: ['/sb-preview/runtime.js'],
 })
