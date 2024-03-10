@@ -1,0 +1,46 @@
+{
+  "\u0000virtual:vike:pageConfigValuesAll:client:/src/pages/index.css": {
+    "file": "assets/static/index.6b1f4f0f.css",
+    "src": "\u0000virtual:vike:pageConfigValuesAll:client:/src/pages/index.css"
+  },
+  ".yarn/__virtual__/vike-virtual-d1e0d8d55e/4/.yarn/berry/cache/vike-npm-0.4.165-697bb8b9f1-10c0.zip/node_modules/vike/dist/esm/client/server-routing-runtime/entry.js": {
+    "dynamicImports": [
+      "virtual:vike:pageConfigValuesAll:client:/src/pages/index"
+    ],
+    "file": "assets/entries/entry-server-routing.af506b33.js",
+    "imports": [
+      "_chunk-cf010ec4.js"
+    ],
+    "isEntry": true,
+    "src": ".yarn/__virtual__/vike-virtual-d1e0d8d55e/4/.yarn/berry/cache/vike-npm-0.4.165-697bb8b9f1-10c0.zip/node_modules/vike/dist/esm/client/server-routing-runtime/entry.js"
+  },
+  "_chunk-cf010ec4.js": {
+    "file": "assets/chunks/chunk-cf010ec4.js"
+  },
+  "compiled-lang/en.json": {
+    "file": "assets/chunks/chunk-b886d270.js",
+    "isDynamicEntry": true,
+    "src": "compiled-lang/en.json"
+  },
+  "compiled-lang/pl.json": {
+    "file": "assets/chunks/chunk-84dc927d.js",
+    "isDynamicEntry": true,
+    "src": "compiled-lang/pl.json"
+  },
+  "virtual:vike:pageConfigValuesAll:client:/src/pages/index": {
+    "css": [
+      "assets/static/index.6b1f4f0f.css"
+    ],
+    "dynamicImports": [
+      "compiled-lang/en.json",
+      "compiled-lang/pl.json"
+    ],
+    "file": "assets/entries/src_pages_index.e7133cae.js",
+    "imports": [
+      "_chunk-cf010ec4.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "virtual:vike:pageConfigValuesAll:client:/src/pages/index"
+  }
+}

@@ -1,0 +1,527 @@
+const pl = {
+  "app.about.NewsletterForm.FormLoaderMessage": [
+    {
+      type: 0,
+      value: "Podpisywanie do newslettera"
+    }
+  ],
+  "app.about.NewsletterForm.FormSnackbarMessage": [
+    {
+      type: 0,
+      value: "Dziękujemy za dołączenie do naszego newslettera. Do zobaczenia wkrótce!"
+    }
+  ],
+  "app.about.NewsletterForm.newsletter": [
+    {
+      type: 0,
+      value: "Dołącz do naszego newslettera"
+    }
+  ],
+  "app.about.NewsletterForm.newsletterJoinButton": [
+    {
+      type: 0,
+      value: "OK!"
+    }
+  ],
+  "app.about.address": [
+    {
+      type: 0,
+      value: "Kraków, Rynek Główny 0, 00-000"
+    }
+  ],
+  "app.about.contactFormLoaderMessage": [
+    {
+      type: 0,
+      value: "Wysyłanie"
+    }
+  ],
+  "app.about.contactFormSnackbarMessage": [
+    {
+      type: 0,
+      value: "Wiadomość wysłana!"
+    }
+  ],
+  "app.about.contactTitle": [
+    {
+      type: 0,
+      value: "Skontaktuj się z nami"
+    }
+  ],
+  "app.about.email": [
+    {
+      type: 0,
+      value: "contact@znosemwpiwie.com"
+    }
+  ],
+  "app.about.emailLabel": [
+    {
+      type: 0,
+      value: "Email kontaktowy"
+    }
+  ],
+  "app.about.emailTitle": [
+    {
+      type: 0,
+      value: "email"
+    }
+  ],
+  "app.about.eventSnackbarMessageError": [
+    {
+      type: 0,
+      value: "Coś poszło nie tak: "
+    },
+    {
+      type: 1,
+      value: "error"
+    },
+    {
+      type: 0,
+      value: "."
+    }
+  ],
+  "app.about.eventSnackbarMessageSuccess": [
+    {
+      type: 0,
+      value: "Dane wydarzenia skopiowane do schowka!"
+    }
+  ],
+  "app.about.eventsTitle": [
+    {
+      type: 0,
+      value: "Nadchodzące wydarzenia"
+    }
+  ],
+  "app.about.fullDescription1": [
+    {
+      type: 0,
+      value: 'W "Z Nosem W Piwie" starannie stworzyliśmy oazę, która przekracza zwykłość, zapraszając cię do wejścia w wyobrażony świat, gdzie nostalgia splata się z nieograniczonymi możliwościami twórczymi. Nasza kapryśna placówka, nosząca zabawną nazwę "Z Nosem W Piwie", to więcej niż tylko fikcyjna knajpa/kawiarnia – to pełne immersji doświadczenie, gdzie każda wizyta to podróż w niezwykłość.'
+    }
+  ],
+  "app.about.fullDescription2": [
+    {
+      type: 0,
+      value: `Wejdź w przytulny kąt zdobiony eklektycznymi dekoracjami, vintage'owymi plakatami i ciepłym blaskiem migoczącego światła świec. Atmosfera w "Z Nosem W Piwie" to starannie skomponowane połączenie rustykalnego uroku i energetycznej wibracji. To otoczenie zaprojektowane, aby cię zaprosić do odprężenia, nawiązania kontaktu z innymi i delektowania się każdym momentem, tworząc bezczasową ucieczkę, gdzie rozmowy swobodnie płyną.`
+    }
+  ],
+  "app.about.fullDescription3": [
+    {
+      type: 0,
+      value: 'Choć nasza knajpa/kawiarnia może być wytworem wyobraźni, smaki, które podajemy, zakorzenione są w prawdziwej radości z eksploracji kulinariów. Nasze menu to hołd dla inspiracji globalnych, obejmujące sycące potrawy pubowe, aromatyczne kawy i starannie wyselekcjonowany zestaw wymyślnych napojów. Od uroku fikcyjnych piw rzemieślniczych po kaprys koktajli kreatywnie przygotowanych – każdy łyk i kęs w "Z Nosem W Piwie" są zaprojektowane, aby przenieść cię do świata rozkosznej gastronomii.'
+    }
+  ],
+  "app.about.fullDescription4": [
+    {
+      type: 0,
+      value: 'Dusza wyobraźni ożywa dzięki różnorodnym wydarzeniom w "Z Nosem W Piwie". Od koncertów na żywo, które rozbrzmiewają przez ściany, po tematyczne imprezy wykraczające poza zwykłość, i dziwaczne wieczory z quizami, które kuszą wyobraźnię – nasz kalendarz wydarzeń zawsze tętni wydarzeniami z krainy wyobraźni. Sprawdzaj regularnie aktualizacje i zanurz się w magii naszego świata wyobraźni.'
+    }
+  ],
+  "app.about.fullnameLabel": [
+    {
+      type: 0,
+      value: "Imię i Nazwisko"
+    }
+  ],
+  "app.about.merchTitle": [
+    {
+      type: 0,
+      value: "Zajrzyj do naszego sklepu!"
+    }
+  ],
+  "app.about.messageLabel": [
+    {
+      type: 0,
+      value: "Wiadomość"
+    }
+  ],
+  "app.about.oHFS": [
+    {
+      type: 0,
+      value: "Piątek - Sobota"
+    }
+  ],
+  "app.about.oHFSHours": [
+    {
+      type: 0,
+      value: "10:00 - 1:30"
+    }
+  ],
+  "app.about.oHMT": [
+    {
+      type: 0,
+      value: "Poniedziałek - Czwartek"
+    }
+  ],
+  "app.about.oHMTHours": [
+    {
+      type: 0,
+      value: "8:00 - 22:30"
+    }
+  ],
+  "app.about.oHS": [
+    {
+      type: 0,
+      value: "Niedziela"
+    }
+  ],
+  "app.about.oHSHours": [
+    {
+      type: 0,
+      value: "10:00 - 18:00"
+    }
+  ],
+  "app.about.openingHours": [
+    {
+      type: 0,
+      value: "Godziny otwarcia"
+    }
+  ],
+  "app.about.phone": [
+    {
+      type: 0,
+      value: "+48 000 000 000"
+    }
+  ],
+  "app.about.phoneTitle": [
+    {
+      type: 0,
+      value: "telefon"
+    }
+  ],
+  "app.about.pubName": [
+    {
+      type: 0,
+      value: "Z Nosem W Piwie"
+    }
+  ],
+  "app.cookiesModal.accept": [
+    {
+      type: 0,
+      value: "Akceptuj"
+    }
+  ],
+  "app.cookiesModal.accepted": [
+    {
+      type: 0,
+      value: "Zaakceptowano pliki cookie"
+    }
+  ],
+  "app.cookiesModal.advertisingDescription": [
+    {
+      type: 0,
+      value: "Pliki cookie reklamowe są używane do dostosowywania reklam do Twoich zainteresowań. Pomagają również mierzyć skuteczność naszych kampanii reklamowych. Bądź pewien, że Twoje dane są używane anonimowo i nie są udostępniane osobom trzecim"
+    }
+  ],
+  "app.cookiesModal.advertisingLabel": [
+    {
+      type: 0,
+      value: "Pliki cookie reklamowe"
+    }
+  ],
+  "app.cookiesModal.analyticsDescription": [
+    {
+      type: 0,
+      value: "Pliki cookie analityczne pomagają nam zrozumieć, w jaki sposób odwiedzający korzystają z naszej witryny. Zebrane dane są anonimowe i pomagają nam podejmować informowane decyzje w celu poprawy ogólnej jakości korzystania z witryny."
+    }
+  ],
+  "app.cookiesModal.analyticsLabel": [
+    {
+      type: 0,
+      value: "Pliki cookie analityczne"
+    }
+  ],
+  "app.cookiesModal.cookiePolicy": [
+    {
+      type: 0,
+      value: "Polityka Plików Cookie"
+    }
+  ],
+  "app.cookiesModal.disclaimer": [
+    {
+      type: 0,
+      value: "Następujący tekst został wygenerowany przez sztuczną inteligencję i nie ma mocy prawnej. Służy jako demonstracja dla fikcyjnej jednostki „Z Nosem W Piwie”, prezentując moje umiejętności jako programisty oprogramowania. Treści i rozwiązania przedstawione tutaj służą wyłącznie celom ilustracyjnym."
+    }
+  ],
+  "app.cookiesModal.disclaimerTitle": [
+    {
+      type: 0,
+      value: "Oświadczenie:"
+    }
+  ],
+  "app.cookiesModal.essentialDescription": [
+    {
+      type: 0,
+      value: "Pliki cookie niezbędne zapewniają podstawową funkcjonalność naszej witryny. Bez tych plików cookie możliwe jest, że nie będziesz w stanie uzyskać dostępu do pewnych funkcji lub skutecznie nawigować po witrynie."
+    }
+  ],
+  "app.cookiesModal.essentialLabel": [
+    {
+      type: 0,
+      value: "Pliki cookie niezbędne"
+    }
+  ],
+  "app.cookiesModal.functionalDescription": [
+    {
+      type: 0,
+      value: "Pliki cookie funkcjonalne zwiększają Twoje doświadczenie, zapamiętując Twoje preferencje i ustawienia. Pozwala nam to świadczyć bardziej spersonalizowaną i wydajną wizytę."
+    }
+  ],
+  "app.cookiesModal.functionalLabel": [
+    {
+      type: 0,
+      value: "Pliki cookie funkcjonalne"
+    }
+  ],
+  "app.cookiesModal.mainCookiesTextPart1": [
+    {
+      type: 0,
+      value: "Witamy w „Z Nosem W Piwie”! W celu ulepszenia Twojego doświadczenia używamy plików cookie na naszej stronie internetowej. Te niewielkie pliki tekstowe pomagają nam zrozumieć, w jaki sposób oddziałujesz z naszą stroną, spersonalizować treść i poprawić ogólną funkcjonalność."
+    }
+  ],
+  "app.cookiesModal.mainCookiesTextPart2": [
+    {
+      type: 0,
+      value: "Kontynuując korzystanie z naszej witryny, zgadzasz się na korzystanie z plików cookie zgodnie z tą umową o zgodzie na pliki cookie. Masz możliwość zarządzania preferencjami dotyczącymi plików cookie za pomocą naszego zaawansowanego okna dialogowego plików cookie."
+    }
+  ],
+  "app.cookiesModal.mainCookiesTextPart3": [
+    {
+      type: 0,
+      value: "Aby uzyskać więcej informacji na temat rodzajów plików cookie, których używamy, i tego, w jaki sposób wpływają na Twoje doświadczenie, zapoznaj się z naszą "
+    },
+    {
+      type: 1,
+      value: "privacyPolicy"
+    },
+    {
+      type: 0,
+      value: " i "
+    },
+    {
+      type: 1,
+      value: "cookiePolicy"
+    },
+    {
+      type: 0,
+      value: "."
+    }
+  ],
+  "app.cookiesModal.mainCookiesTextPart4": [
+    {
+      type: 0,
+      value: "Dziękujemy za wybór „Z Nosem W Piwie”."
+    }
+  ],
+  "app.cookiesModal.openAdvancedSettings": [
+    {
+      type: 0,
+      value: "Zaawansowane ustawienia"
+    }
+  ],
+  "app.cookiesModal.performanceDescription": [
+    {
+      type: 0,
+      value: "Pliki cookie wydajnościowe pomagają nam zrozumieć, w jaki sposób oddziałujesz z naszą witryną, gromadząc informacje o Twojej wizycie. Dane te są agregowane i anonimowe, co pozwala nam poprawić wydajność i użyteczność naszej witryny."
+    }
+  ],
+  "app.cookiesModal.performanceLabel": [
+    {
+      type: 0,
+      value: "Pliki cookie wydajnościowe"
+    }
+  ],
+  "app.cookiesModal.privacyPolicy": [
+    {
+      type: 0,
+      value: "Polityką Prywatności"
+    }
+  ],
+  "app.cookiesModal.saveAdvancedSettings": [
+    {
+      type: 0,
+      value: "Zapisz ustawienia"
+    }
+  ],
+  "app.cookiesModal.saved": [
+    {
+      type: 0,
+      value: "Twoje niestandardowe ustawienia plików cookie zostały zapisane!"
+    }
+  ],
+  "app.cookiesModal.socialDescription": [
+    {
+      type: 0,
+      value: "Pliki cookie mediów społecznościowych umożliwiają udostępnianie naszych treści na różnych platformach mediów społecznościowych i interakcję z zintegrowanymi funkcjami mediów społecznościowych. Te pliki cookie mogą również zbierać informacje o Twoich działaniach w mediach społecznościowych na naszej stronie."
+    }
+  ],
+  "app.cookiesModal.socialLabel": [
+    {
+      type: 0,
+      value: "Pliki cookie mediów społecznościowych"
+    }
+  ],
+  "app.form.emailField": [
+    {
+      type: 0,
+      value: "Pole musi zawierać poprawny adres e-mail"
+    }
+  ],
+  "app.form.requiredField": [
+    {
+      type: 1,
+      value: "fieldName"
+    },
+    {
+      type: 0,
+      value: " jest wymagane"
+    }
+  ],
+  "app.form.send": [
+    {
+      type: 0,
+      value: "Wyślij"
+    }
+  ],
+  "app.form.tooLongField": [
+    {
+      type: 1,
+      value: "fieldName"
+    },
+    {
+      type: 0,
+      value: " nie może być dłuższe niż "
+    },
+    {
+      type: 1,
+      value: "max"
+    }
+  ],
+  "app.home.about": [
+    {
+      type: 0,
+      value: "O nas"
+    }
+  ],
+  "app.home.contact": [
+    {
+      type: 0,
+      value: "Kontakt"
+    }
+  ],
+  "app.home.follow": [
+    {
+      type: 0,
+      value: "Zaobserwuj nas"
+    }
+  ],
+  "app.home.home": [
+    {
+      type: 0,
+      value: "Strona główna"
+    }
+  ],
+  "app.home.offer": [
+    {
+      type: 0,
+      value: "Oferta"
+    }
+  ],
+  "app.home.pubName": [
+    {
+      type: 0,
+      value: "Z Nosem W Piwie"
+    }
+  ],
+  "app.home.welcome": [
+    {
+      type: 0,
+      value: 'Witaj w miejscu, gdzie przeszłość i wyobraźnia splatają się, tworząc niepowtarzalne doświadczenie pubu/kawiarni! Zanurz się w uroku rustykalnej dekoracji, delektuj się wymyślnymi trunkami i pozwól, aby każdy moment przeniósł Cię w miejsce, gdzie śmiech nie zna granic. Zdrowie dla magii "Z Nosem W Piwie" - twojego ucieczki w niezwykły świat wyobraźni!'
+    }
+  ],
+  "app.layout.about": [
+    {
+      type: 0,
+      value: "O nas"
+    }
+  ],
+  "app.layout.contact": [
+    {
+      type: 0,
+      value: "Kontakt"
+    }
+  ],
+  "app.layout.figma": [
+    {
+      type: 0,
+      value: "Projekt strony w Figmie"
+    }
+  ],
+  "app.layout.footer.altLinks": [
+    {
+      type: 0,
+      value: "Alternatywne wersje tej witryny"
+    }
+  ],
+  "app.layout.footer.myLinks": [
+    {
+      type: 0,
+      value: "Moje linki"
+    }
+  ],
+  "app.layout.footer.siteLinks": [
+    {
+      type: 0,
+      value: "Linki do strony"
+    }
+  ],
+  "app.layout.home": [
+    {
+      type: 0,
+      value: "Strona główna"
+    }
+  ],
+  "app.layout.offer": [
+    {
+      type: 0,
+      value: "Oferta"
+    }
+  ],
+  "app.layout.react": [
+    {
+      type: 0,
+      value: "React (aktualny)"
+    }
+  ],
+  "app.layout.repository": [
+    {
+      type: 0,
+      value: "Repozytorium projektu"
+    }
+  ],
+  "app.offer.beers": [
+    {
+      type: 0,
+      value: "P i w a"
+    }
+  ],
+  "app.offer.beersM": [
+    {
+      type: 0,
+      value: "Piwa"
+    }
+  ],
+  "app.offer.coffee": [
+    {
+      type: 0,
+      value: "K a w a"
+    }
+  ],
+  "app.offer.coffeeM": [
+    {
+      type: 0,
+      value: "Kawa"
+    }
+  ]
+};
+export {
+  pl as default
+};
