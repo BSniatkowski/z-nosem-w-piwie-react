@@ -42,19 +42,25 @@ const Home: React.FC<IHomeProps> = ({ actualLocale, setActualIntlLocale }) => {
                         <FormattedMessage {...messages.follow} />
                     </S.FollowUsTextContainer>
                     <S.FollowUsIconsContainer>
-                        <Link href='https://www.facebook.com/'>
+                        <Link
+                            href='https://www.facebook.com/'
+                            ariaLabel='Show entity facebook page'
+                        >
                             <Icon variant='facebook' />
                         </Link>
-                        <Link href='https://www.instagram.com/'>
+                        <Link
+                            href='https://www.instagram.com/'
+                            ariaLabel='Show entity instagram page'
+                        >
                             <Icon variant='instagram' />
                         </Link>
-                        <Link href='https://www.tiktok.com/'>
+                        <Link href='https://www.tiktok.com/' ariaLabel='Show entity tiktok page'>
                             <Icon variant='tiktok' />
                         </Link>
-                        <Link href='https://twitter.com/'>
+                        <Link href='https://twitter.com/' ariaLabel='Show entity twitter page'>
                             <Icon variant='x' />
                         </Link>
-                        <Link href='https://www.youtube.com/'>
+                        <Link href='https://www.youtube.com/' ariaLabel='Show entity youtube page'>
                             <Icon variant='youtube' />
                         </Link>
                     </S.FollowUsIconsContainer>

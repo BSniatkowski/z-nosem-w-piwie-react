@@ -11,7 +11,7 @@ const MenuItem: TMenuItem = ({
 }) => {
     return (
         <S.MenuItemContainer $direction={direction}>
-            <S.ItemImg src={imgSrc} />
+            <S.ItemImg src={imgSrc} alt={name.replaceAll(' ', '_').toLowerCase()} />
             <S.DescriptionContainer>
                 <S.NameWithPrice>
                     <h3 className='decorative'>{name}</h3>

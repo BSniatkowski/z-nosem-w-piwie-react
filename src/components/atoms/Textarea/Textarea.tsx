@@ -5,15 +5,19 @@ import * as S from './Textarea.style'
 import { ITextareaProps } from './Textarea.types'
 
 const Textarea = forwardRef<HTMLTextAreaElement, ITextareaProps>(
-    ({ label, iconVariant, onIconClick, ...props }, ref) => {
+    ({ name, label, iconVariant, onIconClick, ...props }, ref) => {
         const [isFocused, setIsFocused] = useState(false)
         const isLabelSmall = useMemo(() => !!props.value || isFocused, [props.value, isFocused])
 
         return (
             <S.TextareaContainer $isFocused={isFocused}>
-                <S.SLabel $isSmall={isLabelSmall}>{label}</S.SLabel>
+                <S.SLabel $isSmall={isLabelSmall} htmlFor={name}>
+                    {label}
+                </S.SLabel>
                 <S.STextarea
                     ref={ref}
+                    id={name}
+                    name={name}
                     {...props}
                     onFocus={() => setIsFocused(true)}
                     onBlur={() => setIsFocused(false)}

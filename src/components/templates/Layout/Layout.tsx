@@ -16,15 +16,25 @@ const Layout: React.FC<ILayout> = ({ children }) => {
     ]
     const altLinks = [{ children: intl.formatMessage(messages.react), href: '#', isCurrent: true }]
     const myLinks = [
-        { children: 'LinkedIn', href: 'https://www.linkedin.com/in/bartlomiej-sniatkowski/' },
-        { children: 'Github', href: 'https://github.com/BSniatkowski' },
+        {
+            children: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/bartlomiej-sniatkowski/',
+            ariaLabel: 'Show author LinkedIn profile',
+        },
+        {
+            children: 'Github',
+            href: 'https://github.com/BSniatkowski',
+            ariaLabel: 'Show author Github profile',
+        },
         {
             children: intl.formatMessage(messages.repository),
             href: 'https://github.com/BSniatkowski/z-nosem-w-piwie-react',
+            ariaLabel: "Show project's repository",
         },
         {
             children: intl.formatMessage(messages.figma),
             href: 'https://www.figma.com/file/7sIhgDCOUo9jGmuUOFngF9/Z-Nosem-W-Piwie?type=design&node-id=0-1&mode=design&t=RaFAvIdMTLGsTKoS-0',
+            ariaLabel: "Show project's figma",
         },
     ]
 

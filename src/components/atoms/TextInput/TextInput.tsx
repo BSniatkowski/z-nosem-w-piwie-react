@@ -5,15 +5,19 @@ import * as S from './TextInput.style'
 import { ITextInputProps } from './TextInput.types'
 
 const TextInput = forwardRef<HTMLInputElement, ITextInputProps>(
-    ({ label, iconVariant, onIconClick, ...props }, ref) => {
+    ({ name, label, iconVariant, onIconClick, ...props }, ref) => {
         const [isFocused, setIsFocused] = useState(false)
         const isLabelSmall = useMemo(() => !!props.value || isFocused, [props.value, isFocused])
 
         return (
             <S.TextInputContainer $isFocused={isFocused}>
-                <S.SLabel $isSmall={isLabelSmall}>{label}</S.SLabel>
+                <S.SLabel $isSmall={isLabelSmall} htmlFor={name}>
+                    {label}
+                </S.SLabel>
                 <S.STextInput
                     ref={ref}
+                    id={name}
+                    name={name}
                     {...props}
                     onFocus={() => setIsFocused(true)}
                     onBlur={() => setIsFocused(false)}

@@ -104,7 +104,11 @@ const Form = <T extends FieldValues>({
                                     case EFieldType.switch: {
                                         return (
                                             <S.SwitchWrapper>
-                                                {field.label && <S.SLabel>{field.label}</S.SLabel>}
+                                                {field.label && (
+                                                    <S.SLabel htmlFor={field.name}>
+                                                        {field.label}
+                                                    </S.SLabel>
+                                                )}
                                                 <Switch {...cField} />
                                             </S.SwitchWrapper>
                                         )
