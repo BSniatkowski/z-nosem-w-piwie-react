@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import beerSrc from '/imgs/beer_1.png'
+import beerSrc from '/imgs/beer_1.webp'
 
 import MenuItem from './MenuItem'
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import home_background from '/imgs/home_background.png'
+import home_background from '/imgs/home_background.webp'
 
 import { IconWrapper } from '../../atoms/Icon/Icon.style'
 import { SLink } from '../../atoms/Link/Link.style'

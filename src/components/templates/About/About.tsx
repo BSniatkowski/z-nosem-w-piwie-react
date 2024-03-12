@@ -3,7 +3,7 @@ import { SubmitHandler } from 'react-hook-form'
 import { FormattedMessage, useIntl } from 'react-intl'
 import * as yup from 'yup'
 
-import map from '/imgs/map.png'
+import map from '/imgs/map.webp'
 
 import { ContactFormRequest } from '../../../../api/api'
 import { useBreakpoint } from '../../../hooks/useBreakpoint/useBreakpoint'
@@ -73,7 +73,12 @@ const About = () => {
                     />
                     <p>{description}</p>
                 </S.EventDescription>
-                {imgSrc && <S.EventImg src={imgSrc} />}
+                {imgSrc && (
+                    <S.EventImg
+                        src={imgSrc}
+                        alt={`${title.replaceAll(' ', '_').toLowerCase()}_img`}
+                    />
+                )}
             </S.EventContainer>
         ),
         [dispatch, intl, isMobile],
@@ -101,7 +106,12 @@ const About = () => {
                 merchIsSuccess &&
                 merchData.map((merchItem) => ({
                     id: merchItem.id,
-                    itemElement: <S.MerchImg src={merchItem.imgSrc} />,
+                    itemElement: (
+                        <S.MerchImg
+                            src={merchItem.imgSrc}
+                            alt={`${merchItem.id.replaceAll(' ', '_').toLowerCase()}`}
+                        />
+                    ),
                 }))) ||
             [],
         [merchData, merchIsLoading, merchIsSuccess],
@@ -221,7 +231,7 @@ const About = () => {
                         <FormattedMessage {...messages.descriptionPart4} />
                     </p>
                     <S.MapContainer>
-                        <img src={map} />
+                        <img src={map} alt='local_localization_map' />
                     </S.MapContainer>
                     <h4 className='decorative' style={{ textAlign: 'center' }}>
                         <FormattedMessage {...messages.address} />

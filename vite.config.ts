@@ -1,3 +1,4 @@
+import legacy from '@vitejs/plugin-legacy'
 import react from '@vitejs/plugin-react'
 import vike from 'vike/plugin'
 import { defineConfig } from 'vite'
@@ -11,6 +12,9 @@ export default defineConfig({
             prerender: true,
         }),
         react(),
+        legacy({
+            targets: ['defaults', 'not IE 11'],
+        }),
         checker({
             typescript: true,
             eslint: {

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import beer1 from '/imgs/beer_1.png'
-import beer2 from '/imgs/beer_2.png'
-import tshirt from '/imgs/tshirt.png'
+import beer1 from '/imgs/beer_1.webp'
+import beer2 from '/imgs/beer_2.webp'
+import tshirt from '/imgs/tshirt.webp'
 
 import Card from '../../atoms/Card/Card'
 import Carousel from './Carousel'
