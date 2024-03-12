@@ -3,7 +3,7 @@ import { SubmitHandler } from 'react-hook-form'
 import { FormattedMessage, useIntl } from 'react-intl'
 import * as yup from 'yup'
 
-import map from '/imgs/map.png'
+import map from '/imgs/map.webp'
 
 import { ContactFormRequest } from '../../../../api/api'
 import { useBreakpoint } from '../../../hooks/useBreakpoint/useBreakpoint'
