@@ -30,6 +30,7 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
             <meta property="og:title" content="Z Nosem W Piwie">
             <meta property="og:description" content="A fictious entity 'Z Nosem W Piwie'">
             <meta property="og:image" content="/z-nosem-w-piwie-react/logo.svg">
+            <meta property="og:image:type" content="image/svg+xml" />
             ${dangerouslySkipEscape(sheet.getStyleTags())}
         </head>
       <body style="overflow: hidden;">
